@@ -1,0 +1,94 @@
+#* @vtlvariable name="cart" type="ru.aktubselmash.model.Cart" *#
+#* @vtlvariable name="number" type="org.apache.velocity.tools.generic.NumberTool" *#
+#* @vtlvariable name="locale" type="java.util.Locale" *#
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<p style="margin-top: 0;">Поступил новый заказ №${cart.id}.</p>
+<div style="margin: 15px 0 10px 0;">
+    <p>1. Перечень товаров</p>
+    <span>Доставка: ${cart.shipping.name}</span><br/>
+    <span>Оплата: ${cart.payment.name}</span>
+</div>
+<div style="margin-bottom: 10px;">
+    <table cellpadding="0" cellspacing="0" style="border-collapse: collapse; border: 1px solid #a0a0a0;">
+        <thead>
+        <tr>
+            <th style="background: #ccc; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">№</th>
+            <th style="background: #ccc; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Наименование товара</th>
+            <th style="background: #ccc; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Кол-во</th>
+            <th style="background: #ccc; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Цена</th>
+            <th style="background: #ccc; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Сумма</th>
+        </tr>
+        </thead>
+        <tbody>
+            #set($total = 0)
+            #foreach ($cpp in ${cart.cartProducts})
+                #set($amount = $cpp.price * $cpp.number)
+                <tr #if($foreach.count % 2 == 0)style="background: #f2f2f2;"#end>
+                    <td align="right" style="padding: 3px 8px; border: 1px solid #a0a0a0;">$foreach.count</td>
+                    <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">$cpp.product.name</td>
+                    <td align="right" style="padding: 3px 8px; border: 1px solid #a0a0a0;">$cpp.number $cpp.product.unit</td>
+                    <td align="right" style="padding: 3px 8px; border: 1px solid #a0a0a0;">$number.format("currency", $cpp.price, $locale)</td>
+                    <td align="right" style="padding: 3px 8px; border: 1px solid #a0a0a0;">$number.format("currency", $amount, $locale)</td>
+                </tr>
+                #set($total = $amount + $total)
+            #end
+    </table>
+    <h2 style="font-size: 11pt;">Итого без учета комиссий: $number.format("currency", $total, $locale)</h2>
+</div>
+<div>
+    <p>2. Контактная информация</p>
+    <table cellpadding="0" cellspacing="0" style="border-collapse: collapse; border: 1px solid #a0a0a0;">
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; width: 215px; border: 1px solid #a0a0a0;">ФИО получателя</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.fio}</td>
+        </tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Эл. почта</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.email}</td>
+        </tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Телефон</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.phoneNumber}</td></tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Частное/Юр. лицо</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.type.label}</td></tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Область / Край</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.addresses.get(0).region}</td></tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Город</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.addresses.get(0).city}</td></tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Населенный пункт</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.addresses.get(0).county}</td></tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Улица</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.addresses.get(0).street}</td></tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Дом, офис/кв.</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">
+                #if("$!{cart.client.addresses.get(0).building}" != "")дом ${cart.client.addresses.get(0).building}#end#if("$!{cart.client.addresses.get(0).apartment}" != ""), офис/кв. ${cart.client.addresses.get(0).apartment}#end
+            </td>
+        </tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Почтовый индекс</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.addresses.get(0).postalCode}</td></tr>
+        <tr>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid  #a0a0a0;">Дополнительная информация<br/> о заказе</th>
+            <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.details}</td></tr>
+    </table>
+</div>
+<div style="margin: 20px 0;">
+    С уважением,<br/>
+    Виталий.<br/>
+    Актюбсельмаш. Машинки для стрижки овец.<br/>
+    <a href="http://aktubselmash.ru">aktubselmash.ru</a><br/>
+    Эл. почта: <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>, <a href="mailto:ovitaly1@yandex.ru">ovitaly1@yandex.ru</a><br/>
+    Тел.: +7 916 185-06-28
+</div>
+</body>
+</html>

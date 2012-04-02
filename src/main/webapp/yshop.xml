@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+
+<yml_catalog date="2012-03-28 12:07">
+    <shop>
+		<name>Актюбсельмаш</name>
+		<company>Актюбсельмаш</company>
+		<url>http://aktubselmash.ru/</url>
+
+		<currencies>
+			<currency id="RUR" rate="1"/>
+		</currencies>
+		<categories>
+			<category id="1">Машинки для стрижки овец</category>
+			<category id="2" parentId="1">Без преобразователя</category>
+			<category id="3" parentId="1">С преобразователем</category>
+			<category id="4">Запасные части</category>
+			<category id="5" parentId="4">Ножи и гребенки</category>
+		</categories>
+		<local_delivery_cost>350</local_delivery_cost>
+		<offers>
+			<offer id="1" available="true">
+				<url>http://aktubselmash.ru/clippers/liscop-sp-3000</url>
+				<price>18000</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>2</categoryId>
+				<picture>http://aktubselmash.ru/images/clippers/Liscop/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Машинка для стрижки овец Liscop Super Profi 3000</name>
+				<vendor>Liscop</vendor>
+				<description>Для стрижки большого количества овец за сезон (от 50 до 1000 голов) 
+				рекомендуем приобретать более мощные (430 Вт) машинки Liscop Super Profi 3000, 
+				изготовленные в Германии и имеющиеся у нас в наличии. Эта машинка работает от обычной 
+				розетки 220 В, имеет вес 1,6 кг и длину кабеля 5 м.
+				</description>
+				<manufacturer_warranty>true</manufacturer_warranty>
+				<country_of_origin>Германия</country_of_origin>
+				<param name="Мощность двигателя" unit="Вт">430</param>
+				<param name="Вес машинки" unit="кг">1.6</param>
+				<param name="Напряжение" unit="В">220</param>
+				<param name="Гарантия на машинку" unit="месяцев">12</param>
+				<param name="Частота тока" unit="Гц">50</param>
+				<param name="Уровень шума" unit="Дб(а)">75</param>
+				<param name="Длина шнура" unit="м">5</param>
+				<param name="Вибрация меньше" unit="м/с2">2.5</param>
+				<param name="Размеры машинки (Ш х В х Дл.)" unit="мм">80x120x340</param>
+				<param name="Диаметр рукоятки" unit="мм">55-62</param>
+			</offer>
+			<offer id="2" available="true">
+				<url>http://aktubselmash.ru/clippers/vs84-s</url>
+				<price>8700</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>2</categoryId>
+				<picture>http://aktubselmash.ru/images/clippers/VS84-S/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Машинка для стрижки овец VS84-S</name>
+				<vendor>Heiniger</vendor>
+				<description>Результаты испытаний позволили отнести их к лучшим машинкам 
+				(для стрижки до 50 овец) по соотношению цена-качество. Мастерская обеспечена 
+				запасными частями.
+				</description>
+				<manufacturer_warranty>true</manufacturer_warranty>
+				<country_of_origin>Китай</country_of_origin>
+				<param name="Мощность двигателя" unit="Вт">320</param>
+				<param name="Вес машинки" unit="кг">1.7</param>
+				<param name="Напряжение" unit="В">220</param>
+				<param name="Гарантия на машинку" unit="месяцев">6</param>
+				<param name="Частота тока" unit="Гц">50</param>
+				<param name="Число оборотов в минуту">2800</param>
+				<param name="Уровень шума" unit="Дб(а)">93</param>
+				<param name="Вибрация меньше" unit="м/с2">4</param>
+				<param name="Размеры машинки (Ш х В х Дл.)" unit="мм">80x90x350</param>
+				<param name="Диаметр рукоятки" unit="мм">51-57</param>
+			</offer>
+			<offer id="3" available="true">
+				<url>http://aktubselmash.ru/clippers/f7</url>
+				<price>8900</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>2</categoryId>
+				<picture>http://aktubselmash.ru/images/clippers/F7/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Машинка для стрижки овец F7</name>
+				<vendor>Heiniger</vendor>
+				<description>Результаты испытаний позволили отнести их к лучшим машинкам 
+				(для стрижки до 300 овец) по соотношению цена-качество. Мастерская обеспечена 
+				запасными частями.
+				</description>
+				<manufacturer_warranty>true</manufacturer_warranty>
+				<country_of_origin>Китай</country_of_origin>
+				<param name="Мощность двигателя" unit="Вт">350</param>
+				<param name="Вес машинки" unit="кг">1.4</param>
+				<param name="Напряжение" unit="В">220-240</param>
+				<param name="Гарантия на машинку" unit="месяцев">6</param>
+				<param name="Частота тока" unit="Гц">50</param>
+				<param name="Число оборотов в минуту">2500</param>
+				<param name="Уровень шума" unit="Дб(а)">93</param>
+				<param name="Длина шнура" unit="м">6</param>
+				<param name="Размеры машинки (Ш х В х Дл.)" unit="мм">80x95x325</param>
+				<param name="Диаметр рукоятки" unit="мм">57</param>
+			</offer>
+			<offer id="4" available="true">
+				<url>http://aktubselmash.ru/clippers/asi-101</url>
+				<price>18500</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>3</categoryId>
+				<picture>http://aktubselmash.ru/images/clippers/ASI-101/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>АСИ-101 с преобразователем 220В для стрижки овец</name>
+				<vendor>Актюбсельмаш</vendor>
+				<description>Агрегат индивидуальный АСИ-101 работает от однофазной сети (обычной розетки) 
+				220 В, укомплектован одной машинкой МСУ-200. Отличается от АСУ-1 компактным и легким, 
+				но не менее мощным преобразователем частоты тока, достаточным для работы одной машинкой.
+				</description>
+				<country_of_origin>Казахстан</country_of_origin>
+				<param name="Мощность двигателя" unit="Вт">300</param>
+				<param name="Вес машинки" unit="кг">1.7</param>
+				<param name="Вес преобразователя" unit="кг">5.4</param>
+				<param name="Напряжение сети" unit="В">220</param>
+				<param name="Напряжение на машинке" unit="В">36</param>
+				<param name="Выходная частота тока" unit="Гц">200</param>
+				<param name="Частота тока на входе" unit="Гц">50</param>
+				<param name="Число оборотов в минуту">2100-3000</param>
+				<param name="Уровень шума" unit="Дб(а)">83</param>
+				<param name="Длина шнура" unit="м">2.5</param>
+				<param name="Размеры машинки (Ш х В х Дл.)" unit="мм">80x100x325</param>
+				<param name="Размеры преобразователя (Ш х В х Дл.)" unit="мм">240х180х90</param>
+				<param name="Диаметр рукоятки" unit="мм">37-49</param>
+			</offer>
+			<offer id="5" available="true">
+				<url>http://aktubselmash.ru/clippers/asu-1</url>
+				<price>27500</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>3</categoryId>
+				<picture>http://aktubselmash.ru/images/clippers/ASU-1/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>АСУ-1 для стрижки овец</name>
+				<vendor>Актюбсельмаш</vendor>
+				<description>АСУ-1 состоит из двух машинок для стрижки овец МСУ-200 производства завода 
+				«Актюбсельмаш» и одного преобразователя частоты тока мощностью 600 Вт, работающего 
+				от 3-х фазной сети 380 В с частотой 50 Гц.
+				</description>
+				<country_of_origin>Казахстан</country_of_origin>
+				<param name="Мощность двигателя" unit="Вт">600</param>
+				<param name="Вес машинки" unit="кг">1.7</param>
+				<param name="Вес преобразователя" unit="кг">20</param>
+				<param name="Напряжение сети" unit="В">380</param>
+				<param name="Напряжение на машинке" unit="В">36</param>
+				<param name="Выходная частота тока" unit="Гц">200</param>
+				<param name="Частота тока на входе" unit="Гц">50</param>
+				<param name="Число оборотов в минуту">2100-3000</param>
+				<param name="Уровень шума" unit="Дб(а)">83</param>
+				<param name="Длина шнура" unit="м">2.5</param>
+				<param name="Размеры машинки (Ш х В х Дл.)" unit="мм">80x100x325</param>
+				<param name="Размеры преобразователя (Ø х Выс.)" unit="мм">250х240</param>
+				<param name="Диаметр рукоятки" unit="мм">37-49</param>
+			</offer>
+			<offer id="6" available="true">
+				<url>http://aktubselmash.ru/clippers/esa-1d</url>
+				<price>20000</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>3</categoryId>
+				<picture>http://aktubselmash.ru/images/clippers/ESA-1D/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>ЭСА-1Д для стрижки овец</name>
+				<vendor>Актюбсельмаш</vendor>
+				<description>
+				</description>
+				<country_of_origin>Казахстан</country_of_origin>
+				<param name="Мощность двигателя" unit="Вт">120</param>
+				<param name="Вес машинки" unit="кг">1.7</param>
+				<param name="Вес электродвигателя" unit="кг">8.4</param>
+				<param name="Напряжение сети" unit="В">220</param>
+				<param name="Напряжение на машинке" unit="В">36</param>
+				<param name="Частота тока на входе" unit="Гц">50</param>
+				<param name="Число оборотов в минуту" unit="Гц">1500</param>
+				<param name="Уровень шума" unit="Дб(а)">83</param>
+				<param name="Длина гибкого вала" unit="м">16</param>
+				<param name="Диаметр гибкого вала" unit="мм">20.5</param>
+				<param name="Размеры машинки (Ш х В х Дл.)" unit="мм">80x100x325</param>
+				<param name="Размеры электродвигателя (Ш х В х Дл.)" unit="мм">240х180х90</param>
+				<param name="Диаметр рукоятки" unit="мм">37-49</param>
+			</offer>
+			<offer id="7" available="true">
+				<url>http://aktubselmash.ru/parts/comb+cutter-msu-200</url>
+				<price>750</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>5</categoryId>
+				<picture>http://aktubselmash.ru/images/parts/MSU-200/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Нож и гребенка для МСУ-200</name>
+				<vendor>Актюбсельмаш</vendor>
+				<country_of_origin>Казахстан</country_of_origin>
+				<param name="Ширина гребенки" unit="мм">76</param>
+				<param name="Количество зубьев гребенки">13</param>
+				<param name="Толщина гребенки" unit="мм">3</param>
+				<param name="Форма зубьев гребенки">прямая</param>
+				<param name="Количество зубьев ножа" unit="шт.">4</param>
+				<param name="Толщина ножа" unit="мм">4.5</param>
+			</offer>
+			<offer id="8" available="true">
+				<url>http://aktubselmash.ru/parts/comb+cutter-other</url>
+				<price>1500</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>5</categoryId>
+				<picture>http://aktubselmash.ru/images/parts/VS84-S/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Нож и гребенка для VS84-S и F7</name>
+				<vendor>Beiyuan</vendor>
+				<country_of_origin>Китай</country_of_origin>
+				<param name="Ширина гребенки" unit="мм">76</param>
+				<param name="Количество зубьев гребенки">13</param>
+				<param name="Толщина гребенки" unit="мм">3</param>
+				<param name="Форма зубьев гребенки">прямая</param>
+				<param name="Количество зубьев ножа" unit="шт.">4</param>
+				<param name="Толщина ножа" unit="мм">4.5</param>
+			</offer>
+			<offer id="9" available="true">
+				<url>http://aktubselmash.ru/parts/comb+cutter-liscop-a5</url>
+				<price>2250</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>5</categoryId>
+				<picture>http://aktubselmash.ru/images/parts/Liscop-A5/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Нож и гребенка Liscop A5</name>
+				<vendor>Liscop</vendor>
+				<country_of_origin>Германия</country_of_origin>
+				<param name="Ширина гребенки" unit="мм">76</param>
+				<param name="Количество зубьев гребенки">13</param>
+				<param name="Толщина гребенки" unit="мм">3</param>
+				<param name="Форма зубьев гребенки">прямая</param>
+				<param name="Количество зубьев ножа" unit="шт.">4</param>
+				<param name="Толщина ножа" unit="мм">4.5</param>
+			</offer>
+			<offer id="10" available="true">
+				<url>http://aktubselmash.ru/parts/comb+cutter-7v-94</url>
+				<price>2500</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>5</categoryId>
+				<picture>http://aktubselmash.ru/images/parts/7V-94/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Нож и гребенка 7V-94</name>
+				<vendor>Beiyuan</vendor>
+				<country_of_origin>Китай</country_of_origin>
+				<param name="Ширина гребенки" unit="мм">94</param>
+				<param name="Количество зубьев гребенки">13</param>
+				<param name="Толщина гребенки" unit="мм">3</param>
+				<param name="Форма зубьев гребенки">отогнутая</param>
+				<param name="Количество зубьев ножа" unit="шт.">4</param>
+				<param name="Толщина ножа" unit="мм">4.5</param>
+			</offer>
+			<offer id="11" available="true">
+				<url>http://aktubselmash.ru/parts/p380</url>
+				<price>9500</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>4</categoryId>
+				<picture>http://aktubselmash.ru/images/clippers/MSU-200/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Преобразователь частоты тока 600 Вт</name>
+				<vendor>Актюбсельмаш</vendor>
+				<description>Преобразователь частоты тока мощностью 600 Вт выполнен по очень простой 
+				и надежной схеме. Работает только от 3-х фазной сети 380 В с частотой 50 Гц.
+				</description>
+				<country_of_origin>Казахстан</country_of_origin>
+				<param name="Мощность двигателя" unit="Вт">600</param>
+				<param name="Вес" unit="кг">20</param>
+				<param name="Входное напряжение" unit="В">380</param>
+				<param name="Выходное напряжение" unit="В">36</param>
+				<param name="Выходная частота тока" unit="Гц">200</param>
+				<param name="Частота тока на входе" unit="Гц">50</param>
+				<param name="Размеры преобразователя (Ø х Выс.)" unit="мм">250х240</param>
+			</offer>
+			<offer id="12" available="true">
+				<url>http://aktubselmash.ru/parts/msu-200</url>
+				<price>8500</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>4</categoryId>
+				<picture>http://aktubselmash.ru/images/clippers/MSU-200/2m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Машинка МСУ-200</name>
+				<vendor>Актюбсельмаш</vendor>
+				<description>В МСУ-200 установлен асинхронный двигатель,работающий без угольных щеток, 
+				поэтому ею можно работать по 10-12 часов в сутки, не выключая машинку. МСУ-200 работает 
+				только от преобразователя частоты тока, который выдает безопасное 3-х фазное напряжение 
+				36 В с частотой 200 Гц.
+				</description>
+				<country_of_origin>Казахстан</country_of_origin>
+				<param name="Вес машинки" unit="кг">1.7</param>
+				<param name="Напряжение на машинке" unit="В">36</param>
+				<param name="Входная частота тока" unit="Гц">200</param>
+				<param name="Число оборотов в минуту">2100-3000</param>
+				<param name="Уровень шума" unit="Дб(а)">83</param>
+				<param name="Длина шнура" unit="м">2.5</param>
+				<param name="Размеры машинки (Ш х В х Дл.)" unit="мм">80x100x325</param>
+				<param name="Диаметр рукоятки" unit="мм">37-49</param>
+			</offer>
+			<offer id="13" available="true">
+				<url>http://aktubselmash.ru/parts/ta-1</url>
+				<price>39000</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>4</categoryId>
+				<picture>http://aktubselmash.ru/images/parts/TA-1/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Точильный аппарат ТА-1</name>
+				<vendor>Актюбсельмаш</vendor>
+				<description>Точильный аппарат ТА-1 предназначен для заточки (доводки) режущих пар 
+				машинок для стрижки овец.
+				</description>
+				<country_of_origin>Казахстан</country_of_origin>
+				<param name="Производительность" unit="реж. пар/час">12</param>
+				<param name="Диаметр диска" unit="мм">350</param>
+				<param name="Толщина диска" unit="мм">18</param>
+				<param name="Вес" unit="кг">53</param>
+				<param name="Напряжение" unit="В">220 или 3 фазы * 380</param>
+				<param name="Частота" unit="Гц">50</param>
+				<param name="Мощность" unit="Вт">400</param>
+				<param name="Число оборотов в минуту">1500</param>
+				<param name="Размеры (Ш х В х Дл.)" unit="мм">375х386х405</param>
+			</offer>
+			<offer id="14" available="true">
+				<url>http://aktubselmash.ru/parts/pch-400-2</url>
+				<price>10000</price>
+				<currencyId>RUR</currencyId>
+				<categoryId>4</categoryId>
+				<picture>http://aktubselmash.ru/images/clippers/PCH-400-2/1m.png</picture>
+				<delivery>true</delivery>
+				<local_delivery_cost>350</local_delivery_cost>
+				<name>Преобразователь частоты тока ПЧ-400-2</name>
+				<description>Преобразователь частотный предназначен для питания двух машинок 
+				для стрижки овец и может подключаться к обычной сети переменного тока 220 В/50 Гц 
+				или 48 Вольт постоянного тока.
+				</description>
+				<country_of_origin>Россия</country_of_origin>
+				<param name="Мощность двигателя" unit="Вт">400</param>
+				<param name="Вес" unit="кг">1.5</param>
+				<param name="Входное напряжение" unit="В">220-230</param>
+				<param name="Выходное напряжение" unit="В">36</param>
+				<param name="Выходная частота тока" unit="Гц">200</param>
+				<param name="Частота тока на входе" unit="Гц">50</param>
+				<param name="Размеры преобразователя (Ш х В х Дл.)" unit="мм">240х180х90</param>
+			</offer>
+		</offers>
+	</shop>
+</yml_catalog>
