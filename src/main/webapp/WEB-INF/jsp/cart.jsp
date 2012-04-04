@@ -354,7 +354,7 @@
             <div class="box box-container">
                 <h1>
                     <span style="float: left;">Ваш заказ</span>
-                    <a href="<%=request.getContextPath()%>/home" class="home-icon">Продолжить покупки</a>
+                    <a href="<%=request.getContextPath()%>/home" class="home-icon">Продолжить покупки →</a>
                     <div style="clear: both;"></div>
                 </h1>
                 <div style="margin: 15px 10px;">
