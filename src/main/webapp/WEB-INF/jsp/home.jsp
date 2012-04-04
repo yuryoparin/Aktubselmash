@@ -100,7 +100,7 @@
 				<li class="box first">
 					<a href="<%=request.getContextPath()%>/clippers" style="text-align: center; position: relative;">
                         <div class="home-tile-text">
-                            <h2>Машинка для стрижки овец</h2>
+                            <h2>Машинки для стрижки овец</h2>
                             <span>от <fmt:formatNumber value="${productMinPrice}"/> руб.</span>
                         </div>
                         <div style="position: absolute; left: 41px; top: 50px;">
@@ -112,7 +112,7 @@
 				<li class="box">
 					<a href="<%=request.getContextPath()%>/parts" style="text-align: center; position: relative;">
                         <div class="home-tile-text">
-                            <h2>Нож и гребенка</h2>
+                            <h2>Ножи и гребенки</h2>
                             <span>от <fmt:formatNumber value="${partMinPrice}"/> руб.</span>
                         </div>
                         <div style="position: absolute; left: 51px; top: 30px;">
