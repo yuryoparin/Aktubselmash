@@ -103,7 +103,7 @@ public class BasicController {
 
             boolean first = true;
             for (ProductPrice pp : partPrices) {
-                int price = pp.getDiscount() != null && now.after(pp.getDiscountDueDate())
+                int price = pp.getDiscount() != null && now.before(pp.getDiscountDueDate())
                         ? pp.getPrice() - pp.getDiscount() : pp.getPrice();
                 if (first) {
                     partMinPrice = price;
@@ -122,7 +122,7 @@ public class BasicController {
 
             for (ProductPrice pp : partPrices) {
                 if ("ta-1".equals(pp.getProduct().getShortName())) {
-                    session.setAttribute("thirdPrice", pp.getDiscount() != null && now.after(pp.getDiscountDueDate())
+                    session.setAttribute("thirdPrice", pp.getDiscount() != null && now.before(pp.getDiscountDueDate())
                             ? pp.getPrice() - pp.getDiscount() : pp.getPrice());
                 }
             }

@@ -125,8 +125,7 @@
 					<a href="<%=request.getContextPath()%>/parts/ta-1" style="text-align: center; position: relative;">
                         <div class="home-tile-text">
                             <h2>Точильный аппарат</h2>
-                            <span style="margxin-left: -10px;">39 000 руб.</span>
-<%--%><fmt:formatNumber value="${thirdPrice}"/>--%>
+                            <span style="margxin-left: -10px;"><fmt:formatNumber value="${thirdPrice}"/> руб.</span>
                         </div>
                         <div style="position: absolute; left: 50px; top: 30px;">
                             <img src="<%=request.getContextPath()%>/images/parts/TA-1/1m.png" border="0"
