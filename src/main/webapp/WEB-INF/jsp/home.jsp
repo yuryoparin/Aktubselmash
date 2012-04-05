@@ -49,7 +49,7 @@
                     <img border="0" alt="Машинка для стрижки овец ${homeProductPrice.product.name}" width="500" height="400"
                          src="<%=request.getContextPath()%>/images/clippers/VS84-S/1b-home.jpg"/>
                 </div>
-                <div style="float: left; width: 240px; margin: 50px 0 0 0;">
+                <div style="float: left; width: 240px; margin: 30px 0 0 0;">
                     <h1 style="margin-left: 0; font-size: 30pt;">${homeProductPrice.product.name}</h1>
                     <ul class="char-ul" style="margin-top: 2em;">
                         <li style="font-size: 12pt; color: #606060;">&mdash; мощность двигателя 320 Вт</li>
@@ -72,6 +72,13 @@
                                 </c:otherwise>
                             </c:choose>
                         </h1>
+                        <div style="margin: 10px auto; width: 195px;">
+                            <a class="buy-button blue-button" href="<%=request.getContextPath()%>/clippers/vs84-s">
+                                <span class="label">Узнать больше →</span>
+                                <span class="r"></span>
+                            </a>
+                            <span style="display: none;" class="blue-button-loading"></span>
+                        </div>
                     </div>
                 </div>
                 <c:choose>

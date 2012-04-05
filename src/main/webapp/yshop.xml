@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE yml_catalog SYSTEM "shops.dtd">
 
-<yml_catalog date="2012-03-28 12:07">
+<yml_catalog date="2012-04-04 22:35">
     <shop>
 		<name>Актюбсельмаш</name>
 		<company>Актюбсельмаш</company>
@@ -49,7 +49,7 @@
 			</offer>
 			<offer id="2" available="true">
 				<url>http://aktubselmash.ru/clippers/vs84-s</url>
-				<price>8700</price>
+				<price>8750</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>2</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/VS84-S/1m.png</picture>
@@ -76,7 +76,7 @@
 			</offer>
 			<offer id="3" available="true">
 				<url>http://aktubselmash.ru/clippers/f7</url>
-				<price>8900</price>
+				<price>9000</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>2</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/F7/1m.png</picture>
