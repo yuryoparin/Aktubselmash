@@ -43,7 +43,7 @@
     <jsp:include page="header.jsp" />
     <jsp:useBean id="now" class="java.util.Date" />
 	<div id="content">
-        <a href="<%=request.getContextPath()%>/clippers/${homeProductPrice.product.shortName}" style="text-decoration: none;">
+        <%--<a href="<%=request.getContextPath()%>/clippers/${homeProductPrice.product.shortName}" style="text-decoration: none;">--%>
             <div class="" style="overflow: hidden; margin-top: 5px; position: relative;">
                 <div style="float: left; width: 565px;">
                     <img border="0" alt="Машинка для стрижки овец ${homeProductPrice.product.name}" width="500" height="400"
@@ -73,11 +73,10 @@
                             </c:choose>
                         </h1>
                         <div style="margin: 10px auto; width: 195px;">
-                            <a class="buy-button blue-button" href="<%=request.getContextPath()%>/clippers/vs84-s">
-                                <span class="label">Узнать больше →</span>
+                            <a class="buy-button blue-button" href="<%=request.getContextPath()%>/clippers">
+                                <span class="label">Узнать больше <span style="font-weight: normal;">&rarr;</span></span>
                                 <span class="r"></span>
                             </a>
-                            <span style="display: none;" class="blue-button-loading"></span>
                         </div>
                     </div>
                 </div>
@@ -101,7 +100,7 @@
                     </c:when>
                 </c:choose>
             </div>
-        </a>
+        <%--</a>--%>
 		<div class="ul-list ul-list-many" style="margin-top:20px;">
 			<ul>
 				<li class="box first">
@@ -110,7 +109,7 @@
                             <h2>Машинки для стрижки овец</h2>
                             <span>от <fmt:formatNumber value="${productMinPrice}"/> руб.</span>
                         </div>
-                        <div style="margin-top: 3px;"><span class="choose-link">Выбрать →</span></div>
+                        <div style="margin-top: 3px;"><span class="choose-link">Выбрать &rarr;</span></div>
                         <div style="position: absolute; left: 41px; top: 65px;">
                             <img src="<%=request.getContextPath()%>/images/clippers/Liscop/1mm.png" border="0"
                                  width="200" height="183" class="png" alt=""/>
@@ -123,8 +122,8 @@
                             <h2>Ножи и гребенки</h2>
                             <span>от <fmt:formatNumber value="${partMinPrice}"/> руб.</span>
                         </div>
-                        <div style="margin-top: 3px;"><span class="choose-link">Выбрать →</span></div>
-                        <div style="position: absolute; left: 51px; top: 45px;">
+                        <div style="margin-top: 3px;"><span class="choose-link">Выбрать &rarr;</span></div>
+                        <div style="position: absolute; left: 51px; top: 50px;">
                             <img src="<%=request.getContextPath()%>/images/parts/VS84-S/1m.png" border="0"
                              width="200" height="207" class="png" alt=""/>
                         </div>
@@ -134,9 +133,9 @@
 					<a href="<%=request.getContextPath()%>/parts/ta-1" style="text-align: center; position: relative;">
                         <div class="home-tile-text">
                             <h2>Точильный аппарат</h2>
-                            <span style="margxin-left: -10px;"><fmt:formatNumber value="${thirdPrice}"/> руб.</span>
+                            <span style="margin-left: -10px;"><fmt:formatNumber value="${thirdPrice}"/> руб.</span>
                         </div>
-                        <div style="margin-top: 3px;"><span class="choose-link">Заказать →</span></div>
+                        <div style="margin-top: 3px;"><span class="choose-link">Заказать &rarr;</span></div>
                         <div style="position: absolute; left: 55px; top: 30px;">
                             <img src="<%=request.getContextPath()%>/images/parts/TA-1/1m.png" border="0"
                                 width="200" height="207" class="png" alt=""/>

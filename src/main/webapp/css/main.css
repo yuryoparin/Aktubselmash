@@ -1208,7 +1208,9 @@ span.required {
 
 a span.choose-link {
     color: #08c;
+    cursor: pointer;
     text-decoration: underline;
+    zoom: 1;
 }
 
 a.hover span.choose-link {
