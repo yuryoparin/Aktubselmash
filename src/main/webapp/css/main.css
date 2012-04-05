@@ -354,12 +354,12 @@ a.pdf:hover {
 
 .ul-list-many li {
 	width: 282px;
-	height: 240px;
+	height: 250px;
 }
 
 .ul-list-many a {
 	width: 282px;
-	height: 240px;
+	height: 250px;
 	margin-bottom: -2px;
 }
 
@@ -1203,5 +1203,14 @@ span.required {
 }
 
 .home-icon:hover {
+    text-decoration: none;
+}
+
+a span.choose-link {
+    color: #08c;
+    text-decoration: underline;
+}
+
+a.hover span.choose-link {
     text-decoration: none;
 }

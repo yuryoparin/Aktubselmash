@@ -44,7 +44,7 @@
     <jsp:useBean id="now" class="java.util.Date" />
 	<div id="content">
         <a href="<%=request.getContextPath()%>/clippers/${homeProductPrice.product.shortName}" style="text-decoration: none;">
-            <div class="" style="overflow: hidden; margin-top: 20px; position: relative;">
+            <div class="" style="overflow: hidden; margin-top: 5px; position: relative;">
                 <div style="float: left; width: 565px;">
                     <img border="0" alt="Машинка для стрижки овец ${homeProductPrice.product.name}" width="500" height="400"
                          src="<%=request.getContextPath()%>/images/clippers/VS84-S/1b-home.jpg"/>
@@ -110,7 +110,8 @@
                             <h2>Машинки для стрижки овец</h2>
                             <span>от <fmt:formatNumber value="${productMinPrice}"/> руб.</span>
                         </div>
-                        <div style="position: absolute; left: 41px; top: 50px;">
+                        <div style="margin-top: 3px;"><span class="choose-link">Выбрать →</span></div>
+                        <div style="position: absolute; left: 41px; top: 65px;">
                             <img src="<%=request.getContextPath()%>/images/clippers/Liscop/1mm.png" border="0"
                                  width="200" height="183" class="png" alt=""/>
                         </div>
@@ -122,7 +123,8 @@
                             <h2>Ножи и гребенки</h2>
                             <span>от <fmt:formatNumber value="${partMinPrice}"/> руб.</span>
                         </div>
-                        <div style="position: absolute; left: 51px; top: 30px;">
+                        <div style="margin-top: 3px;"><span class="choose-link">Выбрать →</span></div>
+                        <div style="position: absolute; left: 51px; top: 45px;">
                             <img src="<%=request.getContextPath()%>/images/parts/VS84-S/1m.png" border="0"
                              width="200" height="207" class="png" alt=""/>
                         </div>
@@ -134,7 +136,8 @@
                             <h2>Точильный аппарат</h2>
                             <span style="margxin-left: -10px;"><fmt:formatNumber value="${thirdPrice}"/> руб.</span>
                         </div>
-                        <div style="position: absolute; left: 50px; top: 30px;">
+                        <div style="margin-top: 3px;"><span class="choose-link">Заказать →</span></div>
+                        <div style="position: absolute; left: 55px; top: 30px;">
                             <img src="<%=request.getContextPath()%>/images/parts/TA-1/1m.png" border="0"
                                 width="200" height="207" class="png" alt=""/>
                         </div>
