@@ -2,7 +2,7 @@
 <div id="footer">
     <div style="float:left;">
         <p style="padding-bottom: 5px;">
-            &copy; 2011 Актюбсельмаш<br/>
+            &copy; 2012 Актюбсельмаш<br/>
             г. Москва, ул. Ильинка д. 4 подъезд 5. <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
         </p>
     </div>

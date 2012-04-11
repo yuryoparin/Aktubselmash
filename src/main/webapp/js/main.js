@@ -11,6 +11,12 @@ $(function() {
         $(this).removeClass('active');
     });
 
+    $('div.superlink').hover(function() { $(this).addClass('hover'); }, function() { $(this).removeClass('hover'); });
+    $('div.superlink').click(function() {
+        location.href = $(this).find('a').attr('href');
+    });
+
+
     $('.gallery-box').scrollLeft(0);
     $('.gallery-dots span').hover(function() {
         if (!$(this).hasClass('active')) $(this).addClass('hover');

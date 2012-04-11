@@ -44,14 +44,14 @@
     <jsp:useBean id="now" class="java.util.Date" />
 	<div id="content">
         <%--<a href="<%=request.getContextPath()%>/clippers/${homeProductPrice.product.shortName}" style="text-decoration: none;">--%>
-            <div class="" style="overflow: hidden; margin-top: 5px; position: relative;">
-                <div style="float: left; width: 565px;">
+            <div class="" style="overflow: hidden; margin-top: 5px; position: relative; width: 900px;">
+                <div style="float: left; width: 548px;">
                     <img border="0" alt="Машинка для стрижки овец ${homeProductPrice.product.name}" width="500" height="400"
                          src="<%=request.getContextPath()%>/images/clippers/VS84-S/1b-home.jpg"/>
                 </div>
-                <div style="float: left; width: 240px; margin: 30px 0 0 0;">
-                    <h1 style="margin-left: 0; font-size: 30pt;">${homeProductPrice.product.name}</h1>
-                    <ul class="char-ul" style="margin-top: 2em;">
+                <div style="float: left; width: 250px; margin: 30px 0 0 0;">
+                    <h1 style="margin-left: 17px; font-size: 30pt;">${homeProductPrice.product.name}</h1>
+                    <ul class="char-ul" style="margin-top: 2em; margin-left: 0;">
                         <li style="font-size: 12pt; color: #606060;">&mdash; мощность двигателя 320 Вт</li>
                         <li style="font-size: 12pt; color: #606060;">&mdash; вес машинки 1,7 кг</li>
                         <li style="font-size: 12pt; color: #606060;">&mdash; число оборотов в минуту 2800</li>
@@ -104,43 +104,43 @@
 		<div class="ul-list ul-list-many" style="margin-top:20px;">
 			<ul>
 				<li class="box first">
-					<a href="<%=request.getContextPath()%>/clippers" style="text-align: center; position: relative;">
-                        <div class="home-tile-text">
-                            <h2>Машинки для стрижки овец</h2>
-                            <span>от <fmt:formatNumber value="${productMinPrice}"/> руб.</span>
-                        </div>
-                        <div style="margin-top: 3px;"><span class="choose-link">Выбрать &rarr;</span></div>
+                    <div class="superlink">
                         <div style="position: absolute; left: 41px; top: 65px;">
                             <img src="<%=request.getContextPath()%>/images/clippers/Liscop/1mm.png" border="0"
                                  width="200" height="183" class="png" alt=""/>
                         </div>
-                    </a>
+                        <div class="home-tile-text">
+                            <h2>Машинки для стрижки овец</h2>
+                            <span>от <fmt:formatNumber value="${productMinPrice}"/> руб.</span>
+                        </div>
+                        <div style="margin-top: 3px; position: relative;"><a href="<%=request.getContextPath()%>/clippers">Выбрать &rarr;</a></div>
+                    </div>
 				</li>
 				<li class="box">
-					<a href="<%=request.getContextPath()%>/parts" style="text-align: center; position: relative;">
+                    <div class="superlink">
+                        <div style="position: absolute; left: 51px; top: 50px;">
+                            <img src="<%=request.getContextPath()%>/images/parts/VS84-S/1m.png" border="0"
+                                 width="200" height="207" class="png" alt=""/>
+                        </div>
                         <div class="home-tile-text">
                             <h2>Ножи и гребенки</h2>
                             <span>от <fmt:formatNumber value="${partMinPrice}"/> руб.</span>
                         </div>
-                        <div style="margin-top: 3px;"><span class="choose-link">Выбрать &rarr;</span></div>
-                        <div style="position: absolute; left: 51px; top: 50px;">
-                            <img src="<%=request.getContextPath()%>/images/parts/VS84-S/1m.png" border="0"
-                             width="200" height="207" class="png" alt=""/>
-                        </div>
-                    </a>
+                        <div style="margin-top: 3px; position: relative;"><a href="<%=request.getContextPath()%>/parts">Выбрать &rarr;</a></div>
+                    </div>
 				</li>
 				<li class="box">
-					<a href="<%=request.getContextPath()%>/parts/ta-1" style="text-align: center; position: relative;">
+                    <div class="superlink">
+                        <div style="position: absolute; left: 55px; top: 30px;">
+                            <img src="<%=request.getContextPath()%>/images/parts/TA-1/1m.png" border="0"
+                                 width="200" height="207" class="png" alt=""/>
+                        </div>
                         <div class="home-tile-text">
                             <h2>Точильный аппарат</h2>
                             <span style="margin-left: -10px;"><fmt:formatNumber value="${thirdPrice}"/> руб.</span>
                         </div>
-                        <div style="margin-top: 3px;"><span class="choose-link">Заказать &rarr;</span></div>
-                        <div style="position: absolute; left: 55px; top: 30px;">
-                            <img src="<%=request.getContextPath()%>/images/parts/TA-1/1m.png" border="0"
-                                width="200" height="207" class="png" alt=""/>
-                        </div>
-                    </a>
+                        <div style="margin-top: 3px; position: relative;"><a href="<%=request.getContextPath()%>/parts/ta-1">Заказать &rarr;</a></div>
+                    </div>
 				</li>
 			</ul>
 		</div>

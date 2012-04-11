@@ -49,24 +49,26 @@
                         <ul>
                 </c:if>
                             <li class="box transparent <c:if test="${status.count % 3 eq 1}">first</c:if>">
-                                <a href="<%=request.getContextPath()%>/parts/${pp.product.shortName}">
+                                <div class="superlink">
                                     <p style="text-align: center;">
                                         <img src="<%=request.getContextPath()%>${pp.product.mediumImagePath}" alt="${pp.product.name}" border="0" class="png" width="200" height="207"/>
                                     </p>
-                                    <h2 class="name">${pp.product.name}</h2>
-                                    <h2 class="price">
-                                        <c:choose>
-                                            <c:when test="${pp.discount gt 0 and pp.discountDueDate.time ge now.time}">
-                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;">
-                                                    <fmt:formatNumber value="${pp.price}"/></span>
-                                                <fmt:formatNumber value="${pp.price - pp.discount}"/> руб.
-                                            </c:when>
-                                            <c:otherwise>
-                                                <fmt:formatNumber value="${pp.price}"/> руб.
-                                            </c:otherwise>
-                                        </c:choose>
-                                    </h2>
-                                </a>
+                                    <a href="<%=request.getContextPath()%>/parts/${pp.product.shortName}">
+                                        <h2 class="name">${pp.product.name}</h2>
+                                        <h2 class="price">
+                                            <c:choose>
+                                                <c:when test="${pp.discount gt 0 and pp.discountDueDate.time ge now.time}">
+                                                    <span class="old-price-s" style="font-size: 10pt; color: #808080;">
+                                                        <fmt:formatNumber value="${pp.price}"/></span>
+                                                    <fmt:formatNumber value="${pp.price - pp.discount}"/> руб.
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:formatNumber value="${pp.price}"/> руб.
+                                                </c:otherwise>
+                                            </c:choose>
+                                        </h2>
+                                    </a>
+                                </div>
                                 <c:choose>
                                     <c:when test="${pp.product.newFlag}">
                                         <div class="corner-en">
