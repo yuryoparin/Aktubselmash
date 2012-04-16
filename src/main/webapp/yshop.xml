@@ -224,7 +224,7 @@
 			</offer>
 			<offer id="9" available="true">
 				<url>http://aktubselmash.ru/parts/comb+cutter-liscop-a5</url>
-				<price>2250</price>
+				<price>2500</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>5</categoryId>
 				<picture>http://aktubselmash.ru/images/parts/Liscop-A5/1m.png</picture>
@@ -242,7 +242,7 @@
 			</offer>
 			<offer id="10" available="true">
 				<url>http://aktubselmash.ru/parts/comb+cutter-7v-94</url>
-				<price>2500</price>
+				<price>2000</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>5</categoryId>
 				<picture>http://aktubselmash.ru/images/parts/7V-94/1m.png</picture>
