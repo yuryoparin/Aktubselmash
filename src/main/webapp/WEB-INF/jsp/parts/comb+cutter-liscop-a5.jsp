@@ -97,7 +97,7 @@
                                 <span></span>
                             </div>
                         </div>
-                        <div style="float:left; padding-left: 3em;">
+                        <div style="float:left; padding-left: 3em; width: 200px;">
                             <h2 style="margin-top: 1em;">Характеристики</h2>
                             <ul class="char-ul">
                                 <li>— ширина гребенки 76 мм</li>
