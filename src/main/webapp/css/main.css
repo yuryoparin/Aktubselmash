@@ -238,6 +238,7 @@ a.pdf {
     background: url("../images/pdf-icon-small.png") no-repeat -3px 0;
     display: block;
     padding-left: 40px;
+    padding-bottom: 3px;
     color: black;
 }
 
@@ -891,6 +892,7 @@ div.text input {
     border: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    outline: none;
     /*margin-top: 4px;*/
 }
 
@@ -962,6 +964,7 @@ div.textarea textarea {
     border: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    outline: none;
     display: block;
     float: left;
     border-radius: 0;
@@ -1196,6 +1199,10 @@ span.required {
     font-size: 11pt;
     float: right;
     color: black;
+}
+
+.blue {
+    background: url(../images/home-blue.png) no-repeat 0 5px;
 }
 
 .home-icon:hover {

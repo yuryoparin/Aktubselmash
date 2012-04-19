@@ -60,7 +60,7 @@
             <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Область / Край</th>
             <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.addresses.get(0).region}</td></tr>
         <tr>
-            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Город</th>
+            <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Город / Район</th>
             <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">${cart.client.addresses.get(0).city}</td></tr>
         <tr>
             <th align="left" style="background: #eee; padding: 3px 8px; font-weight: normal; border: 1px solid #a0a0a0;">Населенный пункт</th>

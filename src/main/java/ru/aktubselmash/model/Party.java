@@ -33,7 +33,7 @@ public class Party implements Serializable {
     @NotNull @Column(name = "cname")
     private String companyName;
 
-    @NotNull @Column(name = "property")
+    @NotNull @Column(name = "property", length = 1024)
     private String property; // реквизиты
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)

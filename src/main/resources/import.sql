@@ -17,6 +17,7 @@ insert into shipping_payment(shipping_id, payment_id) values(3,2);
 insert into shipping_payment(shipping_id, payment_id) values(3,3);
 insert into shipping_payment(shipping_id, payment_id) values(3,4);
 insert into shipping_payment(shipping_id, payment_id) values(3,5);
+insert into shipping_payment(shipping_id, payment_id) values(4,2);
 insert into shipping_payment(shipping_id, payment_id) values(4,3);
 insert into shipping_payment(shipping_id, payment_id) values(4,4);
 insert into shipping_payment(shipping_id, payment_id) values(4,5);

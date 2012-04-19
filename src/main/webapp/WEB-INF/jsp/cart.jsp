@@ -180,8 +180,8 @@
                 rules: {
                     'client.fio': "required",
                     'client.email': {
-                        email: true,
-                        vrequired: true
+                        email: true//,
+//                        vrequired: true
                     },
                     'client.phoneNumber': {
                         required: true,
@@ -205,12 +205,12 @@
                     'client.addresses[0].street': {
                         vrequired: true
                     },
-                    'client.addresses[0].building': {
-                        vrequired: true
-                    },
-                    'client.addresses[0].apartment': {
-                        vrequired: true
-                    },
+//                    'client.addresses[0].building': {
+//                        vrequired: true
+//                    },
+//                    'client.addresses[0].apartment': {
+//                        vrequired: true
+//                    },
                     'client.addresses[0].postalCode': {
                         vrequired: true
                     }
@@ -257,6 +257,9 @@
    	                form.submit();
                 }
             });
+
+            bindMaxLength($('#property'), 1024);
+            bindMaxLength($('#details'), 255);
         });
 
         function populatePayments(id) {
@@ -342,6 +345,23 @@
                 $('.row .field span.required').show();
             }
         }
+
+        function bindMaxLength(textarea, maxlength) {
+            textarea.keyup(function () {
+                var text = $(this).val();
+                var textLength = text.length;
+                console.log(textLength);
+                if (textLength > maxlength) {
+                    $(this).val(text.substring(0, (maxlength)));
+                }
+            }).keydown(function () {
+                var text = $(this).val();
+                var textLength = text.length;
+                if (textLength > maxlength) {
+                    $(this).val(text.substring(0, (maxlength)));
+                }
+            });
+        }
     </script>
 </head>
 <body class="${browserClass}">
@@ -354,7 +374,7 @@
             <div class="box box-container">
                 <h1>
                     <span style="float: left;">Ваш заказ</span>
-                    <a href="<%=request.getContextPath()%>/home" class="home-icon">Продолжить покупки →</a>
+                    <a href="<%=request.getContextPath()%>/home" class="home-icon blue" style="color: #08c;">Продолжить покупки →</a>
                     <div style="clear: both;"></div>
                 </h1>
                 <div style="margin: 15px 10px;">
@@ -489,7 +509,7 @@
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.fio" id="fio"
-                                                                        cssStyle="width: 240px;"/>
+                                                                        maxlength="255" cssStyle="width: 240px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
@@ -503,12 +523,12 @@
                                                 <div class="field">
                                                     <span class="label">
                                                         <label for="email">Эл. почта</label>
-                                                        <span class="required" style="display: none;">*</span>
+                                                        <%--<span class="required" style="display: none;">*</span>--%>
                                                     </span>
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.email" id="email"
-                                                                        cssStyle="width: 240px;"/>
+                                                                        maxlength="255" cssStyle="width: 240px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
@@ -526,7 +546,7 @@
                                                     </span>
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
-                                                            <form:input path="client.phoneNumber" id="phoneNumber"
+                                                            <form:input path="client.phoneNumber" id="phoneNumber" maxlength="255"
                                                                         cssStyle="width: 240px;" title="Номер с кодом страны и города, например, +7 495 123-45-67"/>
                                                         </span>
                                                         <span class="r"></span>
@@ -578,7 +598,7 @@
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.companyName" id="companyName"
-                                                                        cssStyle="width: 240px;"/>
+                                                                        maxlength="255" cssStyle="width: 240px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
@@ -617,7 +637,7 @@
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.addresses[0].region" id="region"
-                                                                        cssStyle="width: 240px;"/>
+                                                                        maxlength="255" cssStyle="width: 240px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
@@ -636,7 +656,7 @@
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.addresses[0].city" id="city"
-                                                                        cssStyle="width: 240px;"/>
+                                                                        maxlength="255" cssStyle="width: 240px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
@@ -655,7 +675,7 @@
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.addresses[0].county" id="county"
-                                                                        cssStyle="width: 240px;"/>
+                                                                        maxlength="255" cssStyle="width: 240px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
@@ -674,7 +694,7 @@
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.addresses[0].street" id="street"
-                                                                        cssStyle="width: 240px;"/>
+                                                                        maxlength="255" cssStyle="width: 240px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
@@ -691,12 +711,12 @@
                                                         <%--<label for="corp" style="margin-left: 4px;">корпус,</label>--%>
                                                         <%--<label for="str" style="margin-left: 4px;">строение,</label>--%>
                                                         <label for="apartment" style="margin-left: 4px;">офис/кв.</label>
-                                                        <span class="required" style="display: none;">*</span>
+                                                        <%--<span class="required" style="display: none;">*</span>--%>
                                                     </span>
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.addresses[0].building" id="building"
-                                                                        cssStyle="width: 110px;"/>
+                                                                        maxlength="255" cssStyle="width: 110px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
@@ -720,7 +740,7 @@
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.addresses[0].apartment" id="apartment"
-                                                                        cssStyle="width: 114px;"/>
+                                                                        maxlength="255" cssStyle="width: 114px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
@@ -739,7 +759,7 @@
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
                                                             <form:input path="client.addresses[0].postalCode" id="postalCode"
-                                                                        cssStyle="width: 50px;"/>
+                                                                        maxlength="255" cssStyle="width: 50px;"/>
                                                         </span>
                                                         <span class="r"></span>
                                                         <div style="clear: both;"></div>
