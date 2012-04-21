@@ -196,7 +196,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/VS84-S_manual_rus.pdf">Инструкция по применению</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/F7_manual_rus.pdf">Инструкция по применению</a></li>
                     </ul>
                 </div>
             </div>
