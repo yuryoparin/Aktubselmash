@@ -76,7 +76,7 @@
 			</offer>
 			<offer id="3" available="true">
 				<url>http://aktubselmash.ru/clippers/f7</url>
-				<price>9000</price>
+				<price>9200</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>2</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/F7/1m.png</picture>
@@ -224,7 +224,7 @@
 			</offer>
 			<offer id="9" available="true">
 				<url>http://aktubselmash.ru/parts/comb+cutter-liscop-a5</url>
-				<price>2500</price>
+				<price>2700</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>5</categoryId>
 				<picture>http://aktubselmash.ru/images/parts/Liscop-A5/1m.png</picture>
@@ -260,7 +260,7 @@
 			</offer>
 			<offer id="11" available="true">
 				<url>http://aktubselmash.ru/parts/p380</url>
-				<price>9500</price>
+				<price>10500</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>4</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/MSU-200/1m.png</picture>
