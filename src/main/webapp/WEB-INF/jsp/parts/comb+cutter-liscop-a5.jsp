@@ -121,8 +121,8 @@
                                     </c:choose>
                                 </h1>
                                 <p style="line-height: 140%; width: 200px; text-align: left; padding: 5px 0;">
-                                    Минимальная отправка EMS и почтой <span style="color:red;">1 пара</span>.
-                                    При отправке почтой и EMS вместе с машинкой – от <span style="color:red;">1 пары</span> и дополнительная скидка 300 руб.
+                                    Минимальная отправка отдельным заказом почтой или EMS – <span style="color:red;">1 пара</span>,
+                                    а при отправке вместе с машинкой – дополнительная скидка 200 руб.
                                 </p>
                                 <c:choose>
                                     <c:when test="${productPrice.product.unavailableFlag}">

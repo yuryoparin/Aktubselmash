@@ -98,7 +98,7 @@
                             </div>
                         </div>
 
-                        <div style="float:left; padding-left: 3em; width: 200px;">
+                        <div style="float:left; padding-left: 3em; width: 210px;">
                             <h2 style="margin-top: 1em;">Характеристики</h2>
                             <ul class="char-ul">
                                 <li>— ширина гребенки 94 мм</li>
@@ -122,8 +122,8 @@
                                     </c:choose>
                                 </h1>
                                 <p style="line-height: 140%; width: 200px; text-align: left; padding: 5px 0;">
-                                    Минимальная отправка EMS и почтой <span style="color:red;">1 пара</span>.
-                                    При отправке почтой и EMS вместе с машинкой – от <span style="color:red;">1 пары</span> и дополнительная скидка 300 руб.
+                                    Минимальная отправка отдельным заказом почтой или EMS – <span style="color:red;">1 пара</span>,
+                                    а при отправке вместе с машинкой – дополнительная скидка 200 руб.
                                 </p>
                                 <c:choose>
                                     <c:when test="${productPrice.product.unavailableFlag}">

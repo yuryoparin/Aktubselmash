@@ -106,7 +106,7 @@
                                 <li>— толщина гребенки 3 мм</li>
                                 <li>— прямая форма зубьев гребенки</li>
                                 <li>— количество зубьев ножа 4</li>
-                                <li>— толщина ножа 4,5 мм</li>
+                                <li>— толщина ножа 3,5 мм</li>
                             </ul>
                             <div style="text-align: center; margin-top: 2em;">
                                 <h1 style="margin-left: 0;">
@@ -122,8 +122,8 @@
                                     </c:choose>
                                 </h1>
                                 <p style="line-height: 140%; width: 200px; text-align: left; padding: 5px 0;">
-                                    Минимальная отправка EMS и почтой <span style="color:red;">3 пары</span>.
-                                    При отправке почтой и EMS вместе с машинкой – от <span style="color:red;">1 пары</span> и дополнительная скидка 100 руб.
+                                    Минимальная отправка отдельным заказом почтой или EMS – <span style="color:red;">3 пары</span>,
+                                    а при отправке вместе с машинкой – от <span style="color:red;">1 пары</span> и дополнительная скидка 100 руб.
                                 </p>
                                 <c:choose>
                                     <c:when test="${productPrice.product.unavailableFlag}">
