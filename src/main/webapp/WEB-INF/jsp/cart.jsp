@@ -290,9 +290,8 @@
                     $(val).closest('tr').find('td.one-item-price span').html(formatNumber(o.price));
 
                     // + запасная пара в подарок для Liscop & F7
-                    if ($.inArray(parseInt($(val).text()), [1,12]) > -1 &&
-                        $.inArray(parseInt($('#shippings option:selected').val()), [3,4]) > -1 &&
-                        $.inArray(parseInt($('#payments option:selected').val()), [2,3,4]) > -1)
+                    if ($.inArray(parseInt($(val).text()), [1,12,2]) > -1 &&
+                        $.inArray(parseInt($('#shippings option:selected').val()), [3,4,5]) > -1)
                     {
                         var $td = $(val).closest('tr').find('td:eq(2)');
                         if ($td.find('span').length == 0)
@@ -311,8 +310,8 @@
 
         function updateAdditionalLabels(shippingId) {
             $('.cart-table tbody tr td:first-child').each(function(index, val) {
-                if ($.inArray(parseInt($(val).text()), [1,12]) > -1 &&
-                        $.inArray(shippingId, [3,4]) > -1)
+                if ($.inArray(parseInt($(val).text()), [1,12,2]) > -1 &&
+                        $.inArray(shippingId, [3,4,5]) > -1)
                 {
                     var $td = $(val).closest('tr').find('td:eq(2)');
                     if ($td.find('span').length == 0)
