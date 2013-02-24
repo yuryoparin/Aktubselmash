@@ -4,6 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--@elvariable id="browserClass" type="java.lang.String"--%>
+<%--@elvariable id="country" type="java.lang.Boolean"--%>
 <%--@elvariable id="cart" type="ru.aktubselmash.model.Cart"--%>
 <%--@elvariable id="basket" type="ru.aktubselmash.model.Cart"--%>
 <%--@elvariable id="shippingPayments" type="java.util.List<ru.aktubselmash.model.ShippingPayment>"--%>
@@ -81,8 +82,8 @@
             var cnt = 0, id = 0;
             for (key in sp) {
                 value = (sp[key])[0];
-                if (cnt == 0) id = key;
-                $('#shippings').append('<option value="' + value.sid + '" ' + (cnt == 0 ? 'selected="selected"' : '') + '>' +
+                if (cnt == 2) id = key;
+                $('#shippings').append('<option value="' + value.sid + '" ' + (cnt == 2 ? 'selected="selected"' : '') + '>' +
                         value.sname + '</option>');
                 cnt++;
             }
@@ -163,6 +164,7 @@
                 $('#shippings').change();
             </c:if>
             populatePayments(id);
+            updateAdditionalLabels(parseInt(id));
 
             $.validator.addMethod(
                 "vrequired", function(value, element) {
@@ -286,11 +288,39 @@
                     $(val).closest('tr').find('td.sum-item-price span').html(formatNumber(o.price * o.number));
                     $(val).closest('tr').find('td.one-item-price .price').val(o.price);
                     $(val).closest('tr').find('td.one-item-price span').html(formatNumber(o.price));
+
+                    // + запасная пара в подарок для Liscop & F7
+                    if ($.inArray(parseInt($(val).text()), [1,12]) > -1 &&
+                        $.inArray(parseInt($('#shippings option:selected').val()), [3,4]) > -1 &&
+                        $.inArray(parseInt($('#payments option:selected').val()), [2,3,4]) > -1)
+                    {
+                        var $td = $(val).closest('tr').find('td:eq(2)');
+                        if ($td.find('span').length == 0)
+                            $td.append(
+                                    '<span style="">+ запасная режущая пара в подарок</span>');
+                    } else {
+                        $(val).closest('tr').find('td:eq(2) span').remove();
+                    }
                 });
                 $('.total h1 span').html(formatNumber(calculateTotalPrice()));
             }).complete(function() {
             }).error(function() {
                 alert('error');
+            });
+        }
+
+        function updateAdditionalLabels(shippingId) {
+            $('.cart-table tbody tr td:first-child').each(function(index, val) {
+                if ($.inArray(parseInt($(val).text()), [1,12]) > -1 &&
+                        $.inArray(shippingId, [3,4]) > -1)
+                {
+                    var $td = $(val).closest('tr').find('td:eq(2)');
+                    if ($td.find('span').length == 0)
+                        $td.append(
+                                '<span style="">+ запасная режущая пара в подарок</span>');
+                } else {
+                    $(val).closest('tr').find('td:eq(2) span').remove();
+                }
             });
         }
 

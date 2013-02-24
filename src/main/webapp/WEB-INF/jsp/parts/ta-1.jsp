@@ -3,6 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--@elvariable id="browserClass" type="java.lang.String"--%>
+<%--@elvariable id="country" type="java.lang.Boolean"--%>
 <%--@elvariable id="productPrice" type="ru.aktubselmash.model.ProductPrice"--%>
 <%--@elvariable id="dependantPrices" type="java.util.List<ru.aktubselmash.model.ProductPrice>"--%>
 <c:set var="price">
@@ -109,13 +110,27 @@
                             <div style="text-align: center; margin-top: 2em;">
                                 <h1 style="margin-left: 0;">
                                     <c:choose>
-                                        <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
-                                            <span class="old-price-s">
-                                                <fmt:formatNumber value="${productPrice.price}"/></span>
-                                            <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                        <c:when test="${country}">
+                                            <c:choose>
+                                                <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
+                                                    <span class="old-price-s"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span>
+                                                    <fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/> руб.
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:formatNumber value="${productPrice.foreignPrice}"/> руб.
+                                                </c:otherwise>
+                                            </c:choose>
                                         </c:when>
                                         <c:otherwise>
-                                            <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                            <c:choose>
+                                                <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
+                                                    <span class="old-price-s"><fmt:formatNumber value="${productPrice.price}"/></span>
+                                                    <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                                </c:otherwise>
+                                            </c:choose>
                                         </c:otherwise>
                                     </c:choose>
                                 </h1>
@@ -198,13 +213,27 @@
                                             <h4 class="name">${dp.product.name}</h4>
                                             <h4 class="price">
                                                 <c:choose>
-                                                    <c:when test="${dp.discount gt 0}">
-                                                        <span class="old-price-s" style="font-size: 10pt; color: #808080;">
-                                                            <fmt:formatNumber value="${dp.price}"/></span>
-                                                        <fmt:formatNumber value="${dp.price - dp.discount}"/> руб.
+                                                    <c:when test="${country}">
+                                                        <c:choose>
+                                                            <c:when test="${dp.discount gt 0 and dp.discountDueDate.time ge now.time}">
+                                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${dp.foreignPrice}"/></span>
+                                                                <fmt:formatNumber value="${dp.foreignPrice - dp.foreignDiscount}"/> руб.
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <fmt:formatNumber value="${dp.foreignPrice}"/> руб.
+                                                            </c:otherwise>
+                                                        </c:choose>
                                                     </c:when>
                                                     <c:otherwise>
-                                                        <fmt:formatNumber value="${dp.price}"/> руб.
+                                                        <c:choose>
+                                                            <c:when test="${dp.discount gt 0 and dp.discountDueDate.time ge now.time}">
+                                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${dp.price}"/></span>
+                                                                <fmt:formatNumber value="${dp.price - dp.discount}"/> руб.
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <fmt:formatNumber value="${dp.price}"/> руб.
+                                                            </c:otherwise>
+                                                        </c:choose>
                                                     </c:otherwise>
                                                 </c:choose>
                                             </h4>

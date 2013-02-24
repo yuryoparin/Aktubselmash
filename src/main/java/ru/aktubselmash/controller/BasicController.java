@@ -12,7 +12,9 @@ import ru.aktubselmash.service.ProductService;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
+import java.util.Enumeration;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -61,6 +63,24 @@ public class BasicController {
         return "";
     }
 
+    @ModelAttribute("country")
+    public Boolean countryForeign(HttpServletRequest request) {
+        Enumeration locales = request.getLocales();
+
+        while (locales.hasMoreElements()) {
+            Locale l = (Locale) locales.nextElement();
+            if (l.getCountry().equals("RU") || l.getLanguage().equals("ru")) return false;
+        }
+
+        while (locales.hasMoreElements()) {
+            Locale l = (Locale) locales.nextElement();
+            if (l.getCountry().equals("CH")) return true;
+        }
+
+        return false;
+    }
+
+
     @ModelAttribute("productPrices")
     public List<Product> findProducts(HttpSession session) {
         if (session.getAttribute("productPrices") == null)
@@ -76,15 +96,19 @@ public class BasicController {
     }
 
     @ModelAttribute("productMinPrice")
-    public Integer productMinPrice(@ModelAttribute("productPrices") List<ProductPrice> productPrices, HttpSession session) {
+    public Integer productMinPrice(@ModelAttribute("productPrices") List<ProductPrice> productPrices,
+                                   HttpSession session, @ModelAttribute("country") Boolean isForeignCountry) {
         if (session.getAttribute("productMinPrice") == null) {
             int productMinPrice = 0;
             Date now = new Date();
 
             boolean first = true;
             for (ProductPrice pp : productPrices) {
-                int price = pp.getDiscount() != null && now.before(pp.getDiscountDueDate())
-                        ? pp.getPrice() - pp.getDiscount() : pp.getPrice();
+                int price = isForeignCountry ?
+                        (pp.getDiscountDueDate() != null && pp.getForeignDiscount() != null && now.before(pp.getDiscountDueDate())
+                                ? pp.getForeignPrice() - pp.getForeignDiscount() : pp.getForeignPrice()) :
+                        (pp.getDiscountDueDate() != null && pp.getDiscount() != null && now.before(pp.getDiscountDueDate())
+                                ? pp.getPrice() - pp.getDiscount() : pp.getPrice());
                 if (first) {
                     productMinPrice = price;
                     first = false;
@@ -96,15 +120,19 @@ public class BasicController {
     }
 
     @ModelAttribute("partMinPrice")
-    public Integer partMinPrice(@ModelAttribute("partPrices") List<ProductPrice> partPrices, HttpSession session) {
+    public Integer partMinPrice(@ModelAttribute("partPrices") List<ProductPrice> partPrices,
+                                HttpSession session, @ModelAttribute("country") Boolean isForeignCountry) {
         if (session.getAttribute("partMinPrice") == null) {
             int partMinPrice = 0;
             Date now = new Date();
 
             boolean first = true;
             for (ProductPrice pp : partPrices) {
-                int price = pp.getDiscount() != null && now.before(pp.getDiscountDueDate())
-                        ? pp.getPrice() - pp.getDiscount() : pp.getPrice();
+                int price = isForeignCountry ?
+                        (pp.getDiscountDueDate() != null && pp.getForeignDiscount() != null && now.before(pp.getDiscountDueDate())
+                                ? pp.getForeignPrice() - pp.getForeignDiscount() : pp.getForeignPrice()) :
+                        (pp.getDiscountDueDate() != null && pp.getDiscount() != null && now.before(pp.getDiscountDueDate())
+                                ? pp.getPrice() - pp.getDiscount() : pp.getPrice());
                 if (first) {
                     partMinPrice = price;
                     first = false;
@@ -116,14 +144,18 @@ public class BasicController {
     }
 
     @ModelAttribute("thirdPrice")
-    public Integer thirdPrice(@ModelAttribute("partPrices") List<ProductPrice> partPrices, HttpSession session) {
+    public Integer thirdPrice(@ModelAttribute("partPrices") List<ProductPrice> partPrices,
+                              HttpSession session, @ModelAttribute("country") Boolean isForeignCountry) {
         if (session.getAttribute("thirdPrice") == null) {
             Date now = new Date();
 
             for (ProductPrice pp : partPrices) {
                 if ("ta-1".equals(pp.getProduct().getShortName())) {
-                    session.setAttribute("thirdPrice", pp.getDiscount() != null && now.before(pp.getDiscountDueDate())
-                            ? pp.getPrice() - pp.getDiscount() : pp.getPrice());
+                    session.setAttribute("thirdPrice", isForeignCountry ?
+                            (pp.getDiscountDueDate() != null && pp.getForeignDiscount() != null && now.before(pp.getDiscountDueDate())
+                                    ? pp.getForeignPrice() - pp.getForeignDiscount() : pp.getForeignPrice()) :
+                            (pp.getDiscountDueDate() != null && pp.getDiscount() != null && now.before(pp.getDiscountDueDate())
+                                    ? pp.getPrice() - pp.getDiscount() : pp.getPrice()));
                 }
             }
         }

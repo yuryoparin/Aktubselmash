@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE yml_catalog SYSTEM "shops.dtd">
 
-<yml_catalog date="2012-04-04 22:35">
+<yml_catalog date="2012-08-06 21:57">
     <shop>
 		<name>Актюбсельмаш</name>
 		<company>Актюбсельмаш</company>
@@ -49,7 +49,7 @@
 			</offer>
 			<offer id="2" available="true">
 				<url>http://aktubselmash.ru/clippers/vs84-s</url>
-				<price>8750</price>
+				<price>8000</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>2</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/VS84-S/1m.png</picture>
@@ -76,13 +76,13 @@
 			</offer>
 			<offer id="3" available="true">
 				<url>http://aktubselmash.ru/clippers/f7</url>
-				<price>9200</price>
+				<price>8500</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>2</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/F7/1m.png</picture>
 				<delivery>true</delivery>
 				<local_delivery_cost>350</local_delivery_cost>
-				<name>Машинка для стрижки овец F7</name>
+				<name>Машинка для стрижки овец GTS-2012</name>
 				<vendor>Heiniger</vendor>
 				<description>Результаты испытаний позволили отнести их к лучшим машинкам 
 				(для стрижки до 300 овец) по соотношению цена-качество. Мастерская обеспечена 
@@ -282,7 +282,7 @@
 			</offer>
 			<offer id="12" available="true">
 				<url>http://aktubselmash.ru/parts/msu-200</url>
-				<price>8500</price>
+				<price>9000</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>4</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/MSU-200/2m.png</picture>

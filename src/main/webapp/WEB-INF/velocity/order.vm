@@ -27,9 +27,15 @@
             #set($total = 0)
             #foreach ($cpp in ${cart.cartProducts})
                 #set($amount = $cpp.price * $cpp.number)
+                #set($shippingIds = [3,4])
+                #set($productIds = [1,12])
+                #set($text = "")
+                #if($shippingIds.contains($cart.shipping.id) && $productIds.contains($cpp.product.id))
+                    #set($text = "+ запасная режущая пара в подарок")
+                #end
                 <tr #if($foreach.count % 2 == 0)style="background: #f2f2f2;"#end>
                     <td align="right" style="padding: 3px 8px; border: 1px solid #a0a0a0;">$foreach.count</td>
-                    <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">$cpp.product.name</td>
+                    <td style="padding: 3px 8px; border: 1px solid #a0a0a0;">$cpp.product.name $text</td>
                     <td align="right" style="padding: 3px 8px; border: 1px solid #a0a0a0;">$cpp.number $cpp.product.unit</td>
                     <td align="right" style="padding: 3px 8px; border: 1px solid #a0a0a0;">$number.format("currency", $cpp.price, $locale)</td>
                     <td align="right" style="padding: 3px 8px; border: 1px solid #a0a0a0;">$number.format("currency", $amount, $locale)</td>

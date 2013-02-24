@@ -3,6 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--@elvariable id="browserClass" type="java.lang.String"--%>
+<%--@elvariable id="country" type="java.lang.Boolean"--%>
 <%--@elvariable id="productPrice" type="ru.aktubselmash.model.ProductPrice"--%>
 <%--@elvariable id="dependantPrices" type="java.util.List<ru.aktubselmash.model.ProductPrice>"--%>
 <c:set var="price">
@@ -86,7 +87,7 @@
                         <div class="gallery" style="float:left; margin-left: 5px; height: 433px; width: 400px;">
                             <div class="gallery-box" style="width: 400px;">
                                 <ul class="gallery-box-ul" style="width: 1240px;">
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/ASU-1/1b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/parts/Toshiba/1b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0"/></li>
                                     <li><img src="<%=request.getContextPath()%>/images/clippers/MSU-200/2b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0"/></li>
                                     <li><img src="<%=request.getContextPath()%>/images/clippers/MSU-200/3b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0"/></li>
                                 </ul>
@@ -100,9 +101,9 @@
                         <div style="float:left; padding-left: 3em;">
                             <h2 style="margin-top: 1em;">Характеристики</h2>
                             <ul class="char-ul">
-                                <li>— мощность двигателя 600 Вт</li>
+                                <li>— мощность двигателя 400 Вт</li>
                                 <li>— вес машинки 1,7 кг</li>
-                                <li>— вес преобразователя 20 кг</li>
+                                <li>— вес преобразователя 4 кг</li>
                                 <li>— напряжение сети 380 В</li>
                                 <li>— напряжение на машинке 36 В</li>
                                 <li>— выходная частота тока 200 Гц</li>
@@ -110,19 +111,33 @@
                                 <li>— число оборотов в минуту 2100-3000</li>
                                 <li>— уровень шума 83 Дб(а)</li>
                                 <li>— размеры машинки <br/><span style="padding-left: 1.3em;">(Ш х В х Дл.) 80х100х325 мм</span></li>
-                                <li>— размеры преобразователя <br/><span style="padding-left: 1.3em;">(&Oslash; х Выс.) 250х240 мм</span></li>
+                                <li>— размеры преобразователя <br/><span style="padding-left: 1.3em;">(Ш х В х Дл.) 120х110х250 мм</span></li>
                                 <li>— диаметр рукоятки 37-49 мм</li>
                             </ul>
                             <div style="text-align: center; margin-top: 2em;">
                                 <h1 style="margin-left: 0;">
                                     <c:choose>
-                                        <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
-                                            <span class="old-price-s">
-                                                <fmt:formatNumber value="${productPrice.price}"/></span>
-                                            <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                        <c:when test="${country}">
+                                            <c:choose>
+                                                <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
+                                                    <span class="old-price-s"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span>
+                                                    <fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/> руб.
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:formatNumber value="${productPrice.foreignPrice}"/> руб.
+                                                </c:otherwise>
+                                            </c:choose>
                                         </c:when>
                                         <c:otherwise>
-                                            <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                            <c:choose>
+                                                <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
+                                                    <span class="old-price-s"><fmt:formatNumber value="${productPrice.price}"/></span>
+                                                    <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                                </c:otherwise>
+                                            </c:choose>
                                         </c:otherwise>
                                     </c:choose>
                                 </h1>
@@ -168,31 +183,17 @@
                 <ul class="vertical-ul">
                     <li>
                         <h2>Описание</h2>
-                        <p style="margin-top: 6px;">АСУ-1 состоит из двух машинок для стрижки овец
-                            <a href="<%=request.getContextPath()%>/parts/msu-200">МСУ-200</a>
-                            производства завода «Актюбсельмаш» и одного
-                            <a href="<%=request.getContextPath()%>/parts/p380">преобразователя частоты тока</a> мощностью 600 Вт,
-                            выполненного по очень простой и надежной схеме (без всякой электроники) - в одном корпусе
-                            3-х фазный двигатель на 380 В имеет общий ротор с генератором, вырабатывающим 3-х фазный
-                            ток 36 В с частотой 200 Гц. В этой конструкции в пазы статора заложены вместе обмотки
-                            двигателя и генератора, а короткозамкнутый ротор (без всяких щеток) вращается на двух
-                            радиальных шарикоподшипниках, не требующих смазки в процессе эксплуатации.</p>
-                        <p>Машинка <a href="<%=request.getContextPath()%>/parts/msu-200">МСУ-200</a> работает только
-                            от преобразователя частоты тока, при этом на машинку
-                            с преобразователя должно подаваться безопасное 3-х фазное напряжение 36 В с частотой 200 Гц.</p>
-                        <p><a href="<%=request.getContextPath()%>/parts/p380">Преобразователь частоты тока</a> мощностью 600 Вт
-                            работает только от 3-х фазной сети 380 В с частотой 50 Гц.</p>
-                        <p>Это самый мощный и надежный агрегат из имеющихся. На его машинке
-                            <a href="<%=request.getContextPath()%>/parts/msu-200">МСУ-200</a> установлен
-                            безщеточный асинхронный 3-х фазный двигатель, который не греется при работе и не требует
-                            дополнительных работ по контролю за состоянием и замене угольных щеток. При хорошем навыке
-                            стригалей им можно постричь 100 - 160 овец за смену и свыше 3000 овец за сезон.</p>
+                        <p style="margin-top: 6px;">АСУ-1 включает в себя:</p>
+                        <p>– одну машинку для стрижки овец <a href="<%=request.getContextPath()%>/parts/msu-200">МСУ-200</a> производства завода АКТЮБСЕЛЬМАШ;<br/>
+                        – один преобразователь частоты тока мощностью 250 Вт, выполненного по очень простой и надежной схеме: в одном корпусе установлен <a href="<%=request.getContextPath()%>/parts/toshiba">японский преобразователь</a> частоты фирмы TOSHIBA, выдающий 3-х фазный ток частотой 200 Гц и специальный высокочастотный 3-х фазный трансформатор, вместе создающие идеальный синусоидный 3-х фазный ток 36 В с частотой 200 Гц.</p>
+                        <p>В момент запуска двигателя частота тока плавно изменяется от 0 до 200 Гц, что обеспечивает легкий пуск двигателя машинки без потери его мощности. Преобразователь оснащен длинными гибкими резиновыми кабелями со штекерными разъемами и выносной кнопкой Вкл/Выкл. Преобразователь частоты тока мощностью 250 Вт работает от обычной однофазной сети 220 В с частотой 50 Гц.</p>
+                        <p>Это самый надежный агрегат из имеющихся. На машинке МСУ-200 установлен безщеточный асинхронный 3-х фазный двигатель, который не греется при работе и не требует дополнительных работ по контролю за состоянием и замене угольных щеток. При хорошем навыке стригалей им можно постричь 100-160 овец за смену и свыше 3000 овец за сезон.</p>
                     </li>
                     <li>
                         <h2>Комплектация</h2>
                         <ul class="sc-case-ul">
-                            <li class="first">Машинка для стрижки овец МСУ-200 - 2 шт.</li>
-                            <li>Преобразователь частоты тока 600 Вт</li>
+                            <li class="first">Машинка для стрижки овец МСУ-200 – 2 шт.</li>
+                            <li>Преобразователь частоты тока Toshiba</li>
                             <li>Комплект ножей (установлены на машинку)</li>
                             <li>Специальная отвертка и спецключ</li>
                             <li>Инструкция по применению</li>
@@ -210,14 +211,14 @@
                     </ul>
                 </div>
             </div>
-            <c:set var="ta"/>
+            <jsp:useBean id="taList" class="java.util.ArrayList" />
             <div class="portlet">
                 <h3><span>Запасные пары</span></h3>
                 <div class="content description">
                     <ul class="vertical-d-ul">
                         <c:forEach var="dp" items="${dependantPrices}" varStatus="status">
                             <c:choose>
-                                <c:when test="${dp.product.shortName ne 'ta-1'}">
+                                <c:when test="${dp.product.shortName ne 'ta-1' and dp.product.shortName ne 'ta-2'}">
                                     <li <c:if test="${status.first}">class="first"</c:if>>
                                         <c:set var="path">
                                             <c:choose>
@@ -233,13 +234,27 @@
                                             <h4 class="name">${dp.product.name}</h4>
                                             <h4 class="price">
                                                 <c:choose>
-                                                    <c:when test="${dp.discount gt 0}">
-                                                        <span class="old-price-s" style="font-size: 10pt; color: #808080;">
-                                                            <fmt:formatNumber value="${dp.price}"/></span>
-                                                        <fmt:formatNumber value="${dp.price - dp.discount}"/> руб.
+                                                    <c:when test="${country}">
+                                                        <c:choose>
+                                                            <c:when test="${dp.discount gt 0 and dp.discountDueDate.time ge now.time}">
+                                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${dp.foreignPrice}"/></span>
+                                                                <fmt:formatNumber value="${dp.foreignPrice - dp.foreignDiscount}"/> руб.
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <fmt:formatNumber value="${dp.foreignPrice}"/> руб.
+                                                            </c:otherwise>
+                                                        </c:choose>
                                                     </c:when>
                                                     <c:otherwise>
-                                                        <fmt:formatNumber value="${dp.price}"/> руб.
+                                                        <c:choose>
+                                                            <c:when test="${dp.discount gt 0 and dp.discountDueDate.time ge now.time}">
+                                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${dp.price}"/></span>
+                                                                <fmt:formatNumber value="${dp.price - dp.discount}"/> руб.
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <fmt:formatNumber value="${dp.price}"/> руб.
+                                                            </c:otherwise>
+                                                        </c:choose>
                                                     </c:otherwise>
                                                 </c:choose>
                                             </h4>
@@ -260,52 +275,68 @@
                                         <%--</c:choose>--%>
                                     </li>
                                 </c:when>
-                            <c:otherwise><c:set var="ta" value="${dp}"/></c:otherwise>
+                                <c:otherwise><% taList.add(pageContext.getAttribute("dp")); %></c:otherwise>
                             </c:choose>
                         </c:forEach>
                     </ul>
                 </div>
             </div>
-            <c:if test="${not empty ta}">
+            <c:if test="${not empty taList}">
                 <div class="portlet">
                     <h3>Заточка режущих пар</h3>
                     <div class="content description">
                         <ul class="vertical-d-ul">
-                            <li class="first">
-                                <a href="<%=request.getContextPath()%>/parts/${ta.product.shortName}">
-                                    <p style="text-align: center; margin-bottom: 0;">
-                                        <img src="<%=request.getContextPath()%>${ta.product.smallImagePath}"
-                                             alt="${ta.product.name}" border="0" class="png" width="100" height="103"/>
-                                    </p>
-                                    <h4 class="name">${ta.product.name}</h4>
-                                    <h4 class="price">
-                                        <c:choose>
-                                            <c:when test="${ta.discount gt 0}">
-                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;">
-                                                    <fmt:formatNumber value="${ta.price}"/></span>
-                                                <fmt:formatNumber value="${ta.price - ta.discount}"/> руб.
-                                            </c:when>
-                                            <c:otherwise>
-                                                <fmt:formatNumber value="${ta.price}"/> руб.
-                                            </c:otherwise>
-                                        </c:choose>
-                                    </h4>
-                                </a>
-                                <%--<c:choose>--%>
-                                    <%--<c:when test="${ta.product.newFlag}">--%>
+                            <c:forEach items="${taList}" var="ta" varStatus="status">
+                                <li <c:if test="${status.first}">class="first"</c:if>>
+                                    <a href="<%=request.getContextPath()%>/parts/${ta.product.shortName}">
+                                        <p style="text-align: center; margin-bottom: 0;">
+                                            <img src="<%=request.getContextPath()%>${ta.product.smallImagePath}"
+                                                 alt="${ta.product.name}" border="0" class="png" width="100" height="103"/>
+                                        </p>
+                                        <h4 class="name">${ta.product.name}</h4>
+                                        <h4 class="price">
+                                            <c:choose>
+                                                <c:when test="${country}">
+                                                    <c:choose>
+                                                        <c:when test="${ta.discount gt 0 and ta.discountDueDate.time ge now.time}">
+                                                            <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${ta.foreignPrice}"/></span>
+                                                            <fmt:formatNumber value="${ta.foreignPrice - ta.foreignDiscount}"/> руб.
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <fmt:formatNumber value="${ta.foreignPrice}"/> руб.
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <c:choose>
+                                                        <c:when test="${ta.discount gt 0 and ta.discountDueDate.time ge now.time}">
+                                                            <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${ta.price}"/></span>
+                                                            <fmt:formatNumber value="${ta.price - ta.discount}"/> руб.
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <fmt:formatNumber value="${ta.price}"/> руб.
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </c:otherwise>
+                                            </c:choose>
+                                        </h4>
+                                    </a>
+                                        <%--<c:choose>--%>
+                                        <%--<c:when test="${ta.product.newFlag}">--%>
                                         <%--<div class="corner-en">--%>
-                                            <%--<img src="<%=request.getContextPath()%>/images/new-s.png" alt="Новинка" border="0"/>--%>
+                                        <%--<img src="<%=request.getContextPath()%>/images/new-s.png" alt="Новинка" border="0"/>--%>
                                         <%--</div>--%>
-                                    <%--</c:when>--%>
-                                    <%--<c:when test="${ta.discount gt 0}">--%>
+                                        <%--</c:when>--%>
+                                        <%--<c:when test="${ta.discount gt 0}">--%>
                                         <%--<div class="corner-en">--%>
-                                            <%--<img src="<%=request.getContextPath()%>/images/discount-s.png"--%>
-                                                 <%--alt="Скидка до <fmt:formatDate value="${ta.discountDueDate}" pattern="dd MMM" />"--%>
-                                                 <%--border="0"/>--%>
+                                        <%--<img src="<%=request.getContextPath()%>/images/discount-s.png"--%>
+                                        <%--alt="Скидка до <fmt:formatDate value="${ta.discountDueDate}" pattern="dd MMM" />"--%>
+                                        <%--border="0"/>--%>
                                         <%--</div>--%>
-                                    <%--</c:when>--%>
-                                <%--</c:choose>--%>
-                            </li>
+                                        <%--</c:when>--%>
+                                        <%--</c:choose>--%>
+                                </li>
+                            </c:forEach>
                         </ul>
                     </div>
                 </div>

@@ -34,6 +34,11 @@ public class ProductPrice implements Serializable {
     @Column(name = "discount_due_d")
     private Date discountDueDate;
 
+    @Column(name = "fprice")
+    private Integer foreignPrice;
+
+    @Column(name = "fdiscount_p")
+    private Integer foreignDiscount;
 
     @Override
     public boolean equals(Object o) {
@@ -91,5 +96,21 @@ public class ProductPrice implements Serializable {
 
     public void setDiscountDueDate(Date discountDueDate) {
         this.discountDueDate = discountDueDate;
+    }
+
+    public Integer getForeignPrice() {
+        return foreignPrice;
+    }
+
+    public void setForeignPrice(Integer foreignPrice) {
+        this.foreignPrice = foreignPrice;
+    }
+
+    public Integer getForeignDiscount() {
+        return foreignDiscount;
+    }
+
+    public void setForeignDiscount(Integer foreignDiscount) {
+        this.foreignDiscount = foreignDiscount;
     }
 }

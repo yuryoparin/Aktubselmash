@@ -3,6 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--@elvariable id="browserClass" type="java.lang.String"--%>
+<%--@elvariable id="country" type="java.lang.Boolean"--%>
 <%--@elvariable id="product" type="ru.aktubselmash.model.Product"--%>
 <%--@elvariable id="productPrice" type="ru.aktubselmash.model.ProductPrice"--%>
 <%--@elvariable id="dependantPrices" type="java.util.List<ru.aktubselmash.model.ProductPrice>"--%>
@@ -115,17 +116,31 @@
                             <div style="text-align: center; margin-top: 2em;">
                                 <h1 style="margin-left: 0;">
                                     <c:choose>
-                                        <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
-                                            <span class="old-price-s">
-                                                <fmt:formatNumber value="${productPrice.price}"/></span>
-                                            <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                        <c:when test="${country}">
+                                            <c:choose>
+                                                <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
+                                                    <span class="old-price-s"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span>
+                                                    <fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/> руб.
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:formatNumber value="${productPrice.foreignPrice}"/> руб.
+                                                </c:otherwise>
+                                            </c:choose>
                                         </c:when>
                                         <c:otherwise>
-                                            <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                            <c:choose>
+                                                <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
+                                                    <span class="old-price-s"><fmt:formatNumber value="${productPrice.price}"/></span>
+                                                    <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                                </c:otherwise>
+                                            </c:choose>
                                         </c:otherwise>
                                     </c:choose>
                                 </h1>
-								<span style="color: red; font-weight: bold;">+ дополнительный нож в подарок</span>
+								<span style="color: red; font-weight: bold;">+ запасная режущая пара в подарок!</span>
                                 <c:choose>
                                     <c:when test="${productPrice.product.unavailableFlag}">
                                         <h2 style="padding-top: 10px;">Нет в наличии</h2>
@@ -202,14 +217,14 @@
                     </ul>
                 </div>
             </div>
-            <c:set var="ta"/>
+            <jsp:useBean id="taList" class="java.util.ArrayList" />
             <div class="portlet">
                 <h3><span>Запасные пары</span></h3>
                 <div class="content description">
                     <ul class="vertical-d-ul">
                         <c:forEach var="dp" items="${dependantPrices}" varStatus="status">
                             <c:choose>
-                                <c:when test="${dp.product.shortName ne 'ta-1'}">
+                                <c:when test="${dp.product.shortName ne 'ta-1' and dp.product.shortName ne 'ta-2'}">
                                     <li <c:if test="${status.first}">class="first"</c:if>>
                                         <c:set var="path">
                                             <c:choose>
@@ -225,13 +240,27 @@
                                             <h4 class="name">${dp.product.name}</h4>
                                             <h4 class="price">
                                                 <c:choose>
-                                                    <c:when test="${dp.discount gt 0}">
-                                                        <span class="old-price-s" style="font-size: 10pt; color: #808080;">
-                                                            <fmt:formatNumber value="${dp.price}"/></span>
-                                                        <fmt:formatNumber value="${dp.price - dp.discount}"/> руб.
+                                                    <c:when test="${country}">
+                                                        <c:choose>
+                                                            <c:when test="${dp.discount gt 0 and dp.discountDueDate.time ge now.time}">
+                                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${dp.foreignPrice}"/></span>
+                                                                <fmt:formatNumber value="${dp.foreignPrice - dp.foreignDiscount}"/> руб.
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <fmt:formatNumber value="${dp.foreignPrice}"/> руб.
+                                                            </c:otherwise>
+                                                        </c:choose>
                                                     </c:when>
                                                     <c:otherwise>
-                                                        <fmt:formatNumber value="${dp.price}"/> руб.
+                                                        <c:choose>
+                                                            <c:when test="${dp.discount gt 0 and dp.discountDueDate.time ge now.time}">
+                                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${dp.price}"/></span>
+                                                                <fmt:formatNumber value="${dp.price - dp.discount}"/> руб.
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <fmt:formatNumber value="${dp.price}"/> руб.
+                                                            </c:otherwise>
+                                                        </c:choose>
                                                     </c:otherwise>
                                                 </c:choose>
                                             </h4>
@@ -252,52 +281,68 @@
                                         <%--</c:choose>--%>
                                     </li>
                                 </c:when>
-                            <c:otherwise><c:set var="ta" value="${dp}"/></c:otherwise>
+                                <c:otherwise><% taList.add(pageContext.getAttribute("dp")); %></c:otherwise>
                             </c:choose>
                         </c:forEach>
                     </ul>
                 </div>
             </div>
-            <c:if test="${not empty ta}">
+            <c:if test="${not empty taList}">
                 <div class="portlet">
                     <h3>Заточка режущих пар</h3>
                     <div class="content description">
                         <ul class="vertical-d-ul">
-                            <li class="first">
-                                <a href="<%=request.getContextPath()%>/parts/${ta.product.shortName}">
-                                    <p style="text-align: center; margin-bottom: 0;">
-                                        <img src="<%=request.getContextPath()%>${ta.product.smallImagePath}"
-                                             alt="${ta.product.name}" border="0" class="png" width="100" height="103"/>
-                                    </p>
-                                    <h4 class="name">${ta.product.name}</h4>
-                                    <h4 class="price">
-                                        <c:choose>
-                                            <c:when test="${ta.discount gt 0}">
-                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;">
-                                                    <fmt:formatNumber value="${ta.price}"/></span>
-                                                <fmt:formatNumber value="${ta.price - ta.discount}"/> руб.
-                                            </c:when>
-                                            <c:otherwise>
-                                                <fmt:formatNumber value="${ta.price}"/> руб.
-                                            </c:otherwise>
-                                        </c:choose>
-                                    </h4>
-                                </a>
-                                <%--<c:choose>--%>
-                                    <%--<c:when test="${ta.product.newFlag}">--%>
+                            <c:forEach items="${taList}" var="ta" varStatus="status">
+                                <li <c:if test="${status.first}">class="first"</c:if>>
+                                    <a href="<%=request.getContextPath()%>/parts/${ta.product.shortName}">
+                                        <p style="text-align: center; margin-bottom: 0;">
+                                            <img src="<%=request.getContextPath()%>${ta.product.smallImagePath}"
+                                                 alt="${ta.product.name}" border="0" class="png" width="100" height="103"/>
+                                        </p>
+                                        <h4 class="name">${ta.product.name}</h4>
+                                        <h4 class="price">
+                                            <c:choose>
+                                                <c:when test="${country}">
+                                                    <c:choose>
+                                                        <c:when test="${ta.discount gt 0 and ta.discountDueDate.time ge now.time}">
+                                                            <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${ta.foreignPrice}"/></span>
+                                                            <fmt:formatNumber value="${ta.foreignPrice - ta.foreignDiscount}"/> руб.
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <fmt:formatNumber value="${ta.foreignPrice}"/> руб.
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <c:choose>
+                                                        <c:when test="${ta.discount gt 0 and ta.discountDueDate.time ge now.time}">
+                                                            <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${ta.price}"/></span>
+                                                            <fmt:formatNumber value="${ta.price - ta.discount}"/> руб.
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <fmt:formatNumber value="${ta.price}"/> руб.
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </c:otherwise>
+                                            </c:choose>
+                                        </h4>
+                                    </a>
+                                        <%--<c:choose>--%>
+                                        <%--<c:when test="${ta.product.newFlag}">--%>
                                         <%--<div class="corner-en">--%>
-                                            <%--<img src="<%=request.getContextPath()%>/images/new-s.png" alt="Новинка" border="0"/>--%>
+                                        <%--<img src="<%=request.getContextPath()%>/images/new-s.png" alt="Новинка" border="0"/>--%>
                                         <%--</div>--%>
-                                    <%--</c:when>--%>
-                                    <%--<c:when test="${ta.discount gt 0}">--%>
+                                        <%--</c:when>--%>
+                                        <%--<c:when test="${ta.discount gt 0}">--%>
                                         <%--<div class="corner-en">--%>
-                                            <%--<img src="<%=request.getContextPath()%>/images/discount-s.png"--%>
-                                                 <%--alt="Скидка до <fmt:formatDate value="${ta.discountDueDate}" pattern="dd MMM" />"--%>
-                                                 <%--border="0"/>--%>
+                                        <%--<img src="<%=request.getContextPath()%>/images/discount-s.png"--%>
+                                        <%--alt="Скидка до <fmt:formatDate value="${ta.discountDueDate}" pattern="dd MMM" />"--%>
+                                        <%--border="0"/>--%>
                                         <%--</div>--%>
-                                    <%--</c:when>--%>
-                                <%--</c:choose>--%>
-                            </li>
+                                        <%--</c:when>--%>
+                                        <%--</c:choose>--%>
+                                </li>
+                            </c:forEach>
                         </ul>
                     </div>
                 </div>

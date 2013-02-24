@@ -4,6 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--@elvariable id="partPrices" type="java.util.List<ru.aktubselmash.model.ProductPrice>"--%>
 <%--@elvariable id="browserClass" type="java.lang.String"--%>
+<%--@elvariable id="country" type="java.lang.Boolean"--%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -57,13 +58,27 @@
                                         <h2 class="name">${pp.product.name}</h2>
                                         <h2 class="price">
                                             <c:choose>
-                                                <c:when test="${pp.discount gt 0 and pp.discountDueDate.time ge now.time}">
-                                                    <span class="old-price-s" style="font-size: 10pt; color: #808080;">
-                                                        <fmt:formatNumber value="${pp.price}"/></span>
-                                                    <fmt:formatNumber value="${pp.price - pp.discount}"/> руб.
+                                                <c:when test="${country}">
+                                                    <c:choose>
+                                                        <c:when test="${pp.discount gt 0 and pp.discountDueDate.time ge now.time}">
+                                                            <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${pp.foreignPrice}"/></span>
+                                                            <fmt:formatNumber value="${pp.foreignPrice - pp.foreignDiscount}"/> руб.
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <fmt:formatNumber value="${pp.foreignPrice}"/> руб.
+                                                        </c:otherwise>
+                                                    </c:choose>
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <fmt:formatNumber value="${pp.price}"/> руб.
+                                                    <c:choose>
+                                                        <c:when test="${pp.discount gt 0 and pp.discountDueDate.time ge now.time}">
+                                                            <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${pp.price}"/></span>
+                                                            <fmt:formatNumber value="${pp.price - pp.discount}"/> руб.
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <fmt:formatNumber value="${pp.price}"/> руб.
+                                                        </c:otherwise>
+                                                    </c:choose>
                                                 </c:otherwise>
                                             </c:choose>
                                         </h2>

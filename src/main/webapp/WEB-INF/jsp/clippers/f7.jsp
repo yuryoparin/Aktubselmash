@@ -3,6 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--@elvariable id="browserClass" type="java.lang.String"--%>
+<%--@elvariable id="country" type="java.lang.Boolean"--%>
 <%--@elvariable id="productPrice" type="ru.aktubselmash.model.ProductPrice"--%>
 <%--@elvariable id="dependantPrices" type="java.util.List<ru.aktubselmash.model.ProductPrice>"--%>
 <c:set var="price">
@@ -17,7 +18,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Машинка для стрижки овец ${productPrice.product.name} - Актюбсельмаш</title>
 	<meta content="Машинка для стрижки овец ${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
-	<meta content="машинка +для стрижки овец f7, машинки +для стрижки овец f7, куплю машинку +для стрижки овец f7, машинка +для стрижки овец f7 купить, машинка +для стрижки овец f7 цена, машинка +для стрижки овец китай, машинка +для стрижки овец f7 продажа" name="keywords">
+	<meta content="машинка +для стрижки овец f7, машинки +для стрижки овец f7, куплю машинку +для стрижки овец f7, машинка +для стрижки овец f7 купить, машинка +для стрижки овец f7 цена, машинка +для стрижки овец япония, машинка +для стрижки овец f7 продажа" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
 
 	<link href="<%=request.getContextPath()%>/favicon.ico" rel="shortcut icon"/>
@@ -66,7 +67,7 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Мастерская обеспечена запасными частями. Результаты испытаний позволили отнести F7 к лучшей машинке
+    Мастерская обеспечена запасными частями. Результаты испытаний позволили отнести Takumi & F7 Professional к лучшей машинке
     для стрижки до 300 овец по соотношению цена-качество, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
 <div id="wrapper">
@@ -78,7 +79,7 @@
 	<div id="content">
         <div class="main-content-sidebar">
             <div class="box box-container">
-                <h1 style="display: none;">Машинка для стрижки овец ${productPrice.product.name}</h1>
+                <h1 style="display: none;">Машинка ${productPrice.product.name}</h1>
                 <h1>Машинка ${productPrice.product.name}</h1>
                 <p>
                     <div class="box-heading" style="height: 433px;">
@@ -113,16 +114,31 @@
                             <div style="text-align: center; margin-top: 2em;">
                                 <h1 style="margin-left: 0;">
                                     <c:choose>
-                                        <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
-                                            <span class="old-price-s">
-                                                <fmt:formatNumber value="${productPrice.price}"/></span>
-                                            <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                        <c:when test="${country}">
+                                            <c:choose>
+                                                <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
+                                                    <span class="old-price-s"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span>
+                                                    <fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/> руб.
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:formatNumber value="${productPrice.foreignPrice}"/> руб.
+                                                </c:otherwise>
+                                            </c:choose>
                                         </c:when>
                                         <c:otherwise>
-                                            <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                            <c:choose>
+                                                <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
+                                                    <span class="old-price-s"><fmt:formatNumber value="${productPrice.price}"/></span>
+                                                    <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                                </c:otherwise>
+                                            </c:choose>
                                         </c:otherwise>
                                     </c:choose>
                                 </h1>
+                                <span style="color: red; font-weight: bold;">+ запасная режущая пара в подарок!</span>
                                 <c:choose>
                                     <c:when test="${productPrice.product.unavailableFlag}">
                                         <h2 style="padding-top: 10px;">Нет в наличии</h2>
@@ -161,33 +177,29 @@
                     </div>
                 </p>
             </div>
-            <div class="ul-list-two" style="margin-top: 1em;">
-                <ul class="ul">
-                    <li class="li li-first"><div class="box box-container">
-                        <div class="description" style="height: 320px;">
-                            <h2 class="b">Описание</h2>
-                            <p style="margin-top: 6px;">Машинка F7 имеет более мощный двигатель 350 Вт, что позволяет справляться со стрижкой стада овец до 300 голов за один сезон. Кабель у машинки более гибкий и имеет длину 6 метров. Вес машинки без кабеля уменьшен до 1,4 кг. Винты с широкой полукруглой головкой, фиксирующие гребенку, имеют шестигранное углубление под ключ и, с помощью входящего в комплект ключа - шестигранника, обеспечивают надежную фиксацию и удобную замену гребенок.</p>
-							<p>Остальные характеристики этой машинки, а также комплект поставки, такие же, как у машинки <a href="<%=request.getContextPath()%>/clippers/vs84-s">VS84-S</a>. Все зубчатые колеса редуктора F7 изготовлены из стали, а не из текстолита. Кроме того, электродвигатель машинки F7 более тихий и имеет более высокий коэффициент полезной мощности, что способствует уменьшению нагрева машинки во время работы.</p>
-                        	<p>Мастерская обеспечена запасными частями.</p>
-                        </div>
-                    </div></li>
-                    <li class="li"><div class="box box-container">
-                        <div class="description" style="height: 320px;">
-                            <p>
-                                <h2 class="b">Комплектация</h2>
-                                <ul class="sc-case-ul">
-                                    <li class="first">Машинка для стрижки овец</li>
-                                    <li>Комплект ножей (установлены на машинку)</li>
-                                    <li>Специальная отвертка</li>
-                                    <li>Запасные графитовые щетки - 2 шт</li>
-                                    <li>Флакон для смазочного масла (60 мл)</li>
-                                    <li>Кисточка для очистки режущих пар</li>
-                                    <li>Инструкция по применению</li>
-                                    <li>Футляр для транспортировки и хранения</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div></li>
+            <div class="box box-container" style="margin-top: 1em;">
+                <ul class="vertical-ul">
+                    <li>
+                        <h2>Описание</h2>
+                        <p style="margin-top: 6px;">Машинки для стрижки овец TAKUMI & F7 Professional отличаются японским качеством и надежностью.</p>
+                        <p>Мощный двигатель - 350 Вт - позволяет справляться со стрижкой стада овец в 300 голов за сезон. Кабель у этой модели очень гибкий, 6 метров в длину. Вес машинки без кабеля уменьшен до 1,4 кг. Винты с широкой полукруглой головкой, фиксирующие гребенку, имеют шестигранное углубление под ключ и обеспечивают надежную фиксацию и удобную замену гребенок с помощью входящего в комплект ключа-шестигранника.</p>
+                        <p>Остальные характеристики этой машинки и комплект поставки такие же как у <a href="<%=request.getContextPath()%>/clippers/vs84-s">VS84-S</a>.</p>
+                        <p>Все зубчатые колеса редуктора изготовлены из стали, а не из текстолита. Кроме того, электродвигатель машинки TAKUMI & F7 Professional существенно тише, чем у предыдущих моделей, и имеет более высокий коэффициент полезной мощности, что способствует меньшему нагреву машинки во время работы.</p>
+                        <p>Мастерская обеспечена запасными частями.</p>
+                    </li>
+                    <li>
+                        <h2>Комплектация</h2>
+                        <ul class="sc-case-ul">
+                            <li class="first">Машинка для стрижки овец</li>
+                            <li>Комплект ножей (установлены на машинку)</li>
+                            <li>Специальная отвертка</li>
+                            <li>Запасные графитовые щетки - 2 шт</li>
+                            <li>Флакон для смазочного масла (60 мл)</li>
+                            <li>Кисточка для очистки режущих пар</li>
+                            <li>Инструкция по применению</li>
+                            <li>Футляр для транспортировки и хранения</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -200,14 +212,14 @@
                     </ul>
                 </div>
             </div>
-            <c:set var="ta"/>
+            <jsp:useBean id="taList" class="java.util.ArrayList" />
             <div class="portlet">
                 <h3><span>Запасные пары</span></h3>
                 <div class="content description">
                     <ul class="vertical-d-ul">
                         <c:forEach var="dp" items="${dependantPrices}" varStatus="status">
                             <c:choose>
-                                <c:when test="${dp.product.shortName ne 'ta-1'}">
+                                <c:when test="${dp.product.shortName ne 'ta-1' and dp.product.shortName ne 'ta-2'}">
                                     <li <c:if test="${status.first}">class="first"</c:if>>
                                         <c:set var="path">
                                             <c:choose>
@@ -223,13 +235,27 @@
                                             <h4 class="name">${dp.product.name}</h4>
                                             <h4 class="price">
                                                 <c:choose>
-                                                    <c:when test="${dp.discount gt 0}">
-                                                        <span class="old-price-s" style="font-size: 10pt; color: #808080;">
-                                                            <fmt:formatNumber value="${dp.price}"/></span>
-                                                        <fmt:formatNumber value="${dp.price - dp.discount}"/> руб.
+                                                    <c:when test="${country}">
+                                                        <c:choose>
+                                                            <c:when test="${dp.discount gt 0 and dp.discountDueDate.time ge now.time}">
+                                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${dp.foreignPrice}"/></span>
+                                                                <fmt:formatNumber value="${dp.foreignPrice - dp.foreignDiscount}"/> руб.
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <fmt:formatNumber value="${dp.foreignPrice}"/> руб.
+                                                            </c:otherwise>
+                                                        </c:choose>
                                                     </c:when>
                                                     <c:otherwise>
-                                                        <fmt:formatNumber value="${dp.price}"/> руб.
+                                                        <c:choose>
+                                                            <c:when test="${dp.discount gt 0 and dp.discountDueDate.time ge now.time}">
+                                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${dp.price}"/></span>
+                                                                <fmt:formatNumber value="${dp.price - dp.discount}"/> руб.
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <fmt:formatNumber value="${dp.price}"/> руб.
+                                                            </c:otherwise>
+                                                        </c:choose>
                                                     </c:otherwise>
                                                 </c:choose>
                                             </h4>
@@ -250,52 +276,68 @@
                                         <%--</c:choose>--%>
                                     </li>
                                 </c:when>
-                            <c:otherwise><c:set var="ta" value="${dp}"/></c:otherwise>
+                                <c:otherwise><% taList.add(pageContext.getAttribute("dp")); %></c:otherwise>
                             </c:choose>
                         </c:forEach>
                     </ul>
                 </div>
             </div>
-            <c:if test="${not empty ta}">
+            <c:if test="${not empty taList}">
                 <div class="portlet">
                     <h3>Заточка режущих пар</h3>
                     <div class="content description">
                         <ul class="vertical-d-ul">
-                            <li class="first">
-                                <a href="<%=request.getContextPath()%>/parts/${ta.product.shortName}">
-                                    <p style="text-align: center; margin-bottom: 0;">
-                                        <img src="<%=request.getContextPath()%>${ta.product.smallImagePath}"
-                                             alt="${ta.product.name}" border="0" class="png" width="100" height="103"/>
-                                    </p>
-                                    <h4 class="name">${ta.product.name}</h4>
-                                    <h4 class="price">
-                                        <c:choose>
-                                            <c:when test="${ta.discount gt 0}">
-                                                <span class="old-price-s" style="font-size: 10pt; color: #808080;">
-                                                    <fmt:formatNumber value="${ta.price}"/></span>
-                                                <fmt:formatNumber value="${ta.price - ta.discount}"/> руб.
-                                            </c:when>
-                                            <c:otherwise>
-                                                <fmt:formatNumber value="${ta.price}"/> руб.
-                                            </c:otherwise>
-                                        </c:choose>
-                                    </h4>
-                                </a>
-                                <%--<c:choose>--%>
-                                    <%--<c:when test="${ta.product.newFlag}">--%>
+                            <c:forEach items="${taList}" var="ta" varStatus="status">
+                                <li <c:if test="${status.first}">class="first"</c:if>>
+                                    <a href="<%=request.getContextPath()%>/parts/${ta.product.shortName}">
+                                        <p style="text-align: center; margin-bottom: 0;">
+                                            <img src="<%=request.getContextPath()%>${ta.product.smallImagePath}"
+                                                 alt="${ta.product.name}" border="0" class="png" width="100" height="103"/>
+                                        </p>
+                                        <h4 class="name">${ta.product.name}</h4>
+                                        <h4 class="price">
+                                            <c:choose>
+                                                <c:when test="${country}">
+                                                    <c:choose>
+                                                        <c:when test="${ta.discount gt 0 and ta.discountDueDate.time ge now.time}">
+                                                            <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${ta.foreignPrice}"/></span>
+                                                            <fmt:formatNumber value="${ta.foreignPrice - ta.foreignDiscount}"/> руб.
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <fmt:formatNumber value="${ta.foreignPrice}"/> руб.
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <c:choose>
+                                                        <c:when test="${ta.discount gt 0 and ta.discountDueDate.time ge now.time}">
+                                                            <span class="old-price-s" style="font-size: 10pt; color: #808080;"><fmt:formatNumber value="${ta.price}"/></span>
+                                                            <fmt:formatNumber value="${ta.price - ta.discount}"/> руб.
+                                                        </c:when>
+                                                        <c:otherwise>
+                                                            <fmt:formatNumber value="${ta.price}"/> руб.
+                                                        </c:otherwise>
+                                                    </c:choose>
+                                                </c:otherwise>
+                                            </c:choose>
+                                        </h4>
+                                    </a>
+                                        <%--<c:choose>--%>
+                                        <%--<c:when test="${ta.product.newFlag}">--%>
                                         <%--<div class="corner-en">--%>
-                                            <%--<img src="<%=request.getContextPath()%>/images/new-s.png" alt="Новинка" border="0"/>--%>
+                                        <%--<img src="<%=request.getContextPath()%>/images/new-s.png" alt="Новинка" border="0"/>--%>
                                         <%--</div>--%>
-                                    <%--</c:when>--%>
-                                    <%--<c:when test="${ta.discount gt 0}">--%>
+                                        <%--</c:when>--%>
+                                        <%--<c:when test="${ta.discount gt 0}">--%>
                                         <%--<div class="corner-en">--%>
-                                            <%--<img src="<%=request.getContextPath()%>/images/discount-s.png"--%>
-                                                 <%--alt="Скидка до <fmt:formatDate value="${ta.discountDueDate}" pattern="dd MMM" />"--%>
-                                                 <%--border="0"/>--%>
+                                        <%--<img src="<%=request.getContextPath()%>/images/discount-s.png"--%>
+                                        <%--alt="Скидка до <fmt:formatDate value="${ta.discountDueDate}" pattern="dd MMM" />"--%>
+                                        <%--border="0"/>--%>
                                         <%--</div>--%>
-                                    <%--</c:when>--%>
-                                <%--</c:choose>--%>
-                            </li>
+                                        <%--</c:when>--%>
+                                        <%--</c:choose>--%>
+                                </li>
+                            </c:forEach>
                         </ul>
                     </div>
                 </div>

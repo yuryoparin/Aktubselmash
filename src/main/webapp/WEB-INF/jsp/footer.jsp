@@ -26,7 +26,7 @@
         <script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2602267"></script>
         <noscript>
             <a href="http://top100.rambler.ru/navi/2602267/">
-                <img src="http://counter.rambler.ru/top100.cnt?2602267" alt="Rambler's Top100" border="0" />
+                <img src="http://counter.rambler.ru/top100.cnt?2602267" alt="Rambler's Top100" border="0" width="88" height="31"/>
             </a>
         </noscript>
         <!-- end of Top100 code -->

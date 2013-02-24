@@ -36,17 +36,23 @@ public class CartController extends BasicController {
     protected EmailService emailService;
 
     @RequestMapping("/cart")
-    public String view(@ModelAttribute Cart cart, Model model) {
+    public String view(@ModelAttribute Cart cart, Model model, @ModelAttribute("country") Boolean isForeignCountry) {
         List<ShippingPayment> list = shippingPaymentService.findAll();
         if (cart.getShipping() == null) {
-            cart.setShipping(list.get(0).getShipping()); // Самовывоз
-            cart.setPayment(list.get(0).getPayment());   // За наличный расчет
+            cart.setShipping(list.get(2).getShipping()); // Почтой EMS
+            cart.setPayment(list.get(2).getPayment());   // Наложенным платежом
         }
         model.addAttribute("shippingPayments", list);
 
         for (CartProductPrice cpp : cart.getCartProducts()) {
             ProductPrice pp = productPriceService.findByShipping(cpp.getProduct(), cart.getShipping());
-            cpp.setPrice(pp.getDiscountDueDate() != null && pp.getDiscountDueDate().after(new Date()) ?
+
+            if (isForeignCountry)
+                cpp.setPrice(pp.getDiscountDueDate() != null && pp.getDiscountDueDate().after(new Date()) ?
+                        pp.getForeignPrice() - pp.getForeignDiscount() :
+                        pp.getForeignPrice());
+            else
+                cpp.setPrice(pp.getDiscountDueDate() != null && pp.getDiscountDueDate().after(new Date()) ?
                     pp.getPrice() - pp.getDiscount() :
                     pp.getPrice());
         }
@@ -60,14 +66,14 @@ public class CartController extends BasicController {
     }
 
     @RequestMapping(value = "/cart/complete")
-    public String complete(@ModelAttribute Cart cart, Model model, HttpSession session) {
+    public String complete(@ModelAttribute Cart cart, Model model, HttpSession session, @ModelAttribute("country") Boolean isForeignCountry) {
         if (cart.getCartProducts().isEmpty() || cart.getCartProducts().get(0).getProduct() == null ||
             cart.getClient() == null || cart.getClient().getFio() == null || cart.getClient().getFio().length() == 0)
         {
             cart.setShipping(null);
             cart.setPayment(null);
             cart.getCartProducts().clear();
-            return view(cart, model);
+            return view(cart, model, isForeignCountry);
         }
 
         cart.setShipping(shippingService.findById(cart.getShipping().getId()));
@@ -121,12 +127,18 @@ public class CartController extends BasicController {
 
     @RequestMapping("/cart/updatePrices")
     public @ResponseBody
-    List<PriceResult> updatePrices(@RequestParam Integer shippingId, @ModelAttribute Cart cart) {
+    List<PriceResult> updatePrices(@RequestParam Integer shippingId, @ModelAttribute Cart cart,
+                                   @ModelAttribute("country") Boolean isForeignCountry) {
         List<PriceResult> result = new ArrayList<PriceResult>();
 
         for (CartProductPrice cpp : cart.getCartProducts()) {
             ProductPrice pp = productPriceService.findByShipping(cpp.getProduct(), shippingService.findById(shippingId));
-            cpp.setPrice(pp.getDiscountDueDate() != null && pp.getDiscountDueDate().after(new Date()) ?
+            if (isForeignCountry)
+                cpp.setPrice(pp.getDiscountDueDate() != null && pp.getDiscountDueDate().after(new Date()) ?
+                        pp.getForeignPrice() - pp.getForeignDiscount() :
+                        pp.getForeignPrice());
+            else
+                cpp.setPrice(pp.getDiscountDueDate() != null && pp.getDiscountDueDate().after(new Date()) ?
                     pp.getPrice() - pp.getDiscount() :
                     pp.getPrice());
             PriceResult pr = new PriceResult();

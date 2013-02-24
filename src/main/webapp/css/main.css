@@ -1032,6 +1032,7 @@ div.select .option-text {
 
 div.select.active .r {
     background-position: 100% -28px;
+    /*padding-right: 31px;*/
 }
 
 div.select.active .l {
