@@ -159,7 +159,7 @@
         <div class="box box-container" style="margin-top: 1em;">
             <div class="description">
                 <h2 class="b">Описание</h2>
-                <p style="margin-top: 6px;">
+                <p style="margin-top: 12px;">
 
                 </p>
             </div>

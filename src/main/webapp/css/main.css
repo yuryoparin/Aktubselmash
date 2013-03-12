@@ -227,7 +227,8 @@ a.cart:hover {
 }
 
 p {
-    margin-bottom: .5em;
+    margin-bottom: 10px;
+    line-height: 150%;
 }
 
 .b {
@@ -635,7 +636,7 @@ div.home-tile-text span {
 
 .sc-case-ul li {
     list-style: decimal;
-    padding-top: 2px;
+    padding-top: 4px;
     margin: 0;
 }
 
@@ -1033,7 +1034,6 @@ div.select .option-text {
 div.select.active .r {
     background-position: 100% -28px;
     /*padding-right: 31px;*/
-
 }
 
 div.select.active .l {

@@ -181,9 +181,9 @@
             <div class="ul-list-two" style="margin-top: 1em;">
                 <ul class="ul">
                     <li class="li li-first"><div class="box box-container">
-                        <div class="description" style="height: 310px;">
+                        <div class="description" style="height: 375px;">
                             <h2 class="b">Описание</h2>
-                            <p style="margin-top: 6px;">
+                            <p style="margin-top: 12px;">
                                 Электродвигатель привода машинки подвесить на высоте 1600 мм от уровня рабочего места стригаля.
                                 Направление вращения вала электродвигателя должно быть левое, т.е. против часовой стрелки,
                                 если смотреть на торец вала со стороны подключения гибкого вала.</p>
@@ -195,7 +195,7 @@
                         </div>
                     </div></li>
                     <li class="li"><div class="box box-container">
-                        <div class="description" style="height: 310px;">
+                        <div class="description" style="height: 375px;">
                             <p>
                                 <h2 class="b">Комплектация</h2>
                                 <ul class="sc-case-ul">

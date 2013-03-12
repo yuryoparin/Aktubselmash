@@ -182,13 +182,13 @@
             <div class="ul-list-two" style="margin-top: 1em;">
                 <ul class="ul">
                     <li class="li li-first"><div class="box box-container">
-                        <div class="description" style="height: 150px;">
+                        <div class="description" style="height: 200px;">
                             <h2 class="b">Описание</h2>
-                            <p style="margin-top: 6px;">Агрегат индивидуальный АСИ-101 работает от однофазной сети (обычной розетки) 220В, укомплектован 1-й машинкой <a href="<%=request.getContextPath()%>/parts/msu-200">МСУ-200</a> и отличается от АСУ-1 более мощным преобразователем частоты тока <a href="<%=request.getContextPath()%>/parts/pch-400-2">ПЧ-400-2</a>, имеющим два выходных штекера для подключения 2-х машинок и собранным отечественным производителем с использованием современных импортных микросхем.</p>
+                            <p style="margin-top: 12px;">Агрегат индивидуальный АСИ-101 работает от однофазной сети (обычной розетки) 220В, укомплектован 1-й машинкой <a href="<%=request.getContextPath()%>/parts/msu-200">МСУ-200</a> и отличается от АСУ-1 более мощным преобразователем частоты тока <a href="<%=request.getContextPath()%>/parts/pch-400-2">ПЧ-400-2</a>, имеющим два выходных штекера для подключения 2-х машинок и собранным отечественным производителем с использованием современных импортных микросхем.</p>
                         </div>
                     </div></li>
                     <li class="li"><div class="box box-container">
-                        <div class="description" style="height: 150px;">
+                        <div class="description" style="height: 200px;">
                             <p>
                                 <h2 class="b">Комплектация</h2>
                                 <ul class="sc-case-ul">

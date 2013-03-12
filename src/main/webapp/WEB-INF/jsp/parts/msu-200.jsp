@@ -176,9 +176,9 @@
             <div class="ul-list-two" style="margin-top: 1em;">
                 <ul class="ul">
                     <li class="li li-first"><div class="box box-container">
-                        <div class="description" style="height: 220px;">
+                        <div class="description" style="height: 250px;">
                             <h2 class="b">Описание</h2>
-                            <p style="margin-top: 6px;">В МСУ-200 установлен асинхронный двигатель,работающий без угольных щеток,
+                            <p style="margin-top: 12px;">В МСУ-200 установлен асинхронный двигатель,работающий без угольных щеток,
                                 поэтому ею можно работать по 10-12 часов в сутки, не выключая машинку. МСУ-200 работает
                                 только от преобразователя частоты тока, который выдает безопасное 3-х фазное напряжение 36 В с частотой 200 Гц.</p>
                             <p>Работа на такой частоте повышает реальную выходную мощность машинки в 4 раза по сравнению
@@ -187,7 +187,7 @@
                         </div>
                     </div></li>
                     <li class="li"><div class="box box-container">
-                        <div class="description" style="height: 220px;">
+                        <div class="description" style="height: 250px;">
                             <p>
                                 <h2 class="b">Комплектация</h2>
                                 <ul class="sc-case-ul">

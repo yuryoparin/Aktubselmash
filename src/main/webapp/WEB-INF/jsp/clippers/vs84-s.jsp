@@ -180,16 +180,16 @@
             <div class="ul-list-two" style="margin-top: 1em;">
                 <ul class="ul">
                     <li class="li li-first"><div class="box box-container">
-                        <div class="description" style="height: 230px;">
+                        <div class="description" style="height: 275px;">
                             <h2 class="b">Описание</h2>
-                            <p style="margin-top: 6px;">Машинки изготовлены в Китае по лицензии швейцарской фирмы HEINIGER и испытаны профессиональными стригалями в реальных российских условиях!</p>
+                            <p style="margin-top: 12px;">Машинки изготовлены в Китае по лицензии швейцарской фирмы HEINIGER и испытаны профессиональными стригалями в реальных российских условиях!</p>
                                <p>Результаты испытаний позволили отнести их к лучшим машинкам (для стрижки до 50 овец) по соотношению цена-качество.</p>
                                <p>Машинки требуют небольшого перерыва для охлаждения во время работы, хотя имеют встроенный вентилятор и защитное устройство от перегрузки по току.
                                Мастерская обеспечена запасными частями.</p>
                         </div>
                     </div></li>
                     <li class="li"><div class="box box-container">
-                        <div class="description" style="height: 230px;">
+                        <div class="description" style="height: 275px;">
                             <p>
                                 <h2 class="b">Комплектация</h2>
                                 <ul class="sc-case-ul">
