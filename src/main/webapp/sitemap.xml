@@ -4,19 +4,19 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://aktubselmash.ru/</loc>
-        <lastmod>2012-08-12</lastmod>
+        <lastmod>2013-03-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>http://aktubselmash.ru/home</loc>
-        <lastmod>2012-08-12</lastmod>
+        <lastmod>2013-03-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>http://aktubselmash.ru/clippers</loc>
-        <lastmod>2012-08-06</lastmod>
+        <lastmod>2013-03-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -52,13 +52,13 @@
     </url>
     <url>
         <loc>http://aktubselmash.ru/clippers/vs84-s</loc>
-        <lastmod>2012-08-12</lastmod>
+        <lastmod>2013-03-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>http://aktubselmash.ru/clippers/f7</loc>
-        <lastmod>2012-08-07</lastmod>
+        <lastmod>2013-03-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -104,12 +104,12 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    <url>
-        <loc>http://aktubselmash.ru/parts/p380</loc>
-        <lastmod>2012-04-22</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+    <!--<url>-->
+        <!--<loc>http://aktubselmash.ru/parts/p380</loc>-->
+        <!--<lastmod>2012-04-22</lastmod>-->
+        <!--<changefreq>weekly</changefreq>-->
+        <!--<priority>1.0</priority>-->
+    <!--</url>-->
     <url>
         <loc>http://aktubselmash.ru/parts/ta-1</loc>
         <lastmod>2012-04-04</lastmod>
@@ -117,7 +117,19 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>http://aktubselmash.ru/parts/ta-2</loc>
+        <lastmod>2013-03-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>http://aktubselmash.ru/parts/pch-400-2</loc>
+        <lastmod>2012-03-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://aktubselmash.ru/parts/toshiba</loc>
         <lastmod>2012-03-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>

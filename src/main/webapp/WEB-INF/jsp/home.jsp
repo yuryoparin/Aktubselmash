@@ -12,8 +12,8 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Машинка для стрижки овец от <c:out value="${productMinPrice}"/> руб. Запасные режущие пары от <c:out value="${partMinPrice}"/> руб.</title>
-	<meta content="Машинки для стрижки овец VS84-S, LISCOP Super Profi 3000 и советские МСУ-200. Режущие пары - 750р. Продажа по России наложенным платежом или самовывозом." name="description">
+	<title>Машинка для стрижки овец от <c:out value="${productMinPrice}"/> руб. Режущие пары от <c:out value="${partMinPrice}"/> руб.</title>
+	<meta content="Машинки для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200. Режущие пары - 750р. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец, машинки +для стрижки овец, куплю машинку +для стрижки овец, машинка +для стрижки овец купить, машинка +для стрижки овец цена, машинка +для стрижки овец продажа, продажа машинок для стрижки овец" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
 
@@ -36,7 +36,7 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Машинка для стрижки овец Liscop, Heiniger, "Актюбсельмаш". Ножи, гребенки, запасные части. +7 916 185-06-28, <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>. Продажа по России наложенным платежом или самовывозом.
+    Машинка для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200. Ножи, гребенки, запасные части. Продажа по России наложенным платежом или самовывозом. +7 916 185-06-28, <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>.
 </div>
 <div id="wrapper">
     <fmt:setLocale value="RU"/>
@@ -88,10 +88,10 @@
 
                             </c:choose>
                         </h1>
-                        <div style="margin: 10px auto; width: 195px;">
+                        <div style="margin: 10px auto; width: 228px;">
                             <a class="buy-button blue-button" href="<%=request.getContextPath()%>/clippers">
-                                <span class="label">Узнать больше <span style="font-weight: normal;">&rarr;</span></span>
-                                <span class="r"></span>
+                                <span class="label" style="padding-left: 10px;">Смотреть все машинки <span style="font-weight: normal;">&rarr;</span></span>
+                                <span class="r" style="width: 10px;"></span>
                             </a>
                         </div>
                     </div>

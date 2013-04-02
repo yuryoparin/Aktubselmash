@@ -22,7 +22,7 @@
                      border="0" width="211" height="31"/>
             </div>
             <div class="cart">
-                <a href="<%=request.getContextPath()%>/cart" class="cart"><span>Ваш заказ</span></a>
+                <a href="<%=request.getContextPath()%>/cart" class="cart"><span>Мой заказ</span></a>
                 <p style="margin-top:2px; float:left;">
                     <c:set var="total" value="${cart.totalNumber}"/>
                     <c:choose>

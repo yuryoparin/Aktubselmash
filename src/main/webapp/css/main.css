@@ -10,6 +10,7 @@ body {
 	background: white;
 	font-family: Arial, Helvetica, FreeSans, sans-serif;
     font-size: 10pt;
+    font-style: normal;
 	color: #333;
 	text-align: center;
 }
@@ -66,6 +67,11 @@ body {
 
 .logo-div h2 {
 	font-size: 13pt;
+}
+
+.logo-div .logo-href.hover h1, .logo-div .logo-href h2 {
+    color: #08c;
+    text-decoration: underline;
 }
 
 div.phone {
