@@ -52,7 +52,7 @@
                         </c:otherwise>
                     </c:choose>
                     <p style="margin-top: 15px;">
-                        <a href="<%=request.getContextPath()%>/home">Вернуться на главную страницу</a>
+                        <a href="<%=request.getContextPath()%>/home">← Вернуться на главную страницу</a>
                     </p>
                 </div>
             </div>
