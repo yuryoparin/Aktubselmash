@@ -41,7 +41,7 @@
             <p>
                 Запрашиваемая вами страница (<%=request.getAttribute("javax.servlet.error.request_uri")%>) не может быть открыта из-за ошибки на сервере.
             </p>
-            <a style="padding-top: 5px;" href="<%=request.getContextPath()%>/home">Вернуться на главную страницу</a>
+            <a style="padding-top: 5px;" href="<%=request.getContextPath()%>/home">← Вернуться на главную страницу</a>
         </div>
     </div>
 </div>

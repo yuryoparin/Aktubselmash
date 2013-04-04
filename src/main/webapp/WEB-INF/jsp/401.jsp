@@ -41,7 +41,7 @@
             <p>
                 У вас нет прав на просмотр страницы <%=request.getAttribute("javax.servlet.error.request_uri")%>.
             </p>
-            <a style="padding-top: 5px;" href="<%=request.getContextPath()%>/home">Вернуться на главную страницу</a>
+            <a style="padding-top: 5px;" href="<%=request.getContextPath()%>/home">← Вернуться на главную страницу</a>
         </div>
     </div>
 </div>
