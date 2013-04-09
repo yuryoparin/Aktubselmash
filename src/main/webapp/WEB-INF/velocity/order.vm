@@ -28,7 +28,7 @@
             #foreach ($cpp in ${cart.cartProducts})
                 #set($amount = $cpp.price * $cpp.number)
                 #set($shippingIds = [3,4,5])
-                #set($productIds = [1,12])
+                #set($productIds = [1])
                 #set($text = "")
                 #if($shippingIds.contains($cart.shipping.id) && $productIds.contains($cpp.product.id))
                     #set($text = "+ запасная режущая пара в подарок")

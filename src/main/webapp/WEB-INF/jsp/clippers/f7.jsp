@@ -138,7 +138,7 @@
                                         </c:otherwise>
                                     </c:choose>
                                 </h1>
-                                <span style="color: red; font-weight: bold;">+ запасная режущая пара в подарок!</span>
+                                <%--<span style="color: red; font-weight: bold;">+ запасная режущая пара в подарок!</span>--%>
                                 <c:choose>
                                     <c:when test="${productPrice.product.unavailableFlag}">
                                         <h2 style="padding-top: 10px;">Нет в наличии</h2>
