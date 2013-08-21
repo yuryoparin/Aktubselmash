@@ -210,7 +210,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/PCH-400-2_manual_rus.pdf">Описание преобразователя частоты тока</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/PCH-400-2_manual_rus.pdf" title="Инструкция по эксплуатации преобразователя частоты ПЧ-400-2">Описание преобразователя частоты тока</a></li>
                     </ul>
                 </div>
             </div>

@@ -57,6 +57,9 @@ body {
     display: block;
 }
 
+.logo-div .logo-href h1 { color: black !important; text-decoration: none !important; }
+.logo-div .logo-href h2 { color: black !important; text-decoration: none !important; }
+
 .logo-div span {
 	display: block;
 }
@@ -242,7 +245,7 @@ p {
 }
 
 a.pdf {
-    background: url("../images/pdf-icon-small.png") no-repeat -3px 0;
+    background: url("../images/pdf-icon-small.png") no-repeat -3px -2px;
     display: block;
     padding-left: 40px;
     padding-bottom: 3px;

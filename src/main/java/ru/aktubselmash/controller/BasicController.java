@@ -150,7 +150,7 @@ public class BasicController {
             Date now = new Date();
 
             for (ProductPrice pp : partPrices) {
-                if ("ta-1".equals(pp.getProduct().getShortName())) {
+                if ("ta-2".equals(pp.getProduct().getShortName())) {
                     session.setAttribute("thirdPrice", isForeignCountry ?
                             (pp.getDiscountDueDate() != null && pp.getForeignDiscount() != null && now.before(pp.getDiscountDueDate())
                                     ? pp.getForeignPrice() - pp.getForeignDiscount() : pp.getForeignPrice()) :

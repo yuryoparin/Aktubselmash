@@ -210,7 +210,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/ASI_MSU_manual_rus.pdf">Инструкция по применению</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/ASI_MSU_manual_rus.pdf" title="Инструкция по эксплуатации агрегата АСИ-101">Инструкция по эксплуатации</a></li>
                         <li><a class="pdf" href="<%=request.getContextPath()%>/files/ASI_MPO_manual_rus.pdf">Паспорт преобразователя частоты</a></li>
                     </ul>
                 </div>

@@ -16,7 +16,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>${productPrice.product.name} ТА-1 - Актюбсельмаш</title>
+	<title>${productPrice.product.name} - Актюбсельмаш</title>
 	<meta content="Станок для заточни режущих пар машинки для стрижки овец - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="заточка режущих пар +для стрижки овец, доводка режущих пар +для стрижки овец" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
@@ -187,7 +187,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-1_manual_rus.pdf">Инструкция по применению</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-1_manual_rus.pdf" title="Инструкция по эксплуатации точильного аппарата ТА-1">Инструкция по эксплуатации</a></li>
                     </ul>
                 </div>
             </div>

@@ -212,7 +212,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/Liscop_manual_rus.pdf">Инструкция по применению</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/Liscop_manual_rus.pdf" title="Инструкция по эксплуатации машинки для стрижки овец Liscop Super-Profi 3000">Инструкция по эксплуатации</a></li>
                         <li><a class="pdf" href="<%=request.getContextPath()%>/files/Liscop_manual_eng.pdf">Инструкция по применению (англ.) с картинками</a></li>
                     </ul>
                 </div>

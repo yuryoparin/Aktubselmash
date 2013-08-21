@@ -16,7 +16,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>${productPrice.product.name} ТА-2 - Актюбсельмаш</title>
+    <title>${productPrice.product.name} - Актюбсельмаш</title>
     <meta content="Станок для заточни режущих пар машинки для стрижки овец - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
     <meta content="заточка режущих пар +для стрижки овец, доводка режущих пар +для стрижки овец" name="keywords">
     <meta content="Актюбсельмаш" name="author">
@@ -189,7 +189,7 @@
                         на котором можно без дополнительных доработок закрепить однофазный электродвигатель серии АИСЕ71
                         (смотрите <a href="http://www.moselect.ru/st44.html" target="_blank">здесь</a> и
                             <a href="http://www.kontmotor.ru/index.php?cat=2" target="_blank">здесь</a>) и др. детали.
-                        Комплект деталей для сборки станка с одним точильным диском, но без двигателя стоит 14 900 руб.</p>
+                        Комплект деталей для сборки станка с одним точильным диском, но без двигателя стоит 14 900 руб. С двумя точильными дисками — 24 900 руб.</p>
                     </li>
                     <li>
                         <h2>Комплектация</h2>
@@ -213,7 +213,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-2_manual_rus.pdf">Инструкция по применению</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-2_manual_rus.pdf" title="Инструкция по эксплуатации точильного аппарата ТА-2">Инструкция по эксплуатации</a></li>
                     </ul>
                 </div>
             </div>

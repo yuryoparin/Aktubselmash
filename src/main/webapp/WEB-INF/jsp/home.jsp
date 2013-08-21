@@ -155,7 +155,7 @@
                             <h2>Точильный аппарат</h2>
                             <span style="margin-left: -10px;"><fmt:formatNumber value="${thirdPrice}"/> руб.</span>
                         </div>
-                        <div style="margin-top: 3px; position: relative;"><a href="<%=request.getContextPath()%>/parts/ta-1">Заказать &rarr;</a></div>
+                        <div style="margin-top: 3px; position: relative;"><a href="<%=request.getContextPath()%>/parts/ta-2">Заказать &rarr;</a></div>
                     </div>
 				</li>
 			</ul>
