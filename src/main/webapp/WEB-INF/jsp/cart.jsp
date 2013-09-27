@@ -13,7 +13,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Ваш заказ - Актюбсельмаш</title>
+	<title>Мой заказ - Актюбсельмаш</title>
 	<meta content="Корзина, оформление заказа" name="description">
 	<meta content="машинка +для стрижки овец оформление заказа, машинки +для стрижки овец покупка" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
@@ -114,9 +114,13 @@
             $('.number').keyup(function() {
                 var cpp = prices[$(this).closest('tr').find('td:first').text()];
                 if (/^\d+$/.test($(this).val())) {
+                    var delta = cpp.number - parseInt($(this).val());
                     cpp.number = $(this).val();
                     $(this).closest('tr').find('td:nth-child(6) span').html(formatNumber(cpp.number * cpp.price));
                     $('.total h1 span').html(formatNumber(calculateTotalPrice()));
+
+                    var $count = $('#header div.cart .count');
+                    $count.html((parseInt($count.html()) - delta) || 0);
                 }
                 else {
                     $(this).val(cpp.number);
@@ -135,22 +139,28 @@
 
                         if ($('.cart-table td div.text').length == 0) {
                             $('.cart-table tbody').append('<tr><td colspan="6">Нет товаров</td></tr>');
+                            $('#header div.cart .count').html('0');
                             $('.complete-button').css({opacity: '.3'});
                         }
 
-                        $('#header div.cart p').html(tovary(result.size));
-                        var offset = $('.cart-popup').width() / 2;
-                        if (cartPopupTimeout) clearTimeout(cartPopupTimeout);
-                        $('.cart-popup').css({
-                            display: 'block',
-                            top: 25,
-                            left: $('div.cart').offset().left + 18 - $('#header').offset().left - offset
-                        }).animate({opacity: 1, top: 36}, function() {
-                            var $$ = $(this);
-                            cartPopupTimeout = setTimeout(function() {
-                                $$.animate({opacity: 0}, function() { $(this).hide() });
-                            }, 1000);
-                        });
+                        var totalNumber = 0;
+                        for (var id in prices) {
+                            if (prices.hasOwnProperty(id))
+                                totalNumber += parseInt(prices[id].number);
+                        }
+                        $('#header div.cart .count').html(totalNumber);
+//                        var offset = $('.cart-popup').width() / 2;
+//                        if (cartPopupTimeout) clearTimeout(cartPopupTimeout);
+//                        $('.cart-popup').css({
+//                            display: 'block',
+//                            top: 25,
+//                            left: $('div.cart').offset().left + 18 - $('#header').offset().left - offset
+//                        }).animate({opacity: 1, top: 36}, function() {
+//                            var $$ = $(this);
+//                            cartPopupTimeout = setTimeout(function() {
+//                                $$.animate({opacity: 0}, function() { $(this).hide() });
+//                            }, 1000);
+//                        });
                     }
                 }).complete(function() {
                 }).error(function() {
@@ -402,7 +412,7 @@
         <div class="main-content">
             <div class="box box-container">
                 <h1>
-                    <span style="float: left;">Ваш заказ</span>
+                    <span style="float: left;">Мой заказ</span>
                     <a href="<%=request.getContextPath()%>/home" class="home-icon blue" style="color: #08c;">Продолжить покупки →</a>
                     <div style="clear: both;"></div>
                 </h1>

@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Контактная информация - Актюбсельмаш</title>
+	<title>Контакты — Актюбсельмаш</title>
 	<meta content="Как с нами связаться или найти нас в Москве" name="description">
 	<meta content="машинка +для стрижки овец телефон, машинки +для стрижки овец адрес" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
@@ -74,7 +74,7 @@
 	<div id="content">
         <div class="main-content">
             <div class="box box-container">
-                <h1>Контактная информация</h1>
+                <h1>Контакты</h1>
                 <div style="overflow: hidden; margin-bottom: 1em;">
                     <div style="width: 360px; float: left;">
                         <ul class="vertical-ul contacts-ul">

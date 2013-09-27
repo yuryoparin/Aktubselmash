@@ -213,7 +213,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-2_manual_rus.pdf" title="Инструкция по эксплуатации точильного аппарата ТА-2">Инструкция по эксплуатации</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-2_manual_rus.pdf">Инструкция на точильный аппарат ТА-2</a></li>
                     </ul>
                 </div>
             </div>

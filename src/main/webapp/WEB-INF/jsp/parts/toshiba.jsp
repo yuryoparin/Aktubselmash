@@ -15,7 +15,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Преобразователь частотный 400 Вт ${productPrice.product.name} - Актюбсельмаш</title>
+    <title>${productPrice.product.name} - Актюбсельмаш</title>
     <meta content="Преобразователь частотный 400 Вт для стрижки овец ${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
     <meta content="преобразователь +для стрижки овец toshiba япония, куплю преобразователь +для стрижки овец +toshiba, преобразователь +для стрижки овец toshiba купить, преобразователь +для стрижки овец toshiba цена" name="keywords">
     <meta content="Актюбсельмаш" name="author">
@@ -79,8 +79,7 @@
 <div id="content">
 <div class="main-content-sidebar">
     <div class="box box-container">
-        <h1 style="display:none;">Преобразователь частоты тока для стрижки овец Toshiba Япония</h1>
-        <h1>Преобразователь к МСУ-200 (Япония)</h1>
+        <h1>Преобразователь (Япония)</h1>
         <p>
         <div class="box-heading" style="height: 433px;">
             <div class="gallery" style="float:left; margin-left: 5px; height: 433px; width: 400px;">
@@ -161,7 +160,7 @@
         <div class="description">
             <h2 class="b">Описание</h2>
             <p style="margin-top: 12px;">
-
+                Предназначен для питания машинки <a href="<%=request.getContextPath()%>/parts/msu-200">МСУ-200</a>
             </p>
         </div>
     </div>

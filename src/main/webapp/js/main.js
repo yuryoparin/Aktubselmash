@@ -92,19 +92,19 @@ function buy(productId, url) {
 
     $.getJSON(url, { productId: productId }, function(result) {
         if (result.success) {
-            $('#header div.cart p').html(tovary(result.size));
+            $('#header div.cart .count').html(result.size || 0);
             var offset = $('.cart-popup').width() / 2;
             if (cartPopupTimeout) clearTimeout(cartPopupTimeout);
-            $('.cart-popup').css({
-                display: 'block',
-                top: 25,
-                left: $('div.cart').offset().left + 18 - $('#header').offset().left - offset
-            }).animate({opacity: 1, top: 36}, function() {
-                var $$ = $(this);
-                cartPopupTimeout = setTimeout(function() {
-                    $$.animate({opacity: 0}, function() { $(this).hide() });
-                }, 1000);
-            });
+//            $('.cart-popup').css({
+//                display: 'block',
+//                top: 25,
+//                left: $('div.cart').offset().left + 18 - $('#header').offset().left - offset
+//            }).animate({opacity: 1, top: 36}, function() {
+//                var $$ = $(this);
+//                cartPopupTimeout = setTimeout(function() {
+//                    $$.animate({opacity: 0}, function() { $(this).hide() });
+//                }, 1000);
+//            });
             $('.error-msg').hide();
             location.href = "http://aktubselmash.ru/cart";
         } else {

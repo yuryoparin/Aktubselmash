@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Оплата машинки для стрижки овец - Актюбсельмаш</title>
+	<title>Оплата - Актюбсельмаш</title>
 	<meta content="Оплата машинки для стрижки овец" name="description">
 	<meta content="машинка +для стрижки овец +оплата, машинки +для стрижки овец +оплата, куплю машинку +для стрижки овец" name="keywords">
 	<meta content="Актюбсельмаш" name="author">

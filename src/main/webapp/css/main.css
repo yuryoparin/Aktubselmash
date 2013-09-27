@@ -24,7 +24,7 @@ body {
 
 #header {
     padding-top: 12px;
-	height: 100px;
+	height: 130px;
 	position: relative;
 	width: 100%;
     z-index: 1001;
@@ -45,7 +45,7 @@ body {
 .logo-div {
 	background: url(../images/logo.png) no-repeat 0 2px;
 	padding-left: 80px;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	float: left;
 }
 
@@ -57,8 +57,13 @@ body {
     display: block;
 }
 
-.logo-div .logo-href h1 { color: black !important; text-decoration: none !important; }
-.logo-div .logo-href h2 { color: black !important; text-decoration: none !important; }
+.logo-div .header-1 {
+    color: black !important; text-decoration: none !important;
+    margin-bottom: 0;
+    font-size: 36px;
+    font-family: Georgia, Times, serif;
+    font-variant: small-caps;
+}
 
 .logo-div span {
 	display: block;
@@ -78,18 +83,38 @@ body {
 }
 
 div.phone {
-    background: url(../images/phone-36.png) 0 -3px no-repeat;
-	margin-top: 3px;
-    padding-left: 40px;
+    background: url(../images/phone-new.jpg) 0 3px no-repeat;
+	margin-top: 5px;
+    padding-left: 28px;
 	float:left;
 }
 
+div.phone span {
+    font-size: 26px;
+}
+
 div.cart {
-	background: url(../images/cart.png) no-repeat;
-	padding-left: 40px;
-	padding-right: 3px;
+	/*background: url(../images/cart.png) no-repeat;*/
+	/*padding-left: 40px;*/
+	padding-right: 2.3em;
+    margin-top: 12px;
 	float:right;
     position: relative;
+}
+
+div.cart .count {
+    color: white;
+    background: #2093ef;
+    background: -webkit-gradient(linear, center top, center bottom, from(#64c1ff), to(#2093ef));
+    background: -moz-linear-gradient(center top , #64c1ff, #2093ef);
+    background: -o-linear-gradient(top, #64c1ff, #2093ef);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#FF64c1ff, endColorStr=#FF2093ef);
+    border-radius: 1em;
+    padding: 0.45em 0.5em;
+    line-height: .9;
+    min-width: .7em;
+    top: -0.35em; right: 0;
+    position: absolute;
 }
 
 /*-------------- Navigation --------------*/
@@ -99,7 +124,7 @@ div.cart {
     overflow: hidden;
     padding: 0;
     border-bottom:  none;
-    float: right;
+    /*float: right;*/
 }
 
 .ie #navigation {
@@ -121,18 +146,19 @@ div.cart {
 
 #navigation ul li a, #navigation ul li div {
 	color: black;
-	font-size: 10pt;
+	font-size: 16px;
+    font-family: Georgia, Times, serif;
 	white-space: nowrap;
 	display: block;
 	float: left;
-    height: 33px;
+    height: 38px;
 }
 
 #navigation ul li span {
 	padding: 4px 21px;
     margin-top: 4px;
 	display: block;
-    border-left: 1px solid #ccc;
+    /*border-left: 1px solid #ccc;*/
 }
 
 #navigation ul li.first span {
@@ -167,6 +193,7 @@ div.cart {
 #navigation ul li.selected span {
     border-left: none;
     color: white;
+    margin-top: 5px;
 }
 
 #navigation ul li.selected a {

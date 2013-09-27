@@ -80,8 +80,7 @@
 	<div id="content">
         <div class="main-content-sidebar">
             <div class="box box-container">
-                <h1 style="display: none;">Агрегат для стрижки овец ${productPrice.product.name}</h1>
-                <h1>Агрегат ${productPrice.product.name}</h1>
+                <h1>${productPrice.product.name}</h1>
                 <p>
                     <div class="box-heading" style="height: 433px;">
                         <div class="gallery" style="float:left; margin-left: 5px; height: 433px; width: 400px;">

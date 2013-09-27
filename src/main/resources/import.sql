@@ -28,7 +28,7 @@ insert into shipping_payment(shipping_id, payment_id) values(5,5);
 insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(1, 'liscop-sp-3000',        1, 'Liscop Super Profi 3000',              'false', 'true', '/images/clippers/Liscop/1m.png',    '/images/clippers/Liscop/1s.png',    '50-1000 голов', false, false, 'шт.');
 insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(2, 'vs84-s',                2, 'VS84-S',                               'false', 'true', '/images/clippers/VS84-S/1m.png',    '/images/clippers/VS84-S/1s.png',    '10-50 голов',   false, false, 'шт.');
 insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(3, 'asi-101',               4, 'АСИ-101 с преобразователем 220В',      'false', 'true', '/images/clippers/ASI-101/1m.png',   '/images/clippers/ASI-101/1s.png',   '50-1000 голов', false, false, 'шт.');
-insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(4, 'asu-1',                 5, 'АСУ-1',                                'false', 'true', '/images/parts/Toshiba/1m.png',     '/images/parts/Toshiba/1s.png',     '50-1000 голов', false, false, 'шт.');
+insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(4, 'asu-1',                 5, 'Агрегат АСУ-1',                        'false', 'true', '/images/parts/Toshiba/1m.png',     '/images/parts/Toshiba/1s.png',     '50-1000 голов', false, false, 'шт.');
 insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(5, 'comb+cutter-msu-200',   1, 'Нож и гребенка для МСУ-200',           'true',  'true', '/images/parts/MSU-200/1m.png',      '/images/parts/MSU-200/1s.png',      '',              false, false, 'к-т.');
 insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(6, 'comb+cutter-other',     2, 'Нож и гребенка для VS84-S и F7',       'true',  'true', '/images/parts/VS84-S/1m.png',       '/images/parts/VS84-S/1s.png',       '',              false, false, 'к-т.');
 insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(7, 'comb+cutter-liscop-a5', 3, 'Нож и гребенка Liscop A5',             'true',  'true', '/images/parts/Liscop-A5/1m.png',    '/images/parts/Liscop-A5/1s.png',    '',              false, false, 'к-т.');
@@ -44,17 +44,17 @@ insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image
 -- insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(16,'pch-rus',               10, 'Преобразователь частоты (Россия)',    'true',  'true', '/images/clippers/PCH-400-2/1m.png', '/images/clippers/PCH-400-2/1s.png', '',              true, false, 'шт.');
 
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 1, 18500, 500, '2013-08-22', 12400, 500);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 2, 18600, 250, '2013-08-22', 12225, 250);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 3, 18900, 400, '2013-08-22', 13000, 700);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 4, 18900, 400, '2013-08-22', 13000, 700);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 5, 18900, 900, '2013-08-22', 12700, 400);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 1, 18500, 500, '2013-10-03', 12400, 500);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 2, 18600, 250, '2013-10-03', 12225, 250);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 3, 18900, 400, '2013-10-03', 13000, 700);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 4, 18900, 400, '2013-10-03', 13000, 700);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 5, 18900, 900, '2013-10-03', 12700, 400);
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 1, 8000, 1000, '2013-08-22', 5400, 500);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 2, 8000, 650, '2013-08-22', 5100, 200);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 3, 8000, 500, '2013-08-22', 5100, 200);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 4, 8000, 500, '2013-08-22', 5100, 200);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 5, 8000, 700, '2013-08-22', 5300, 200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 1, 8000, 1500, '2013-10-03', 5400, 500);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 2, 8000, 1150, '2013-10-03', 5100, 200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 3, 8000, 1000, '2013-10-03', 5100, 200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 4, 8000, 1000, '2013-10-03', 5100, 200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 5, 8000, 1200, '2013-10-03', 5300, 200);
 
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 1, 19200, null, null, 10600, null);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 2, 19500, null, null, 10900, null);
@@ -110,17 +110,17 @@ insert into product_price (product_id, shipping_id, price, discount_p, discount_
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (11, 4, 45000, null, null, 18000, null);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (11, 5, 45000, null, null, 21500, null);
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 1, 44000, 4100, '2013-08-22', 21000, 0);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 2, 45000, 4400, '2013-08-22', 21000, 0);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 3, 45000, 4400, '2013-08-22', 21000, 0);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 4, 45000, 4400, '2013-08-22', 21000, 0);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 5, 45000, 4400, '2013-08-22', 21000, 0);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 1, 44000, 4100, '2013-10-03', 21000, 0);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 2, 45000, 4400, '2013-10-03', 21000, 0);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 3, 45000, 4400, '2013-10-03', 21000, 0);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 4, 45000, 4400, '2013-10-03', 21000, 0);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 5, 45000, 4400, '2013-10-03', 21000, 0);
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 1, 10700, 2000, '2013-08-22', 6800, 1200);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 2, 10700, 1700, '2013-08-22', 6700, 900);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 3, 10700, 1700, '2013-08-22', 6700, 900);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 4, 10700, 1700, '2013-08-22', 6700, 900);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 5, 10700, 1900, '2013-08-22', 5900, 0);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 1, 10700, 2000, '2013-10-03', 6800, 1200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 2, 10700, 1700, '2013-10-03', 6700, 900);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 3, 10700, 1700, '2013-10-03', 6700, 900);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 4, 10700, 1700, '2013-10-03', 6700, 900);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 5, 10700, 1900, '2013-10-03', 5900, 0);
 
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (13, 1, 10000, null, null, 5000, null);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (13, 2, 10500, null, null, 5000, null);

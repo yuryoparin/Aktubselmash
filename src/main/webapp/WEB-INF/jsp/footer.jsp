@@ -1,9 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div id="footer">
     <div style="float:left;">
-        <p style="padding-bottom: 5px;">
-            &copy; 2012 Актюбсельмаш<br/>
-            г. Москва, ул. Ильинка д. 4 подъезд 5. <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
+        <p style="padding-bottom: 5px;" class="vcard">
+            &copy; 2013 <span class="fn org">Актюбсельмаш</span><br/>
+            <span class="category"><span class="value-title" title="Магазины"></span></span>
+            <span class="category"><span class="value-title" title="Машинки для стрижки овец"></span></span>
+            <span class="workhours"><span class="value-title" title="круглосуточно"></span></span>
+            <span class="url"><span class="value-title" title="http://aktubselmash.ru"></span></span>
+            <span class="tel"><span class="value-title" title="+7 (916) 185-06-28"></span></span>
+            <span class="adr">
+                <span class="country-name"><span class="value-title" title="Россия"></span></span>
+                <span class="locality">г. Москва</span>, <span class="street-address">ул. Ильинка д. 4</span> <span class="extended-address">подъезд 5</span>.
+                <a href="mailto:info@aktubselmash.ru" class="email">info@aktubselmash.ru</a></span>
         </p>
     </div>
     <div style="float:right; margin-right:3px;">

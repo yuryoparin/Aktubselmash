@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Каталог машинок для стрижки овец - Актюбсельмаш</title>
+	<title>Машинки для стрижки овец - Актюбсельмаш</title>
 	<meta content="Каталог машинок для стрижки овец. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец каталог, машинки +для стрижки овец каталог, машинка +для стрижки овец цена" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
@@ -43,7 +43,7 @@
     <jsp:useBean id="now" class="java.util.Date" />
 	<div id="content">
         <div class="box box-main">
-            <h1>Машинки</h1>
+            <h1>Машинки для стрижки овец</h1>
             <c:forEach var="pp" items="${productPrices}" varStatus="status">
                 <c:if test="${status.count % 3 eq 1}">
                     <div class="ul-list ul-list-transparent ul-list-three" style="margin-top:20px;">

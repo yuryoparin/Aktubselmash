@@ -16,7 +16,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Машинка для стрижки овец ${productPrice.product.name} - Актюбсельмаш</title>
+	<title>${productPrice.product.name} - Актюбсельмаш</title>
 	<meta content="${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец эса-1д, машинки +для стрижки овец эса-1д, куплю машинку +для стрижки овец эса-1д, машинка +для стрижки овец эса-1д купить, машинка +для стрижки овец эса-1д цена, машинка +для стрижки овец актюбсельмаш" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
@@ -78,7 +78,6 @@
 	<div id="content">
         <div class="main-content-sidebar">
             <div class="box box-container">
-                <h1 style="display: none;">Машинка для стрижки овец ${productPrice.product.name}</h1>
                 <h1>${productPrice.product.name}</h1>
                 <p>
                     <div class="box-heading" style="height: 433px;">
