@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Контакты — Актюбсельмаш</title>
+	<title>Контакты</title>
 	<meta content="Как с нами связаться или найти нас в Москве" name="description">
 	<meta content="машинка +для стрижки овец телефон, машинки +для стрижки овец адрес" name="keywords">
 	<meta content="Актюбсельмаш" name="author">

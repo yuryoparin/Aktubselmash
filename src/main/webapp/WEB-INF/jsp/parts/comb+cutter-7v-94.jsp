@@ -16,7 +16,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>${productPrice.product.name} - Актюбсельмаш</title>
+	<title>${productPrice.product.name}</title>
 	<meta content="${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="режущая пара +для стрижки овец vs84-s и f7, нож +для стрижки овец vs84-s и f7, гребенка +для стрижки овец vs84-s и f7, куплю гребенку +для стрижки овец vs84-s и f7, импортные режущие пары" name="keywords">
 	<meta content="Актюбсельмаш" name="author">

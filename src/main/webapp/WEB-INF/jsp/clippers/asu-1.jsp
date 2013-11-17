@@ -16,7 +16,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>${productPrice.product.name} - Актюбсельмаш</title>
+	<title>${productPrice.product.name}</title>
 	<meta content="Машинка для стрижки овец ${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="агрегат +для стрижки овец асу-1, куплю агрегат +для стрижки овец асу-1, агрегат +для стрижки овец асу-1 купить, агрегат +для стрижки овец асу-1 цена, машинка +для стрижки овец актюбсельмаш" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
@@ -71,6 +71,9 @@
     «Актюбсельмаш» и одного преобразователя частоты тока мощностью 600 Вт, работающего
     от 3-х фазной сети 380 В с частотой 50 Гц, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>.
 </div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
+    <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>
+</div>
 <div id="wrapper">
     <fmt:setLocale value="RU"/>
     <c:set var="selected" value="clippers" scope="request"/>
@@ -78,17 +81,18 @@
     <jsp:include page="../header.jsp" />
     <jsp:useBean id="now" class="java.util.Date" />
 	<div id="content">
-        <div class="main-content-sidebar">
+        <div class="main-content-sidebar" itemscope itemtype="http://schema.org/Product">
             <div class="box box-container">
-                <h1>${productPrice.product.name}</h1>
+                <h1 itemprop="name">${productPrice.product.name}</h1>
+                <%--<meta itemprop="category" content="Машинки для стрижки овец" />--%>
                 <p>
                     <div class="box-heading" style="height: 433px;">
                         <div class="gallery" style="float:left; margin-left: 5px; height: 433px; width: 400px;">
                             <div class="gallery-box" style="width: 400px;">
                                 <ul class="gallery-box-ul" style="width: 1240px;">
-                                    <li><img src="<%=request.getContextPath()%>/images/parts/Toshiba/1b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/MSU-200/2b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/MSU-200/3b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0"/></li>
+                                    <li><img itemprop="image" src="<%=request.getContextPath()%>/images/parts/Toshiba/1b.jpg" alt="${productPrice.product.name}" border="0"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/MSU-200/2b.jpg" alt="${productPrice.product.name}" border="0"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/MSU-200/3b.jpg" alt="${productPrice.product.name}" border="0"/></li>
                                 </ul>
                             </div>
                             <div class="gallery-dots" style="width: 52px;">
@@ -114,16 +118,17 @@
                                 <li>— диаметр рукоятки 37-49 мм</li>
                             </ul>
                             <div style="text-align: center; margin-top: 2em;">
-                                <h1 style="margin-left: 0;">
+                                <h1 style="margin-left: 0;" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                    <meta itemprop="priceCurrency" content="RUB" />
                                     <c:choose>
                                         <c:when test="${country}">
                                             <c:choose>
                                                 <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
                                                     <span class="old-price-s"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span>
-                                                    <fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/></span> руб.
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <fmt:formatNumber value="${productPrice.foreignPrice}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span> руб.
                                                 </c:otherwise>
                                             </c:choose>
                                         </c:when>
@@ -131,10 +136,10 @@
                                             <c:choose>
                                                 <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
                                                     <span class="old-price-s"><fmt:formatNumber value="${productPrice.price}"/></span>
-                                                    <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.price - productPrice.discount}"/></span> руб.
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.price}"/></span> руб.
                                                 </c:otherwise>
                                             </c:choose>
                                         </c:otherwise>
@@ -182,11 +187,12 @@
                 <ul class="vertical-ul">
                     <li>
                         <h2>Описание</h2>
-                        <p style="margin-top: 12px;">АСУ-1 включает в себя:</p>
+                        <div itemprop="description"><p style="margin-top: 12px;">АСУ-1 включает в себя:</p>
                         <p>– одну машинку для стрижки овец <a href="<%=request.getContextPath()%>/parts/msu-200">МСУ-200</a> производства завода АКТЮБСЕЛЬМАШ;<br/>
                         – один преобразователь частоты тока мощностью 250 Вт, выполненного по очень простой и надежной схеме: в одном корпусе установлен <a href="<%=request.getContextPath()%>/parts/toshiba">японский преобразователь</a> частоты фирмы TOSHIBA, выдающий 3-х фазный ток частотой 200 Гц и специальный высокочастотный 3-х фазный трансформатор, вместе создающие идеальный синусоидный 3-х фазный ток 36 В с частотой 200 Гц.</p>
                         <p>В момент запуска двигателя частота тока плавно изменяется от 0 до 200 Гц, что обеспечивает легкий пуск двигателя машинки без потери его мощности. Преобразователь оснащен длинными гибкими резиновыми кабелями со штекерными разъемами и выносной кнопкой Вкл/Выкл. Преобразователь частоты тока мощностью 250 Вт работает от обычной однофазной сети 220 В с частотой 50 Гц.</p>
                         <p>Это самый надежный агрегат из имеющихся. На машинке МСУ-200 установлен безщеточный асинхронный 3-х фазный двигатель, который не греется при работе и не требует дополнительных работ по контролю за состоянием и замене угольных щеток. При хорошем навыке стригалей им можно постричь 100-160 овец за смену и свыше 3000 овец за сезон.</p>
+                        </div>
                     </li>
                     <li>
                         <h2>Комплектация</h2>

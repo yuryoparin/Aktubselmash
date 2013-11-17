@@ -16,7 +16,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Машинка МСУ-200 - Актюбсельмаш</title>
+	<title>Машинка МСУ-200</title>
 	<meta content="${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец мсу-200, машинки +для стрижки овец мсу-200, куплю машинку +для стрижки овец мсу-200, машинка +для стрижки овец мсу-200 купить, машинка +для стрижки овец мсу-200 цена, машинка +для стрижки овец мсу-200 продажа" name="keywords">
 	<meta content="Актюбсельмаш" name="author">

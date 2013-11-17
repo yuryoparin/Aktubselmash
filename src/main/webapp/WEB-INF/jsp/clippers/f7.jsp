@@ -16,7 +16,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>${productPrice.product.name} - Актюбсельмаш</title>
+	<title>${productPrice.product.name}</title>
 	<meta content="Машинка для стрижки овец ${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец f7, машинки +для стрижки овец f7, куплю машинку +для стрижки овец f7, машинка +для стрижки овец f7 купить, машинка +для стрижки овец f7 цена, машинка +для стрижки овец япония, машинка +для стрижки овец f7 продажа, машинка +для стрижки овец такуми" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
@@ -70,6 +70,9 @@
     Мастерская обеспечена запасными частями. Результаты испытаний позволили отнести Takumi & F7 Professional к лучшей машинке
     для стрижки до 300 овец по соотношению цена-качество, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
+    <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>
+</div>
 <div id="wrapper">
     <fmt:setLocale value="RU"/>
     <c:set var="selected" value="clippers" scope="request"/>
@@ -77,17 +80,18 @@
     <jsp:include page="../header.jsp" />
     <jsp:useBean id="now" class="java.util.Date" />
 	<div id="content">
-        <div class="main-content-sidebar">
+        <div class="main-content-sidebar" itemscope itemtype="http://schema.org/Product">
             <div class="box box-container">
-                <h1>${productPrice.product.name}</h1>
+                <h1 itemprop="name">${productPrice.product.name}</h1>
+                <%--<meta itemprop="category" content="Машинки для стрижки овец" />--%>
                 <p>
                     <div class="box-heading" style="height: 433px;">
                         <div class="gallery" style="float:left; margin-left: 5px; height: 433px; width: 400px;">
                             <div class="gallery-box" style="width: 400px;">
                                 <ul class="gallery-box-ul" style="width: 1240px;">
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/F7/1b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0" width="400" height="414"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/F7/2b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0" width="400" height="414"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/F7/3b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img itemprop="image" src="<%=request.getContextPath()%>/images/clippers/F7/1b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/F7/2b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/F7/3b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
                                 </ul>
                             </div>
                             <div class="gallery-dots" style="width: 52px;">
@@ -111,16 +115,17 @@
                                 <li>— диаметр рукоятки 57 мм</li>
                             </ul>
                             <div style="text-align: center; margin-top: 2em;">
-                                <h1 style="margin-left: 0;">
+                                <h1 style="margin-left: 0;" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                    <meta itemprop="priceCurrency" content="RUB" />
                                     <c:choose>
                                         <c:when test="${country}">
                                             <c:choose>
                                                 <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
                                                     <span class="old-price-s"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span>
-                                                    <fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/></span> руб.
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <fmt:formatNumber value="${productPrice.foreignPrice}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span> руб.
                                                 </c:otherwise>
                                             </c:choose>
                                         </c:when>
@@ -128,16 +133,16 @@
                                             <c:choose>
                                                 <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
                                                     <span class="old-price-s"><fmt:formatNumber value="${productPrice.price}"/></span>
-                                                    <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.price - productPrice.discount}"/></span> руб.
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.price}"/></span> руб.
                                                 </c:otherwise>
                                             </c:choose>
                                         </c:otherwise>
                                     </c:choose>
                                 </h1>
-                                <span style="color: red; font-weight: bold;">+ запасная режущая пара в подарок!</span>
+                                <span style="color: red; font-weight: bold;">+ 2 запасные режущие пары в подарок!</span>
                                 <c:choose>
                                     <c:when test="${productPrice.product.unavailableFlag}">
                                         <h2 style="padding-top: 10px;">Нет в наличии</h2>
@@ -180,11 +185,14 @@
                 <ul class="vertical-ul">
                     <li>
                         <h2>Описание</h2>
-                        <p style="margin-top: 12px;">Машинки для стрижки овец TAKUMI & F7 Professional отличаются японским качеством и надежностью.</p>
-                        <p>Мощный двигатель - 350 Вт - позволяет справляться со стрижкой стада овец в 300 голов за сезон. Кабель у этой модели очень гибкий, 6 метров в длину. Вес машинки без кабеля уменьшен до 1,4 кг. Винты с широкой полукруглой головкой, фиксирующие гребенку, имеют шестигранное углубление под ключ и обеспечивают надежную фиксацию и удобную замену гребенок с помощью входящего в комплект ключа-шестигранника.</p>
-                        <p>Остальные характеристики этой машинки и комплект поставки такие же как у <a href="<%=request.getContextPath()%>/clippers/vs84-s">VS84-S</a>.</p>
-                        <p>Все зубчатые колеса редуктора изготовлены из стали, а не из текстолита. Кроме того, электродвигатель машинки TAKUMI & F7 Professional существенно тише, чем у предыдущих моделей, и имеет более высокий коэффициент полезной мощности, что способствует меньшему нагреву машинки во время работы.</p>
-                        <p>Мастерская обеспечена запасными частями.</p>
+
+                        <div itemprop="description">
+                            <p style="margin-top: 12px;">Машинки для стрижки овец TAKUMI & F7 Professional отличаются японским качеством и надежностью.</p>
+                            <p>Мощный двигатель - 350 Вт - позволяет справляться со стрижкой стада овец в 300 голов за сезон. Кабель у этой модели очень гибкий, 6 метров в длину. Вес машинки без кабеля уменьшен до 1,4 кг. Винты с широкой полукруглой головкой, фиксирующие гребенку, имеют шестигранное углубление под ключ и обеспечивают надежную фиксацию и удобную замену гребенок с помощью входящего в комплект ключа-шестигранника.</p>
+                            <p>Остальные характеристики этой машинки и комплект поставки такие же как у <a href="<%=request.getContextPath()%>/clippers/vs84-s">VS84-S</a>.</p>
+                            <p>Все зубчатые колеса редуктора изготовлены из стали, а не из текстолита. Кроме того, электродвигатель машинки TAKUMI & F7 Professional существенно тише, чем у предыдущих моделей, и имеет более высокий коэффициент полезной мощности, что способствует меньшему нагреву машинки во время работы.</p>
+                            <p>Мастерская обеспечена запасными частями.</p>
+                        </div>
                     </li>
                     <li>
                         <h2>Советы по уходу за машинкой и эксплуатацией режущих пар</h2>
@@ -201,7 +209,7 @@
                             <li class="first">Машинка для стрижки овец</li>
                             <li>Комплект ножей (установлены на машинку)</li>
                             <li>Специальная отвертка</li>
-                            <li>Запасные графитовые щетки - 2 шт</li>
+                            <li>Запасные графитовые щетки - 2 шт.</li>
                             <li>Флакон для смазочного масла (60 мл)</li>
                             <li>Кисточка для очистки режущих пар</li>
                             <li>Инструкция по применению</li>

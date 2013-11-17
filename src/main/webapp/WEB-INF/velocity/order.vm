@@ -27,11 +27,13 @@
             #set($total = 0)
             #foreach ($cpp in ${cart.cartProducts})
                 #set($amount = $cpp.price * $cpp.number)
+                #set($shippingFullIds = [1,2,3,4,5])
                 #set($shippingIds = [3,4,5])
-                #set($productIds = [1,12])
                 #set($text = "")
-                #if($shippingIds.contains($cart.shipping.id) && $productIds.contains($cpp.product.id))
+                #if($shippingIds.contains($cart.shipping.id) && $cpp.product.id eq 1)
                     #set($text = "+ запасная режущая пара в подарок")
+                #elseif($shippingFullIds.contains($cart.shipping.id) && $cpp.product.id eq 12)
+                    #set($text = "+ 2 запасные режущие пары в подарок")
                 #end
                 <tr #if($foreach.count % 2 == 0)style="background: #f2f2f2;"#end>
                     <td align="right" style="padding: 3px 8px; border: 1px solid #a0a0a0;">$foreach.count</td>

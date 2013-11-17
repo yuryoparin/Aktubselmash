@@ -11,7 +11,7 @@
 <div id="header">
     <div>
         <div class="logo-div">
-            <c:if test="${not isHome}"><a class="logo-href" href="<%=request.getContextPath()%>/home" title="Перейти на главную страницу"></c:if>
+            <c:if test="${not isHome}"><a class="logo-href" href="<%=request.getContextPath()%>/" title="Перейти на главную страницу"></c:if>
                 <p class="header-1">Актюбсельмаш</p>
                 <%--<p class="header-2">Машинки для стрижки овец</p>--%>
             <c:if test="${not isHome}"></a></c:if>
@@ -67,7 +67,7 @@
                         <c:when test="${selected eq 'clippers' and not selectedLink}">
                             <div><span>Машинки для стрижки овец</span></div>
                         </c:when>
-                        <c:otherwise><a href="<%=request.getContextPath()%>/clippers"><span>Машинки для стрижки овец</span></a></c:otherwise>
+                        <c:otherwise><div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="<%=request.getContextPath()%>/clippers" itemprop="url"><span itemprop="title">Машинки для стрижки овец</span></a></div></c:otherwise>
                     </c:choose>
                 </li>
                 <li<c:if test="${selected eq 'parts'}"> class="selected"</c:if>>

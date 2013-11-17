@@ -16,7 +16,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Преобразователь частотный 400 Вт ${productPrice.product.name} - Актюбсельмаш</title>
+	<title>${productPrice.product.name}</title>
 	<meta content="Преобразователь частотный 400 Вт для стрижки овец ${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="преобразователь +для стрижки овец пч-400-2, куплю преобразователь +для стрижки овец пч-400-2, преобразователь +для стрижки овец пч-400-2 купить, преобразователь +для стрижки овец пч-400-2 цена" name="keywords">
 	<meta content="Актюбсельмаш" name="author">

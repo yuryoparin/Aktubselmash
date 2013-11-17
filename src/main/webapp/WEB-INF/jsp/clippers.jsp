@@ -9,8 +9,8 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Машинки для стрижки овец - Актюбсельмаш</title>
-	<meta content="Каталог машинок для стрижки овец. Продажа по России наложенным платежом или самовывозом." name="description">
+	<title>Машинки для стрижки овец</title>
+	<meta content="Каталог машинок для стрижки овец Takumi F7, Liscop Super Profi 3000, VS84-S и советские МСУ-200. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец каталог, машинки +для стрижки овец каталог, машинка +для стрижки овец цена" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
 
@@ -34,6 +34,12 @@
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
     Каталог машинок для стрижки овец Liscop, Heiniger, "Актюбсельмаш". Продажа по России наложенным платежом или самовывозом, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
+</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
+    <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>
+</div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
+    <a itemprop="url" href="http://aktubselmash.ru/clippers"><span itemprop="title">Машинки для стрижки овец</span></a>
 </div>
 <div id="wrapper">
     <fmt:setLocale value="RU"/>

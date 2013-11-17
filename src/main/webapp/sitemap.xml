@@ -8,27 +8,27 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    <url>
-        <loc>http://aktubselmash.ru/home</loc>
-        <lastmod>2013-09-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+    <!--<url>-->
+        <!--<loc>http://aktubselmash.ru/home</loc>-->
+        <!--<lastmod>2013-09-28</lastmod>-->
+        <!--<changefreq>weekly</changefreq>-->
+        <!--<priority>1.0</priority>-->
+    <!--</url>-->
     <url>
         <loc>http://aktubselmash.ru/clippers</loc>
-        <lastmod>2013-09-28</lastmod>
+        <lastmod>2013-10-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>http://aktubselmash.ru/parts</loc>
-        <lastmod>2012-09-28</lastmod>
+        <lastmod>2012-10-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>http://aktubselmash.ru/payment</loc>
-        <lastmod>2012-03-02</lastmod>
+        <lastmod>2013-10-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -58,7 +58,7 @@
     </url>
     <url>
         <loc>http://aktubselmash.ru/clippers/f7</loc>
-        <lastmod>2013-09-28</lastmod>
+        <lastmod>2013-11-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>

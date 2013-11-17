@@ -16,7 +16,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>${productPrice.product.name} - Актюбсельмаш</title>
+	<title>${productPrice.product.name}</title>
 	<meta content="${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец эса-1д, машинки +для стрижки овец эса-1д, куплю машинку +для стрижки овец эса-1д, машинка +для стрижки овец эса-1д купить, машинка +для стрижки овец эса-1д цена, машинка +для стрижки овец актюбсельмаш" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
@@ -69,6 +69,9 @@
 <div title="description" class="se-description" style="display: none;">
     Машинка для стрижки овец ЭСА-1Д с гибким валом. Доставка по России наложенным платежом, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
+    <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>
+</div>
 <div id="wrapper">
     <fmt:setLocale value="RU"/>
     <c:set var="selected" value="clippers" scope="request"/>
@@ -76,17 +79,18 @@
     <jsp:include page="../header.jsp" />
     <jsp:useBean id="now" class="java.util.Date" />
 	<div id="content">
-        <div class="main-content-sidebar">
+        <div class="main-content-sidebar" itemscope itemtype="http://schema.org/Product">
             <div class="box box-container">
-                <h1>${productPrice.product.name}</h1>
+                <h1 itemprop="name">${productPrice.product.name}</h1>
+                <%--<meta itemprop="category" content="Машинки для стрижки овец" />--%>
                 <p>
                     <div class="box-heading" style="height: 433px;">
                         <div class="gallery" style="float:left; margin-left: 5px; height: 433px; width: 400px;">
                             <div class="gallery-box" style="width: 400px;">
                                 <ul class="gallery-box-ul" style="width: 1240px;">
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/ESA-1D/1b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0" width="400" height="414"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/ESA-1D/2b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0" width="400" height="414"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/ESA-1D/3b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img itemprop="image" src="<%=request.getContextPath()%>/images/clippers/ESA-1D/1b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/ESA-1D/2b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/ESA-1D/3b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
                                 </ul>
                             </div>
                             <div class="gallery-dots" style="width: 52px;">
@@ -113,16 +117,17 @@
                                 <li>— диаметр рукоятки 37-49 мм</li>
                             </ul>
                             <div style="text-align: center; margin-top: 2em;">
-                                <h1 style="margin-left: 0;">
+                                <h1 style="margin-left: 0;" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                    <meta itemprop="priceCurrency" content="RUB" />
                                     <c:choose>
                                         <c:when test="${country}">
                                             <c:choose>
                                                 <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
                                                     <span class="old-price-s"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span>
-                                                    <fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/></span> руб.
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <fmt:formatNumber value="${productPrice.foreignPrice}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span> руб.
                                                 </c:otherwise>
                                             </c:choose>
                                         </c:when>
@@ -130,10 +135,10 @@
                                             <c:choose>
                                                 <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
                                                     <span class="old-price-s"><fmt:formatNumber value="${productPrice.price}"/></span>
-                                                    <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.price - productPrice.discount}"/></span> руб.
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.price}"/></span> руб.
                                                 </c:otherwise>
                                             </c:choose>
                                         </c:otherwise>
@@ -182,7 +187,7 @@
                     <li class="li li-first"><div class="box box-container">
                         <div class="description" style="height: 375px;">
                             <h2 class="b">Описание</h2>
-                            <p style="margin-top: 12px;">
+                            <div itemprop="description"><p style="margin-top: 12px;">
                                 Электродвигатель привода машинки подвесить на высоте 1600 мм от уровня рабочего места стригаля.
                                 Направление вращения вала электродвигателя должно быть левое, т.е. против часовой стрелки,
                                 если смотреть на торец вала со стороны подключения гибкого вала.</p>
@@ -190,7 +195,7 @@
                                 а также проверить надежность крепления его арматуры - стопорные винты наконечников гибкого вала должны быть
                                 закручены до упора в лыску на валах машинки и электродвигателя, а стопорные кольца установлены
                                 в канавку наконечника и щлицы винтов.</p>
-                            <p>Подробности смотрите в пункте <a href="<%=request.getContextPath()%>/files/ESA-1D_manual_rus.pdf">инструкции</a> "Подготовка к работе".</p>
+                            <p>Подробности смотрите в пункте <a href="<%=request.getContextPath()%>/files/ESA-1D_manual_rus.pdf">инструкции</a> "Подготовка к работе".</p></div>
                         </div>
                     </div></li>
                     <li class="li"><div class="box box-container">

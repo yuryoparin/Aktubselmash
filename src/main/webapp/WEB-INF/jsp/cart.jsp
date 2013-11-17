@@ -300,14 +300,23 @@
                     $(val).closest('tr').find('td.one-item-price span').html(formatNumber(o.price));
 
                     // + запасная пара в подарок для Liscop & F7
-                    if ($.inArray(parseInt($(val).text()), [1,12,2]) > -1 &&
+                    if (parseInt($(val).text()) == 1 &&
                         $.inArray(parseInt($('#shippings option:selected').val()), [3,4,5]) > -1)
                     {
                         var $td = $(val).closest('tr').find('td:eq(2)');
                         if ($td.find('span').length == 0)
                             $td.append(
                                     '<span style="">+ запасная режущая пара в подарок</span>');
-                    } else {
+                    }
+                    else if (parseInt($(val).text()) == 12 &&
+                             $.inArray(parseInt($('#shippings option:selected').val()), [1,2,3,4,5]) > -1)
+                    {
+                        $td = $(val).closest('tr').find('td:eq(2)');
+                        if ($td.find('span').length == 0)
+                            $td.append(
+                                    '<span style="">+ 2 запасные режущие пары в подарок</span>');
+                    }
+                    else {
                         $(val).closest('tr').find('td:eq(2) span').remove();
                     }
                 });
@@ -320,14 +329,24 @@
 
         function updateAdditionalLabels(shippingId) {
             $('.cart-table tbody tr td:first-child').each(function(index, val) {
-                if ($.inArray(parseInt($(val).text()), [1,12,2]) > -1 &&
-                        $.inArray(shippingId, [3,4,5]) > -1)
+                // + запасная пара в подарок для Liscop & F7
+                if (parseInt($(val).text()) == 1 &&
+                    $.inArray(shippingId, [3,4,5]) > -1)
                 {
                     var $td = $(val).closest('tr').find('td:eq(2)');
                     if ($td.find('span').length == 0)
                         $td.append(
                                 '<span style="">+ запасная режущая пара в подарок</span>');
-                } else {
+                }
+                else if (parseInt($(val).text()) == 12 &&
+                        $.inArray(shippingId, [1,2,3,4,5]) > -1)
+                {
+                    $td = $(val).closest('tr').find('td:eq(2)');
+                    if ($td.find('span').length == 0)
+                        $td.append(
+                                '<span style="">+ 2 запасные режущие пары в подарок</span>');
+                }
+                else {
                     $(val).closest('tr').find('td:eq(2) span').remove();
                 }
             });

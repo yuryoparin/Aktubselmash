@@ -16,7 +16,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>${productPrice.product.name} - Актюбсельмаш</title>
+	<title>${productPrice.product.name}</title>
 	<meta content="${productPrice.product.name} - ${price} руб." name="description">
 	<meta content="режущая пара +для стрижки овец liscop a5, нож +для стрижки овец liscop a5, гребенка +для стрижки овец liscop a5, куплю гребенку +для стрижки овец liscop a5, импортные режущие пары" name="keywords">
 	<meta content="Актюбсельмаш" name="author">

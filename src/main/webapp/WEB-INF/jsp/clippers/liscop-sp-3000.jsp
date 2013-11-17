@@ -17,7 +17,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>${productPrice.product.name} - Актюбсельмаш</title>
+	<title>${productPrice.product.name}</title>
 	<meta content="Машинка для стрижки овец ${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец liscop, машинки +для стрижки овец liscop, куплю машинку +для стрижки овец liscop, машинка +для стрижки овец liscop купить, машинка +для стрижки овец liscop цена, машинка +для стрижки овец германия, машинка +для стрижки овец liscop продажа" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
@@ -72,6 +72,9 @@
     Liscop Super Profi 3000 предназначена для большого количества овец (до 1000 голов), работает от обычной
     розетки 220 В, имеет вес 1,6 кг и длину кабеля 5 м, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
+    <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>
+</div>
 <div id="wrapper">
     <fmt:setLocale value="RU"/>
     <c:set var="selected" value="clippers" scope="request"/>
@@ -79,17 +82,18 @@
     <jsp:include page="../header.jsp" />
     <jsp:useBean id="now" class="java.util.Date" />
 	<div id="content">
-        <div class="main-content-sidebar">
+        <div class="main-content-sidebar" itemscope itemtype="http://schema.org/Product">
             <div class="box box-container">
-                <h1>${productPrice.product.name}</h1>
+                <h1 itemprop="name">${productPrice.product.name}</h1>
+                <%--<meta itemprop="category" content="Машинки для стрижки овец" />--%>
                 <p>
                     <div class="box-heading" style="height: 433px;">
                         <div class="gallery" style="float:left; margin-left: 5px; height: 433px; width: 400px;">
                             <div class="gallery-box" style="width: 400px;">
                                 <ul class="gallery-box-ul" style="width: 1240px;">
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/Liscop/1b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0" width="400" height="414"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/Liscop/2b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0" width="400" height="414"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/Liscop/3b.jpg" alt="Машинка для стрижки овец ${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img itemprop="image" src="<%=request.getContextPath()%>/images/clippers/Liscop/1b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/Liscop/2b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/Liscop/3b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
                                 </ul>
                             </div>
                             <div class="gallery-dots" style="width: 52px;">
@@ -113,16 +117,17 @@
                                 <li>— диаметр рукоятки 55-62 мм</li>
                             </ul>
                             <div style="text-align: center; margin-top: 2em;">
-                                <h1 style="margin-left: 0;">
+                                <h1 style="margin-left: 0;" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                    <meta itemprop="priceCurrency" content="RUB" />
                                     <c:choose>
                                         <c:when test="${country}">
                                             <c:choose>
                                                 <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
                                                     <span class="old-price-s"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span>
-                                                    <fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.foreignPrice - productPrice.foreignDiscount}"/></span> руб.
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <fmt:formatNumber value="${productPrice.foreignPrice}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.foreignPrice}"/></span> руб.
                                                 </c:otherwise>
                                             </c:choose>
                                         </c:when>
@@ -130,10 +135,10 @@
                                             <c:choose>
                                                 <c:when test="${productPrice.discount gt 0 and productPrice.discountDueDate.time ge now.time}">
                                                     <span class="old-price-s"><fmt:formatNumber value="${productPrice.price}"/></span>
-                                                    <fmt:formatNumber value="${productPrice.price - productPrice.discount}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.price - productPrice.discount}"/></span> руб.
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <fmt:formatNumber value="${productPrice.price}"/> руб.
+                                                    <span itemprop="price"><fmt:formatNumber value="${productPrice.price}"/></span> руб.
                                                 </c:otherwise>
                                             </c:choose>
                                         </c:otherwise>
@@ -182,15 +187,17 @@
                 <ul class="vertical-ul">
                     <li>
                         <h2>Описание</h2>
-                        <p style="margin-top: 12px;">Для стрижки большого количества овец за сезон (от 150 до 1000 голов) рекомендуем приобретать более мощные (430 Вт) машинки Liscop Super Profi 3000, изготовленные в Германии и имеющиеся у нас в наличии.</p>
-						<p>Машинка работает от обычной розетки 220 В, имеет вес 1,6 кг и длину кабеля 5 м.
-						Это очень удачная разработка известного немецкого производителя, стрижет хорошо, работает надежно. Мощный 430-ваттный мотор вращается со скоростью 3000 об/мин и с вполне приемлемым тихим жужжанием.</p>
-						<p>Прижатие ножей с помощью прижимной гайки осуществляется очень плавно.</p> 
-						<p>Вблизи стригущей головки корпус сужен и закрыт пластмассовыми накладками, чтобы машинку удобно было держать в руке.</p>
-						<p>Улучшенная модель встроенного вентилятора работает менее шумно и лучше остужает мотор и головку машинки.</p>
-						<p>С целью уменьшения веса инструмента был разработан новый пластиковый термостойкий, укрепленный стекловолокном корпус для мотора.
-						В машинке установлен новый конденсатор, а к щеточному узлу подсоединен дополнительный резистивно-емкостный искорогаситель. Это позволило заметно увеличить коэффициент полезной мощности двигателя машинки до 99%.</p>
-						<p>В целом, это симпатичная, плавно и довольно тихо работающая машинка, ею удобно пользоваться в полевых условиях.</p>
+                        <div itemprop="description">
+                            <p style="margin-top: 12px;">Для стрижки большого количества овец за сезон (от 150 до 1000 голов) рекомендуем приобретать более мощные (430 Вт) машинки Liscop Super Profi 3000, изготовленные в Германии и имеющиеся у нас в наличии.</p>
+                            <p>Машинка работает от обычной розетки 220 В, имеет вес 1,6 кг и длину кабеля 5 м.
+                            Это очень удачная разработка известного немецкого производителя, стрижет хорошо, работает надежно. Мощный 430-ваттный мотор вращается со скоростью 3000 об/мин и с вполне приемлемым тихим жужжанием.</p>
+                            <p>Прижатие ножей с помощью прижимной гайки осуществляется очень плавно.</p>
+                            <p>Вблизи стригущей головки корпус сужен и закрыт пластмассовыми накладками, чтобы машинку удобно было держать в руке.</p>
+                            <p>Улучшенная модель встроенного вентилятора работает менее шумно и лучше остужает мотор и головку машинки.</p>
+                            <p>С целью уменьшения веса инструмента был разработан новый пластиковый термостойкий, укрепленный стекловолокном корпус для мотора.
+                            В машинке установлен новый конденсатор, а к щеточному узлу подсоединен дополнительный резистивно-емкостный искорогаситель. Это позволило заметно увеличить коэффициент полезной мощности двигателя машинки до 99%.</p>
+                            <p>В целом, это симпатичная, плавно и довольно тихо работающая машинка, ею удобно пользоваться в полевых условиях.</p>
+                        </div>
                     </li>
                     <li>
                         <h2>Комплектация</h2>

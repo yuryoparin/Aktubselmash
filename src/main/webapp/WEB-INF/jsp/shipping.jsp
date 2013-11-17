@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Доставка - Актюбсельмаш</title>
+	<title>Доставка</title>
 	<meta content="Доставка машинки для стрижки овец по России или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец доставка, машинки +для стрижки овец доставка" name="keywords">
 	<meta content="Актюбсельмаш" name="author">

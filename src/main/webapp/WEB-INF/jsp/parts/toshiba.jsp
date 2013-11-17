@@ -15,7 +15,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>${productPrice.product.name} - Актюбсельмаш</title>
+    <title>${productPrice.product.name}</title>
     <meta content="Преобразователь частотный 400 Вт для стрижки овец ${productPrice.product.name} - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
     <meta content="преобразователь +для стрижки овец toshiba япония, куплю преобразователь +для стрижки овец +toshiba, преобразователь +для стрижки овец toshiba купить, преобразователь +для стрижки овец toshiba цена" name="keywords">
     <meta content="Актюбсельмаш" name="author">
