@@ -206,7 +206,7 @@
                             <li>Комплект ножей (установлены на машинку)</li>
                             <li>Гаечный ключ</li>
                             <li>Флакон специального смазочного масла (60 мл)</li>
-                            <li>Инструкция по применению</li>
+                            <li><a href="<%=request.getContextPath()%>/files/Liscop_manual_rus.pdf" target="_blank">Инструкция по эксплуатации</a></li>
                             <li>Футляр для транспортировки и хранения</li>
                         </ul>
                     </li>
@@ -218,7 +218,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/Liscop_manual_rus.pdf" title="Инструкция по эксплуатации машинки для стрижки овец Liscop Super-Profi 3000">Инструкция по эксплуатации</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/Liscop_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации машинки для стрижки овец Liscop Super-Profi 3000">Инструкция по эксплуатации</a></li>
                         <li><a class="pdf" href="<%=request.getContextPath()%>/files/Liscop_manual_eng.pdf">Инструкция по применению (англ.) с картинками</a></li>
                     </ul>
                 </div>

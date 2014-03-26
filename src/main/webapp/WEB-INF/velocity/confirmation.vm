@@ -38,7 +38,7 @@
                 #if($shippingIds.contains($cart.shipping.id) && $cpp.product.id eq 1)
                     #set($text = "+ запасная режущая пара в подарок")
                 #elseif($shippingFullIds.contains($cart.shipping.id) && $cpp.product.id eq 12)
-                    #set($text = "+ 2 запасные режущие пары в подарок")
+                    #set($text = "+ запасная режущая пара в подарок")
                 #end
 
                 <tr #if($foreach.count % 2 == 0)style="background: #f2f2f2;"#end>

@@ -142,7 +142,7 @@
                                         </c:otherwise>
                                     </c:choose>
                                 </h1>
-                                <span style="color: red; font-weight: bold;">+ 2 запасные режущие пары в подарок!</span>
+                                <span style="color: red; font-weight: bold;">+ запасная режущая пара в подарок!</span>
                                 <c:choose>
                                     <c:when test="${productPrice.product.unavailableFlag}">
                                         <h2 style="padding-top: 10px;">Нет в наличии</h2>
@@ -212,7 +212,7 @@
                             <li>Запасные графитовые щетки - 2 шт.</li>
                             <li>Флакон для смазочного масла (60 мл)</li>
                             <li>Кисточка для очистки режущих пар</li>
-                            <li>Инструкция по применению</li>
+                            <li><a href="<%=request.getContextPath()%>/files/Takumi_F7_Professional_manual_rus.pdf" target="_blank">Инструкция по эксплуатации</a></li>
                             <li>Футляр для транспортировки и хранения</li>
                         </ul>
                     </li>
@@ -224,7 +224,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/Takumi_F7_Professional_manual_rus.pdf">Инструкция по эксплуатации машинки для стрижки овец Takumi & F7 Professional</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/Takumi_F7_Professional_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации машинки для стрижки овец Takumi & F7 Professional">Инструкция по эксплуатации машинки для стрижки овец Takumi & F7 Professional</a></li>
                     </ul>
                 </div>
             </div>

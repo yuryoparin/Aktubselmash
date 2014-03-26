@@ -23,7 +23,7 @@
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/DD_belatedPNG.js"></script>
     </c:if>
     <script type="text/javascript">
-        var map, placemark1, placemark2;
+        var map, placemark1, placemark2, placemark3;
         $(document).ready(function() {
             <c:if test="${fn:contains(browserClass, 'ie6')}">
                 DD_belatedPNG.fix('.num');
@@ -45,6 +45,11 @@
             placemark2.description = "г. Москва, ул. 7-я Текстильщиков д. 5, подъезд 3";
             map.addOverlay(placemark2);
 
+            placemark3 = new YMaps.Placemark(new YMaps.GeoPoint(37.633634, 55.728586));
+            placemark3.name = "Актюбсельмаш на ст. м. «Павелецкая»";
+            placemark3.description = "г. Москва, ул. Б. Пионерская д. 10–12 стр. 1, подъезд 1";
+            map.addOverlay(placemark3);
+
             map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 11);
 
             showLocation();
@@ -59,6 +64,9 @@
             } else if (hash == '#2') {
                 map.setCenter(new YMaps.GeoPoint(37.7479, 55.6980), 14);
                 placemark2.openBalloon();
+            } else if (hash == '#3') {
+                map.setCenter(new YMaps.GeoPoint(37.633634, 55.728586), 15);
+                placemark3.openBalloon();
             }
         }
     </script>
@@ -95,8 +103,17 @@
                                     <a href="#2" class="dashed">м. Текстильщики</a>
                                     <p>г. Москва, ул. 7-я Текстильщиков д. 5, подъезд 3<br/>
                                        &#9742; +7 916 185-06-28, +7 499 176-83-64<br/>
-                                       <span style="font-size: 12pt;">&#x231A;</span> 19:00&ndash;21:00 пн.&ndash;пт., 9:00&ndash;21:00 сб.&ndash;вс.<br/>
-                                       Виталий Константинович
+                                       <span style="font-size: 12pt;">&#x231A;</span> 19:00&ndash;21:00 пн.&ndash;пт., 9:00&ndash;21:00 сб.&ndash;вс.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="num"><span>3</span></div>
+                                <div class="address">
+                                    <a href="#3" class="dashed">м. Павелецкая</a>
+                                    <p>г. Москва, ул. Б. Пионерская д. 10&ndash;12 стр. 1, подъезд 1<br/>
+                                        &#9742; +7 916 185-06-28, +7 499 235-37-18<br/>
+                                        <span style="font-size: 12pt;">&#x231A;</span> 11:00&ndash;22:00 пн.&ndash;вс.
                                     </p>
                                 </div>
                             </li>

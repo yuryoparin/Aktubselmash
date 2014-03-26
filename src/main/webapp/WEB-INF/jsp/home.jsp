@@ -13,13 +13,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Машинка для стрижки овец от <c:out value="${productMinPrice}"/> руб. Режущие пары от <c:out value="${partMinPrice}"/> руб.</title>
-	<meta content="Машинки для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200. Режущие пары - 750р. Продажа по России наложенным платежом или самовывозом." name="description">
+	<meta content="Машинки для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200. Режущие пары - 950р. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец, машинки +для стрижки овец, куплю машинку +для стрижки овец, машинка +для стрижки овец купить, машинка +для стрижки овец цена, машинка +для стрижки овец продажа, продажа машинок для стрижки овец" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
 
     <link href="<%=request.getContextPath()%>/favicon.ico" rel="shortcut icon"/>
     <link type="image/x-icon" href="<%=request.getContextPath()%>/favicon.ico" rel="icon"/>
     <link media="all" type="text/css" href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"/>
+    <link rel="canonical" href="http://aktubselmash.ru"/>
 
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>

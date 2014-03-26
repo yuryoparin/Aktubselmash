@@ -187,7 +187,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-1_manual_rus.pdf" title="Инструкция по эксплуатации точильного аппарата ТА-1">Инструкция по эксплуатации</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-1_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации точильного аппарата ТА-1">Инструкция по эксплуатации</a></li>
                     </ul>
                 </div>
             </div>

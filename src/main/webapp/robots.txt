@@ -1,15 +1,7 @@
-
-User-agent: Yandex
-Disallow: /cart/
-Disallow: /css/
-Host: aktubselmash.ru
-
-User-agent: Googlebot
-Disallow: /cart/
-Disallow: /css/
-
-User-agent: *
-Disallow: /cart/
-Disallow: /css/
-
+User-Agent: *
+Disallow: /css
+Disallow: /images
+Disallow: /js
+Disallow: /cart
 Sitemap: http://aktubselmash.ru/sitemap.xml
+Host: aktubselmash.ru

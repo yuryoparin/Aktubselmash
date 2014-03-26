@@ -314,7 +314,7 @@
                         $td = $(val).closest('tr').find('td:eq(2)');
                         if ($td.find('span').length == 0)
                             $td.append(
-                                    '<span style="">+ 2 запасные режущие пары в подарок</span>');
+                                    '<span style="">+ запасная режущая пара в подарок</span>');
                     }
                     else {
                         $(val).closest('tr').find('td:eq(2) span').remove();
@@ -344,7 +344,7 @@
                     $td = $(val).closest('tr').find('td:eq(2)');
                     if ($td.find('span').length == 0)
                         $td.append(
-                                '<span style="">+ 2 запасные режущие пары в подарок</span>');
+                                '<span style="">+ запасная режущая пара в подарок</span>');
                 }
                 else {
                     $(val).closest('tr').find('td:eq(2) span').remove();
