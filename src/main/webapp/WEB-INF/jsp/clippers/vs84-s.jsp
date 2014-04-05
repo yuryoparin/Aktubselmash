@@ -67,8 +67,8 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Мастерская обеспечена запасными частями. Результаты испытаний позволили отнести VS84-S к лучшей машинке
-    для стрижки до 50 овец по соотношению цена-качество, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
+    Результаты испытаний позволили отнести VS84-S к лучшей машинке для стрижки до 50 овец по соотношению цена-качество.
+    Мастерская обеспечена запасными частями. Звоните по тел. + 7 (916) 185 0628 или пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
     <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>

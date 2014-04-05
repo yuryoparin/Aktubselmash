@@ -13,7 +13,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Машинка для стрижки овец от <c:out value="${productMinPrice}"/> руб. Режущие пары от <c:out value="${partMinPrice}"/> руб.</title>
-	<meta content="Машинки для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200. Режущие пары - 950р. Продажа по России наложенным платежом или самовывозом." name="description">
+	<meta content="Машинки для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200. Режущие пары — 950р. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец, машинки +для стрижки овец, куплю машинку +для стрижки овец, машинка +для стрижки овец купить, машинка +для стрижки овец цена, машинка +для стрижки овец продажа, продажа машинок для стрижки овец" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
 
@@ -37,7 +37,7 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Машинка для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200. Ножи, гребенки, запасные части. Продажа по России наложенным платежом или самовывозом. +7 916 185-06-28, <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>.
+    Машинка для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200 производства завода &laquo;Актюбсельмаш&raquo;. Ножи, гребенки, запасные части. Продажа по России наложенным платежом или самовывозом. +7 916 185-06-28, <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>.
 </div>
 <div id="wrapper">
     <fmt:setLocale value="RU"/>

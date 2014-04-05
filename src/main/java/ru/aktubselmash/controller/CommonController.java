@@ -6,15 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
-import ru.aktubselmash.model.Cart;
-import ru.aktubselmash.model.Product;
 import ru.aktubselmash.model.ProductPrice;
-import ru.aktubselmash.service.ProductPriceService;
-import ru.aktubselmash.service.ProductService;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -61,6 +54,11 @@ public class CommonController extends BasicController {
     @RequestMapping("/parts")
     public String parts(Model model) {
         return "parts";
+    }
+
+    @RequestMapping("/appeal")
+    public String appeal(Model model) {
+        return "appeal";
     }
 
     @RequestMapping("/payment")

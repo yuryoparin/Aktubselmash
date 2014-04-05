@@ -33,7 +33,8 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Каталог машинок для стрижки овец Liscop, Heiniger, "Актюбсельмаш". Продажа по России наложенным платежом или самовывозом, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
+    Каталог машинок для стрижки овец Takumi F7, Liscop Super Profi 3000, VS84-S и советские МСУ-200 производства завода &laquo;Актюбсельмаш&raquo;.
+    Продажа по России наложенным платежом или самовывозом. Звоните по тел. +7 (916) 185 0628 или пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
     <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>

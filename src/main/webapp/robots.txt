@@ -3,5 +3,6 @@ Disallow: /css
 Disallow: /images
 Disallow: /js
 Disallow: /cart
+Disallow: /appeal
 Sitemap: http://aktubselmash.ru/sitemap.xml
 Host: aktubselmash.ru

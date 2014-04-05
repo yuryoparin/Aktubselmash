@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE yml_catalog SYSTEM "shops.dtd">
 
-<yml_catalog date="2013-09-28 03:33">
+<yml_catalog date="2014-04-05 14:29">
     <shop>
 		<name>Актюбсельмаш</name>
 		<company>Актюбсельмаш</company>
@@ -21,7 +21,7 @@
 		<offers>
 			<offer id="1" available="true">
 				<url>http://aktubselmash.ru/clippers/liscop-sp-3000</url>
-				<price>18000</price>
+				<price>18500</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>2</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/Liscop/1m.png</picture>
@@ -49,7 +49,7 @@
 			</offer>
 			<offer id="2" available="true">
 				<url>http://aktubselmash.ru/clippers/vs84-s</url>
-				<price>6500</price>
+				<price>6000</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>2</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/VS84-S/1m.png</picture>
@@ -103,7 +103,7 @@
 			</offer>
 			<offer id="4" available="true">
 				<url>http://aktubselmash.ru/clippers/asi-101</url>
-				<price>19200</price>
+				<price>20000</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>3</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/ASI-101/1m.png</picture>
@@ -161,7 +161,7 @@
 			</offer>
 			<offer id="6" available="true">
 				<url>http://aktubselmash.ru/clippers/esa-1d</url>
-				<price>20000</price>
+				<price>21000</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>3</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/ESA-1D/1m.png</picture>
@@ -188,7 +188,7 @@
 			</offer>
 			<offer id="7" available="true">
 				<url>http://aktubselmash.ru/parts/comb+cutter-msu-200</url>
-				<price>750</price>
+				<price>950</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>5</categoryId>
 				<picture>http://aktubselmash.ru/images/parts/MSU-200/1m.png</picture>
@@ -224,7 +224,7 @@
 			</offer>
 			<offer id="9" available="true">
 				<url>http://aktubselmash.ru/parts/comb+cutter-liscop-a5</url>
-				<price>2500</price>
+				<price>2700</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>5</categoryId>
 				<picture>http://aktubselmash.ru/images/parts/Liscop-A5/1m.png</picture>
@@ -282,7 +282,7 @@
 			<!--</offer>-->
 			<offer id="12" available="true">
 				<url>http://aktubselmash.ru/parts/msu-200</url>
-				<price>9000</price>
+				<price>9500</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>4</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/MSU-200/2m.png</picture>
@@ -331,7 +331,7 @@
 			</offer>
 			<offer id="14" available="true">
 				<url>http://aktubselmash.ru/parts/pch-400-2</url>
-				<price>10000</price>
+				<price>10500</price>
 				<currencyId>RUR</currencyId>
 				<categoryId>4</categoryId>
 				<picture>http://aktubselmash.ru/images/clippers/PCH-400-2/1m.png</picture>
@@ -353,7 +353,7 @@
 			</offer>
             <offer id="15" available="true">
                 <url>http://aktubselmash.ru/parts/ta-2</url>
-                <price>39000</price>
+                <price>44000</price>
                 <currencyId>RUR</currencyId>
                 <categoryId>4</categoryId>
                 <picture>http://aktubselmash.ru/images/parts/TA-2/1m.png</picture>

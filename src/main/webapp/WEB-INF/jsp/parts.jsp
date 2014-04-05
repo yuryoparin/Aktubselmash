@@ -33,7 +33,8 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Ножи и гребенки, преобразователи и точильный станок для стрижки овец. Продажа по России наложенным платежом или самовывозом, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
+    Ножи и гребенки, преобразователи и точильный станок для стрижки овец. Продажа по России наложенным платежом или самовывозом.
+    Звоните по тел. +7 (916) 185 0628 или пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
 <div id="wrapper">
     <fmt:setLocale value="RU"/>

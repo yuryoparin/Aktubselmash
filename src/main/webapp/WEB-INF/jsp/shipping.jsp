@@ -19,7 +19,7 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Самовывозом - бесплатно. Стоимость доставки по Москве 350 руб. Почтой EMS, Почтой России,
+    Доставка машинки для стрижки овец по России или самовывозом. Самовывозом - бесплатно. Стоимость доставки по Москве 350 руб. Почтой EMS, Почтой России,
     Транспортной компанией "ПЭК" или "Энергия". Тарифы на сайтах компаний или пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
 <div id="wrapper">
@@ -34,7 +34,7 @@
                     <ul class="vertical-ul">
                         <li>
                             <h2>Самовывозом</h2>
-                            <p>Отгрузка машинок производится с <a href="<%=request.getContextPath()%>/contacts">2-х точек</a> в Москве
+                            <p>Отгрузка машинок производится с <a href="<%=request.getContextPath()%>/contacts">3-х точек</a> в Москве
                                после предварительного звонка по контактному тел.:  +7 916 185-06-28
                             </p>
                         </li>

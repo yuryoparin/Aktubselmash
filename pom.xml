@@ -35,7 +35,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.1.1</version>
                 <configuration>
-                    <outputDirectory>../apache-tomcat-7.0.39/webapps</outputDirectory>
+                    <outputDirectory>../apache-tomcat-7.0.52/webapps</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>

@@ -67,7 +67,8 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Машинка для стрижки овец ЭСА-1Д с гибким валом. Доставка по России наложенным платежом, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
+    Машинка для стрижки овец ЭСА-1Д с гибким валом производства завода &laquo;Актюбсельмаш&raquo;. Доставка по России наложенным платежом.
+    Звоните по тел. + 7 (916) 185 0628 или пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
     <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>
@@ -195,7 +196,7 @@
                                 а также проверить надежность крепления его арматуры &mdash; стопорные винты наконечников гибкого вала должны быть
                                 закручены до упора в лыску на валах машинки и электродвигателя, а стопорные кольца установлены
                                 в канавку наконечника и щлицы винтов.</p>
-                            <p>Подробности смотрите в пункте <a href="<%=request.getContextPath()%>/files/ESA-1D_manual_rus.pdf">инструкции</a> "Подготовка к работе".</p></div>
+                            <p>Подробности смотрите в пункте <a href="<%=request.getContextPath()%>/files/ESA-1D_manual_rus.pdf">инструкции</a> &laquo;Подготовка к работе&raquo;.</p></div>
                         </div>
                     </div></li>
                     <li class="li"><div class="box box-container">
