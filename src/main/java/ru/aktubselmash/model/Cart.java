@@ -51,6 +51,21 @@ public class Cart implements Serializable {
     private Integer totalNumber;
 
     @Override
+    public String toString() {
+        return "Cart{" +
+                "id=" + id +
+                ", client=" + client +
+                ", cartProducts=" + cartProducts +
+                ", shipping=" + shipping +
+                ", payment=" + payment +
+                ", orderDate=" + orderDate +
+                ", details='" + details + '\'' +
+                ", status='" + status + '\'' +
+                ", totalNumber=" + totalNumber +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

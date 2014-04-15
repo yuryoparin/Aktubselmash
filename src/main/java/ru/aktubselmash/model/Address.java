@@ -34,6 +34,20 @@ public class Address implements Serializable {
     private String postalCode;
 
     @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", region='" + region + '\'' +
+                ", city='" + city + '\'' +
+                ", county='" + county + '\'' +
+                ", street='" + street + '\'' +
+                ", building='" + building + '\'' +
+                ", apartment='" + apartment + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

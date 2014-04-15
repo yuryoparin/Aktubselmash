@@ -22,6 +22,15 @@ public class Payment implements Serializable {
     private String description;
 
     @Override
+    public String toString() {
+        return "Payment{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

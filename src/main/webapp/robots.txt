@@ -1,6 +1,8 @@
 User-Agent: *
 Disallow: /css
 Disallow: /images
+Allow: /images/clippers
+Allow: /images/parts
 Disallow: /js
 Disallow: /cart
 Disallow: /appeal

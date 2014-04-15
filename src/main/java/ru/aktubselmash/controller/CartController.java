@@ -4,18 +4,19 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import ru.aktubselmash.model.*;
 import ru.aktubselmash.model.constant.PartyType;
 import ru.aktubselmash.model.util.AddToCartResult;
 import ru.aktubselmash.model.util.PriceResult;
 import ru.aktubselmash.service.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.EnumSet;
 import java.util.List;
 
 /**
@@ -67,6 +68,8 @@ public class CartController extends BasicController {
 
     @RequestMapping(value = "/cart/complete")
     public String complete(@ModelAttribute Cart cart, Model model, HttpSession session, @ModelAttribute("country") Boolean isForeignCountry) {
+        logger.info("!!!!!! CART: " + cart);
+
         if (cart.getCartProducts().isEmpty() || cart.getCartProducts().get(0).getProduct() == null ||
             cart.getClient() == null || cart.getClient().getFio() == null || cart.getClient().getFio().length() == 0)
         {

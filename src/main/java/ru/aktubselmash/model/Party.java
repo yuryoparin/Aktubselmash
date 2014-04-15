@@ -45,6 +45,20 @@ public class Party implements Serializable {
     private String email;
 
     @Override
+    public String toString() {
+        return "Party{" +
+                "id=" + id +
+                ", type=" + type +
+                ", fio='" + fio + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", property='" + property + '\'' +
+                ", addresses=" + addresses +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
