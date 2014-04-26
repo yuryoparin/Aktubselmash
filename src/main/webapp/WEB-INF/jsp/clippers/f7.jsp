@@ -66,10 +66,10 @@
     </script>
 </head>
 <body class="${browserClass}">
-<div title="description" class="se-description" style="display: none;">
-    Мастерская обеспечена запасными частями. Результаты испытаний позволили отнести Takumi & F7 Professional к лучшей машинке
-    для стрижки до 300 овец по соотношению цена-качество, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
-</div>
+<%--<div title="description" class="se-description" style="display: none;">--%>
+    <%--Мастерская обеспечена запасными частями. Результаты испытаний позволили отнести Takumi F7 Professional к лучшей машинке--%>
+    <%--для стрижки до 300 овец по соотношению цена-качество, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>--%>
+<%--</div>--%>
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
     <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>
 </div>
@@ -187,10 +187,10 @@
                         <h2>Описание</h2>
 
                         <div itemprop="description">
-                            <p style="margin-top: 12px;">Машинки для стрижки овец TAKUMI & F7 Professional отличаются японским качеством и надежностью.</p>
+                            <p style="margin-top: 12px;">Машинка для стрижки овец Takumi F7 Professional отличается японским качеством и надежностью.</p>
                             <p>Мощный двигатель - 350 Вт - позволяет справляться со стрижкой стада овец в 300 голов за сезон. Кабель у этой модели очень гибкий, 6 метров в длину. Вес машинки без кабеля уменьшен до 1,4 кг. Винты с широкой полукруглой головкой, фиксирующие гребенку, имеют шестигранное углубление под ключ и обеспечивают надежную фиксацию и удобную замену гребенок с помощью входящего в комплект ключа-шестигранника.</p>
                             <p>Остальные характеристики этой машинки и комплект поставки такие же как у <a href="<%=request.getContextPath()%>/clippers/vs84-s">VS84-S</a>.</p>
-                            <p>Все зубчатые колеса редуктора изготовлены из стали, а не из текстолита. Кроме того, электродвигатель машинки TAKUMI & F7 Professional существенно тише, чем у предыдущих моделей, и имеет более высокий коэффициент полезной мощности, что способствует меньшему нагреву машинки во время работы.</p>
+                            <p>Все зубчатые колеса редуктора изготовлены из стали, а не из текстолита. Кроме того, электродвигатель машинки Takumi F7 Professional существенно тише, чем у предыдущих моделей, и имеет более высокий коэффициент полезной мощности, что способствует меньшему нагреву машинки во время работы.</p>
                             <p>Мастерская обеспечена запасными частями.</p>
                         </div>
                     </li>
@@ -224,7 +224,7 @@
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
-                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/Takumi_F7_Professional_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации машинки для стрижки овец Takumi & F7 Professional">Инструкция по эксплуатации машинки для стрижки овец Takumi & F7 Professional</a></li>
+                        <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/Takumi_F7_Professional_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации машинки для стрижки овец Takumi F7 Professional">Инструкция по эксплуатации машинки для стрижки овец Takumi F7 Professional</a></li>
                     </ul>
                 </div>
             </div>

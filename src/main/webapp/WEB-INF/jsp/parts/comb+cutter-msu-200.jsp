@@ -180,7 +180,7 @@
             </div>
             <jsp:useBean id="taList" class="java.util.ArrayList" />
             <div class="box box-container description" style="margin-top: 1em;">
-                <h2 class="b" style="margin-bottom: 7px;">Использование</h2>
+                <h2 class="b" style="margin-bottom: 7px;">Подходит для машинок</h2>
                 <ul class="horizontal-d-ul">
                     <c:forEach var="dp" items="${dependantPrices}" varStatus="status">
                         <c:choose>

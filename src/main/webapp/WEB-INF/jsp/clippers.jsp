@@ -10,8 +10,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Машинки для стрижки овец</title>
-	<meta content="Каталог машинок для стрижки овец Takumi F7, Liscop Super Profi 3000, VS84-S и советские МСУ-200. Продажа по России наложенным платежом или самовывозом." name="description">
-	<meta content="машинка +для стрижки овец каталог, машинки +для стрижки овец каталог, машинка +для стрижки овец цена" name="keywords">
+	<meta content="Машинка для стрижки овец VS84-S — 6500 руб, Профессиональная машинка для стрижки овец Takumi F7 — 8700 руб, Liscop Super Profi 3000 — 18700 руб. Купить машинку для стрижки овец наложенным платежом или самовывозом." name="description">
+	<meta content="машинка +для стрижки овец купить, машинки +для стрижки овец купить, машинка +для стрижки овец каталог" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
 
 	<link href="<%=request.getContextPath()%>/favicon.ico" rel="shortcut icon"/>
@@ -33,8 +33,8 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Каталог машинок для стрижки овец Takumi F7, Liscop Super Profi 3000, VS84-S и советские МСУ-200 производства завода &laquo;Актюбсельмаш&raquo;.
-    Продажа по России наложенным платежом или самовывозом. Звоните по тел. +7 (916) 185 0628 или пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
+    Машинка для стрижки овец VS84-S — 6500 руб, Профессиональная машинка для стрижки овец Takumi F7 — 8700 руб, Liscop Super Profi 3000 — 18700 руб.
+    Купить машинку для стрижки овец наложенным платежом или самовывозом. Звоните по тел. +7 (916) 185 0628 или пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
 <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:none;">
     <a itemprop="url" href="http://aktubselmash.ru/"><span itemprop="title">Главная</span></a>

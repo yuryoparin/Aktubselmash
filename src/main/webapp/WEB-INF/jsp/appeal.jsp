@@ -58,9 +58,9 @@
                                 <a href="<%=request.getContextPath()%>/clippers/esa-1d">ЭСА-1Д</a>, <a href="<%=request.getContextPath()%>/parts/msu-200">МСУ-200</a>),
                                 которая не представлена на сайтах наших конкурентов, в чём вы легко можете убедиться, внимательно изучая списки товаров на их сайтах.</p>
                             <p>С 2010 года на нашем сайте появились современные портативные машинки <a href="<%=request.getContextPath()%>/clippers/vs84-s">VS84-S</a>,
-                                <a href="<%=request.getContextPath()%>/clippers/f7">Takumi & F7 Professional</a> и
+                                <a href="<%=request.getContextPath()%>/clippers/f7">Takumi F7 Professional</a> и
                                 <a href="<%=request.getContextPath()%>/clippers/liscop-sp-3000">Liscop Super Profi 3000</a>.</p>
-                            <p>У оригинальных машинок Takumi & F7 Professional рукоятки тёмно-синие, как представлено на нашем сайте.
+                            <p>У оригинальных машинок Takumi F7 Professional рукоятки тёмно-синие, как представлено на нашем сайте.
                                Поэтому дешёвые китайские машинки легко отличить по цвету рукоятки (красные, тёмно-зелёные).</p>
                             <p>Подробное описание всех машинок вы можете найти на нашем сайте в разделе <a href="<%=request.getContextPath()%>/clippers">Машинки для стрижки овец</a>.</p>
                             <p>Также мы продаём запасные режущие пары разных стран-изготовителей, главной характеристикой которых является количество овец,
