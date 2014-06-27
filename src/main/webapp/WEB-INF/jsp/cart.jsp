@@ -30,6 +30,18 @@
     <script type="text/javascript">
         var sp = {}, prices = {};
         $(document).ready(function() {
+//            $.ajax({
+//                type: "GET",
+//                url: "http://www.ya.ru"
+//            })
+//            .done(function(data) {
+//                console.log(data);
+//            })
+//            .fail(function(jqXHR, textStatus, errorThrown) {
+//                console.log("[cart] request failed: [%d] %s, %s", jqXHR.status, textStatus, errorThrown);
+//            });
+
+
             $('.cart-table tbody tr').live({
                 mouseenter: function() { $(this).addClass('hover'); },
                 mouseleave: function() { $(this).removeClass('hover'); }
@@ -216,16 +228,16 @@
                     },
                     'client.addresses[0].street': {
                         vrequired: true
-                    },
+                    }//,
 //                    'client.addresses[0].building': {
 //                        vrequired: true
 //                    },
 //                    'client.addresses[0].apartment': {
 //                        vrequired: true
 //                    },
-                    'client.addresses[0].postalCode': {
-                        vrequired: true
-                    }
+//                    'client.addresses[0].postalCode': {
+//                        vrequired: true
+//                    }
                 },
                 messages: {
                     'client.fio': "Поле не может быть пустым",
@@ -330,18 +342,19 @@
         function updateAdditionalLabels(shippingId) {
             $('.cart-table tbody tr td:first-child').each(function(index, val) {
                 // + запасная пара в подарок для Liscop & F7
-                if (parseInt($(val).text()) == 1 &&
-                    $.inArray(shippingId, [3,4,5]) > -1)
-                {
-                    var $td = $(val).closest('tr').find('td:eq(2)');
-                    if ($td.find('span').length == 0)
-                        $td.append(
-                                '<span style="">+ запасная режущая пара в подарок</span>');
-                }
-                else if (parseInt($(val).text()) == 12 &&
+//                if (parseInt($(val).text()) == 1 &&
+//                    $.inArray(shippingId, [3,4,5]) > -1)
+//                {
+//                    var $td = $(val).closest('tr').find('td:eq(2)');
+//                    if ($td.find('span').length == 0)
+//                        $td.append(
+//                                '<span style="">+ запасная режущая пара в подарок</span>');
+//                }
+//                else
+                if (parseInt($(val).text()) == 12 &&
                         $.inArray(shippingId, [1,2,3,4,5]) > -1)
                 {
-                    $td = $(val).closest('tr').find('td:eq(2)');
+                    var $td = $(val).closest('tr').find('td:eq(2)');
                     if ($td.find('span').length == 0)
                         $td.append(
                                 '<span style="">+ запасная режущая пара в подарок</span>');
@@ -444,43 +457,6 @@
                                     <div class="num"><span>1</span></div>
                                     <div class="address">
                                         <h2 style="font-weight: normal; margin-bottom: 20px;">Перечень товаров</h2>
-                                        <div style="overflow: hidden; margin-bottom: 10px; padding-top: 1px;">
-                                            <label for="shippings" style=""><span class="label">Доставка</span>
-                                                <c:choose>
-                                                    <c:when test="${fn:contains(browserClass, 'ie6') or fn:contains(browserClass, 'ios')}">
-                                                        <div style="float: left;">
-                                                            <select name="shipping.id" id="shippings"></select>
-                                                        </div>
-                                                    </c:when>
-                                                    <c:otherwise>
-                                                        <div class="select" style="float:left;">
-                                                            <span class="l"></span>
-                                                            <span class="r">
-                                                                <select name="shipping.id" id="shippings"></select>
-                                                                <span class="option-text">${cart.shipping.name}</span>
-                                                            </span>
-                                                        </div>
-                                                    </c:otherwise>
-                                                </c:choose>
-                                            </label>
-                                            <label for="payments"><span class="label" style="margin-left: 7px;">Оплата</span>
-                                                <c:choose>
-                                                    <c:when test="${fn:contains(browserClass, 'ie6') or fn:contains(browserClass, 'ios')}">
-                                                        <select name="payment.id" id="payments"></select>
-                                                    </c:when>
-                                                    <c:otherwise>
-                                                        <div class="select" style="float:left;">
-                                                            <span class="l"></span>
-                                                            <span class="r">
-                                                                <select name="payment.id" id="payments"></select>
-                                                                <span class="option-text">${cart.payment.name}</span>
-                                                            </span>
-                                                        </div>
-                                                    </c:otherwise>
-                                                </c:choose>
-                                            </label>
-                                            <div style="clear: left;"></div>
-                                        </div>
                                         <table class="cart-table">
                                             <thead>
                                                 <tr>
@@ -539,14 +515,57 @@
                                                 <tr><td colspan="6"></td></tr>
                                             </tfoot>
                                         </table>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="num"><span>2</span></div>
+                                    <div class="address">
+                                        <h2 style="font-weight: normal; margin-bottom: 20px;">Доставка и оплата</h2>
+                                        <div style="overflow: hidden; margin-bottom: 10px; padding-top: 1px;">
+                                            <label for="shippings" style=""><span class="label">Доставка</span>
+                                                <c:choose>
+                                                    <c:when test="${fn:contains(browserClass, 'ie6') or fn:contains(browserClass, 'ios')}">
+                                                        <div style="float: left;">
+                                                            <select name="shipping.id" id="shippings"></select>
+                                                        </div>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <div class="select" style="float:left;">
+                                                            <span class="l"></span>
+                                                            <span class="r">
+                                                                <select name="shipping.id" id="shippings"></select>
+                                                                <span class="option-text">${cart.shipping.name}</span>
+                                                            </span>
+                                                        </div>
+                                                    </c:otherwise>
+                                                </c:choose>
+                                            </label>
+                                            <label for="payments"><span class="label" style="margin-left: 7px;">Оплата</span>
+                                                <c:choose>
+                                                    <c:when test="${fn:contains(browserClass, 'ie6') or fn:contains(browserClass, 'ios')}">
+                                                        <select name="payment.id" id="payments"></select>
+                                                    </c:when>
+                                                    <c:otherwise>
+                                                        <div class="select" style="float:left;">
+                                                            <span class="l"></span>
+                                                            <span class="r">
+                                                                <select name="payment.id" id="payments"></select>
+                                                                <span class="option-text">${cart.payment.name}</span>
+                                                            </span>
+                                                        </div>
+                                                    </c:otherwise>
+                                                </c:choose>
+                                            </label>
+                                            <div style="clear: left;"></div>
+                                        </div>
                                         <div>
                                             <div style="float: left; margin-top: 19px;">Подробнее о комиссии в разделах
-                                               <a style="font-size: 10pt;" href="<%=request.getContextPath()%>/payment" target="_blank">Оплата</a>
-                                               и <a style="font-size: 10pt;"
-                                                    href="<%=request.getContextPath()%>/shipping" target="_blank">Доставка</a>.
+                                                <a style="font-size: 10pt;" href="<%=request.getContextPath()%>/payment" target="_blank">Оплата</a>
+                                                и <a style="font-size: 10pt;"
+                                                     href="<%=request.getContextPath()%>/shipping" target="_blank">Доставка</a>.
                                             </div>
                                             <div class="total" style="float:right;">
-                                                <span class="title"><span style="font-size: 14pt;">Итого</span> без учета комиссий:</span>
+                                                <span class="title"><span style="font-size: 14pt;">Итого</span> без учета доставки:</span>
                                                 <h1><span><fmt:formatNumber value="${totalPrice}"/></span> руб.</h1>
                                             </div>
                                             <div style="clear: both;"></div>
@@ -554,7 +573,7 @@
                                     </div>
                                 </li>
                                 <li style="margin-bottom: 10px;">
-                                    <div class="num"><span>2</span></div>
+                                    <div class="num"><span>3</span></div>
                                     <div class="address">
                                         <h2 style="font-weight: normal; margin-bottom: 20px;">Контактная информация</h2>
                                         <div style="margin-left: -8px;">
@@ -812,7 +831,7 @@
                                                 <div class="field">
                                                     <span class="label">
                                                         <label for="postalCode">Почтовый индекс</label>
-                                                        <span class="required" style="display: none;">*</span>
+                                                        <%--<span class="required" style="display: none;">*</span>--%>
                                                     </span>
                                                     <div class="text" style="float: left;">
                                                         <span class="l">
@@ -848,7 +867,7 @@
                                             <div>
                                                 <div style="margin: 15px 0 10px 224px; width: 220px; overflow: hidden;">
                                                     <a class="complete-button blue-button" href="">
-                                                        <span class="label">Отправить заказ</span>
+                                                        <span class="label">Заказать</span>
                                                         <span class="r"></span>
                                                     </a>
                                                     <div style="margin: 0 auto; width: 45px; display: none;">

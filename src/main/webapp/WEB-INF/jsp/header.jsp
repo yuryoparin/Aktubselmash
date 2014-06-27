@@ -29,7 +29,7 @@
                     </c:when>
                     <c:otherwise><c:set var="total" value="0"/></c:otherwise>
                 </c:choose>
-                <a href="<%=request.getContextPath()%>/cart" class="cart"><span>Мой заказ</span> <span class="count"><c:out value="${total}"/></span></a>
+                <a href="<%=request.getContextPath()%>/cart" class="cart"><span style="font-size: 18px;">Мой заказ</span> <span class="count"><c:out value="${total}"/></span></a>
             </div>
         </div>
         <%--<table class="popup cart-popup">--%>

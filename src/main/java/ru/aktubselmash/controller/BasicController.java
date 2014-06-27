@@ -1,20 +1,17 @@
 package ru.aktubselmash.controller;
 
-import org.springframework.ui.Model;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import ru.aktubselmash.model.Cart;
-import ru.aktubselmash.model.Product;
 import ru.aktubselmash.model.ProductPrice;
 import ru.aktubselmash.service.ProductPriceService;
 import ru.aktubselmash.service.ProductService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,7 +23,10 @@ import java.util.regex.Pattern;
  * Version: ${VERSION}
  */
 @SessionAttributes({"cart", "productMinPrice", "partMinPrice", "thirdPrice", "productPrices", "partPrices"})
+//@SessionAttributes({"cart", "productMinPrice", "partMinPrice", "thirdPrice", "productPrices"})
 public class BasicController {
+    private static final Logger logger = LoggerFactory.getLogger(BasicController.class);
+
     private final Pattern firefoxPattern = Pattern.compile("firefox/(\\d+)");
     private final Pattern msiePattern = Pattern.compile("msie (\\d+)");
     private final Pattern chromePattern = Pattern.compile("chrome/(\\d+)");
@@ -39,26 +39,30 @@ public class BasicController {
 
     @ModelAttribute("browserClass")
     public String browserClass(HttpServletRequest request) {
-        String browserType = request.getHeader("User-Agent").toLowerCase();
+        String browserType = request.getHeader("User-Agent");
 
-        Matcher m = msiePattern.matcher(browserType);
-        if (m.find()) return "ie ie" + m.group(1);
+        if (browserType != null) {
+            browserType = browserType.toLowerCase();
 
-        m = firefoxPattern.matcher(browserType);
-        if (m.find()) return "firefox ff" + m.group(1);
+            Matcher m = msiePattern.matcher(browserType);
+            if (m.find()) return "ie ie" + m.group(1);
 
-        m = chromePattern.matcher(browserType);
-        if (m.find()) return "chrome chrome" + m.group(1);
+            m = firefoxPattern.matcher(browserType);
+            if (m.find()) return "firefox ff" + m.group(1);
 
-        m = safariPattern.matcher(browserType);
-        if (m.find()) {
-            String r = "safari safari" + m.group(1);
-            if (iosPattern.matcher(browserType).find()) r += " ios";
-            return r;
+            m = chromePattern.matcher(browserType);
+            if (m.find()) return "chrome chrome" + m.group(1);
+
+            m = safariPattern.matcher(browserType);
+            if (m.find()) {
+                String r = "safari safari" + m.group(1);
+                if (iosPattern.matcher(browserType).find()) r += " ios";
+                return r;
+            }
+
+            m = operaPattern.matcher(browserType);
+            if (m.find()) return "opera o" + m.group(1);
         }
-
-        m = operaPattern.matcher(browserType);
-        if (m.find()) return "opera o" + m.group(1);
 
         return "";
     }
@@ -82,17 +86,20 @@ public class BasicController {
 
 
     @ModelAttribute("productPrices")
-    public List<Product> findProducts(HttpSession session) {
-        if (session.getAttribute("productPrices") == null)
+    public List<ProductPrice> findProducts(HttpSession session) {
+        logger.info("!!! @ModelAttribute(\"productPrices\") has begun");
+        if (session.getAttribute("productPrices") == null) {
             session.setAttribute("productPrices", productPriceService.findWithMinPrice(false));
-        return (List<Product>) session.getAttribute("productPrices");
+            logger.info("!!! @ModelAttribute(\"productPrices\")" + ((List<ProductPrice>) session.getAttribute("productPrices")));
+        }
+        return (List<ProductPrice>) session.getAttribute("productPrices");
     }
 
     @ModelAttribute("partPrices")
-    public List<Product> findParts(HttpSession session) {
+    public List<ProductPrice> findParts(HttpSession session) {
         if (session.getAttribute("partPrices") == null)
             session.setAttribute("partPrices", productPriceService.findWithMinPrice(true));
-        return (List<Product>) session.getAttribute("partPrices");
+        return (List<ProductPrice>) session.getAttribute("partPrices");
     }
 
     @ModelAttribute("productMinPrice")

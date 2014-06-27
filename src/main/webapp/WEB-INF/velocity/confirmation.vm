@@ -35,9 +35,9 @@
                 #set($shippingFullIds = [1,2,3,4,5])
                 #set($shippingIds = [3,4,5])
                 #set($text = "")
-                #if($shippingIds.contains($cart.shipping.id) && $cpp.product.id eq 1)
-                    #set($text = "+ запасная режущая пара в подарок")
-                #elseif($shippingFullIds.contains($cart.shipping.id) && $cpp.product.id eq 12)
+##                #if($shippingIds.contains($cart.shipping.id) && $cpp.product.id eq 1)
+##                    #set($text = "+ запасная режущая пара в подарок")
+                #if($shippingFullIds.contains($cart.shipping.id) && $cpp.product.id eq 12)
                     #set($text = "+ запасная режущая пара в подарок")
                 #end
 
