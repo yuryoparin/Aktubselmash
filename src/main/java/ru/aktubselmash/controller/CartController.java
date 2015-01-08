@@ -1,7 +1,7 @@
 package ru.aktubselmash.controller;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -28,7 +28,7 @@ import java.util.List;
  */
 @Controller
 public class CartController extends BasicController {
-    private static final Log logger = LogFactory.getLog(CartController.class);
+    private final Logger logger = LoggerFactory.getLogger(CartController.class);
 
     protected ShippingPaymentService shippingPaymentService;
     protected ShippingService shippingService;
@@ -88,7 +88,7 @@ public class CartController extends BasicController {
                 emailService.sendConformationEmail(cart);
             model.addAttribute("basket", c);
         } catch (Exception e) {
-            logger.error(e);
+            logger.error("", e);
             model.addAttribute("exception", true);
             model.addAttribute("exceptionMessage", e.getMessage());
         }

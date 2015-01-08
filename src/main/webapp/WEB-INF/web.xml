@@ -5,7 +5,7 @@
          version="3.0"
          metadata-complete="true">
 
-    <display-name>Aktubselmash business site</display-name>
+    <display-name>Aktubselmash</display-name>
 
     <filter>
         <filter-name>CharacterEncoding</filter-name>
@@ -79,7 +79,7 @@
     </session-config>
 
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file></welcome-file>
     </welcome-file-list>
 
     <resource-ref>
