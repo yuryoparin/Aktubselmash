@@ -87,10 +87,10 @@ public class BasicController {
 
     @ModelAttribute("productPrices")
     public List<ProductPrice> findProducts(HttpSession session) {
-        logger.info("!!! @ModelAttribute(\"productPrices\") has begun");
+//        logger.info("!!! @ModelAttribute(\"productPrices\") has begun");
         if (session.getAttribute("productPrices") == null) {
             session.setAttribute("productPrices", productPriceService.findWithMinPrice(false));
-            logger.info("!!! @ModelAttribute(\"productPrices\")" + ((List<ProductPrice>) session.getAttribute("productPrices")));
+//            logger.info("!!! @ModelAttribute(\"productPrices\")" + ((List<ProductPrice>) session.getAttribute("productPrices")));
         }
         return (List<ProductPrice>) session.getAttribute("productPrices");
     }

@@ -69,20 +69,27 @@
         <constructor-arg index="0" value="info@aktubselmash.ru"/>
         <constructor-arg index="1" value="ovitaly1@yandex.ru"/>
         <property name="mailSender">
-            <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+            <bean class="org.springframework.mail.javamail.JavaMailSenderImpl">
                 <property name="host" value="smtp.yandex.ru"/>
+                <property name="protocol" value="smtp"/>
                 <property name="defaultEncoding" value="UTF-8"/>
                 <property name="username" value="info@aktubselmash.ru"/>
                 <property name="password" value="block0"/>
-                <property name="port" value="25"/>
+                <property name="port" value="587"/>
+                <property name="javaMailProperties" ref="javaMailProperties"/>
             </bean>
         </property>
         <property name="velocityEngine">
-            <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+            <bean class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
                 <property name="resourceLoaderPath" value="/WEB-INF/velocity/"/>
             </bean>
         </property>
     </bean>
+
+    <util:properties id="javaMailProperties">
+        <prop key="mail.smtp.auth">true</prop>
+        <prop key="mail.smtp.starttls.enable">true</prop>
+    </util:properties>
 
     <import resource="context-jdbc.xml"/>
 
