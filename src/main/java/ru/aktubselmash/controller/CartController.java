@@ -4,10 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import ru.aktubselmash.model.*;
 import ru.aktubselmash.model.constant.PartyType;
 import ru.aktubselmash.model.util.AddToCartResult;
@@ -97,21 +94,21 @@ public class CartController extends BasicController {
         return "cart-complete";
     }
 
-    @RequestMapping("/cart/addProduct")
+    @RequestMapping(value = "/cart/addProduct", produces = {"application/json"}, method = RequestMethod.GET)
     public @ResponseBody
     AddToCartResult addProduct(@RequestParam Integer productId, @ModelAttribute Cart cart,
-                                            @ModelAttribute("productPrices") List<ProductPrice> productPrices) {
+                               @ModelAttribute("productPrices") List<ProductPrice> productPrices) {
         return addItemToCart(productId, cart, productPrices);
     }
 
-    @RequestMapping("/cart/addPart")
+    @RequestMapping(value = "/cart/addPart", produces = {"application/json"}, method = RequestMethod.GET)
     public @ResponseBody
     AddToCartResult addPart(@RequestParam Integer productId, @ModelAttribute Cart cart,
-                                            @ModelAttribute("partPrices") List<ProductPrice> partPrices) {
+                            @ModelAttribute("partPrices") List<ProductPrice> partPrices) {
         return addItemToCart(productId, cart, partPrices);
     }
 
-    @RequestMapping("/cart/removeProduct")
+    @RequestMapping(value = "/cart/removeProduct", produces = {"application/json"}, method = RequestMethod.GET)
     public @ResponseBody
     AddToCartResult removeProduct(@RequestParam Integer productId, @ModelAttribute Cart cart) {
         int index = 0;
@@ -128,7 +125,7 @@ public class CartController extends BasicController {
         return result;
     }
 
-    @RequestMapping("/cart/updatePrices")
+    @RequestMapping(value = "/cart/updatePrices", produces = {"application/json"}, method = RequestMethod.GET)
     public @ResponseBody
     List<PriceResult> updatePrices(@RequestParam Integer shippingId, @ModelAttribute Cart cart,
                                    @ModelAttribute("country") Boolean isForeignCountry) {
