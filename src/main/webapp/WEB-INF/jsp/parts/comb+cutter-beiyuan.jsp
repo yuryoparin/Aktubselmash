@@ -40,14 +40,14 @@
 
             var cnt = 1;
             var galInterval = setInterval(function() {
-                if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 2)).click();
+                if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 3)).click();
             }, 5000);
 
             var blur = false;
             $(window).focus(function() {
                 if (blur) {
                     galInterval = setInterval(function() {
-                        if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 2)).click();
+                        if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 3)).click();
                     }, 5000);
                     blur = false;
                 }
@@ -67,7 +67,7 @@
 </head>
 <body class="${browserClass}">
 <div title="description" class="se-description" style="display: none;">
-    Нож и гребенка для VS84-S и F7 с прямой формой зубьев гребенки, ширина гребенки 76 мм, количество зубьев гребенки 13, толщина гребенки 3 мм,
+    Нож и гребенка Beiyuan с прямой формой зубьев гребенки, ширина гребенки 76 мм, количество зубьев гребенки 13, толщина гребенки 3 мм,
     количество зубьев ножа 4, толщина ножа 4,5 мм, запрос пишите на <a href="mailto:info@aktubselmash.ru">info@aktubselmash.ru</a>
 </div>
 <div id="wrapper">
@@ -85,16 +85,16 @@
                         <div class="gallery" style="float:left; margin-left: 5px; height: 433px; width: 400px;">
                             <div class="gallery-box" style="width: 400px;">
                                 <ul class="gallery-box-ul" style="width: 1640px">
-                                    <li><img src="<%=request.getContextPath()%>/images/parts/VS84-S/1b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/parts/VS84-S/2b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
-                                    <%--<li><img src="<%=request.getContextPath()%>/images/parts/VS84-S/3b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>--%>
-                                    <li><img src="<%=request.getContextPath()%>/images/parts/VS84-S/4b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/parts/Beiyuan/1b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/parts/Beiyuan/2b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/parts/Beiyuan/3b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/parts/Beiyuan/4b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
                                 </ul>
                             </div>
                             <div class="gallery-dots" style="width: 69px;">
                                 <span class="active"></span>
                                 <span></span>
-                                <%--<span></span>--%>
+                                <span></span>
                                 <span></span>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                                 <li>— толщина гребенки 3 мм</li>
                                 <li>— прямая форма зубьев гребенки</li>
                                 <li>— количество зубьев ножа 4</li>
-                                <li>— толщина ножа 4 мм</li>
+                                <li>— толщина ножа 4,5 мм</li>
                             </ul>
                             <div style="text-align: center; margin-top: 2em;">
                                 <h1 style="margin-left: 0;">
