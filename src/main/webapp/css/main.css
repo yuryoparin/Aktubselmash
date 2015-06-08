@@ -83,21 +83,21 @@ body {
 }
 
 div.phone {
-    background: url(../images/phone-new.jpg) 0 3px no-repeat;
+    background: url(../images/phone-new.jpg) 0 11px no-repeat;
 	margin-top: 5px;
-    padding-left: 28px;
+    padding-left: 31px;
 	float:left;
 }
 
 div.phone span {
-    font-size: 26px;
+    font-size: 24px;
 }
 
 div.cart {
 	/*background: url(../images/cart.png) no-repeat;*/
 	/*padding-left: 40px;*/
 	padding-right: 2.3em;
-    margin-top: 12px;
+    margin-top: 19px;
 	float:right;
     position: relative;
 }

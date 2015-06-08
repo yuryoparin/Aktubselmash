@@ -16,8 +16,8 @@
                 <%--<p class="header-2">Машинки для стрижки овец</p>--%>
             <c:if test="${not isHome}"></a></c:if>
         </div>
-        <div style="overflow: hidden; width: 478px; float: right; padding-top: 7px;">
-            <div class="phone"><span>+7 916 </span><span>185-</span><span>06-28</span>
+        <div style="overflow: hidden; width: 478px; float: right;">
+            <div class="phone"><div><span>+7 916 </span><span>185-</span><span>06-28</span></div><div><span>+7 925 </span><span>142-</span><span>25-01</span></div>
                 <%--<img src="<%=request.getContextPath()%>/images/phone-number.png" alt=""--%>
                      <%--border="0" width="211" height="31"/>--%>
             </div>

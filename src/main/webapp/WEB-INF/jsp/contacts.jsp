@@ -91,8 +91,8 @@
                                 <div class="address">
                                     <a href="#1" class="dashed">В Центре</a>
                                     <p>г. Москва, ул. Ильинка д. 4, подъезд 5<br/>
-                                       &#9742; +7 916 185-06-28<br/>
-                                       <span style="font-size: 12pt;">&#x231A;</span> 9:00&ndash;18:00 пн.&ndash;пт.<br/>
+                                       &#9742; +7 916 185-06-28, +7 925 142-25-01<br/>
+                                       <span style="font-size: 12pt;">&#x1f550;</span> 9:00&ndash;18:00 пн.&ndash;пт.<br/>
                                        Виталий Константинович
                                     </p>
                                 </div>
@@ -102,8 +102,8 @@
                                 <div class="address">
                                     <a href="#2" class="dashed">м. Текстильщики</a>
                                     <p>г. Москва, ул. 7-я Текстильщиков д. 5, подъезд 3<br/>
-                                       &#9742; +7 916 185-06-28, +7 499 176-83-64<br/>
-                                       <span style="font-size: 12pt;">&#x231A;</span> 19:00&ndash;21:00 пн.&ndash;пт., 9:00&ndash;21:00 сб.&ndash;вс.
+                                       &#9742; +7 916 185-06-28, +7 925 142-25-01, +7 499 176-83-64<br/>
+                                       <span style="font-size: 12pt;">&#x1f550;</span> 19:00&ndash;21:00 пн.&ndash;пт., 9:00&ndash;21:00 сб.&ndash;вс.
                                     </p>
                                 </div>
                             </li>
@@ -112,8 +112,8 @@
                                 <div class="address">
                                     <a href="#3" class="dashed">м. Павелецкая</a>
                                     <p>г. Москва, ул. Б. Пионерская д. 10&ndash;12 стр. 1, подъезд 1<br/>
-                                        &#9742; +7 916 185-06-28, +7 499 235-37-18<br/>
-                                        <span style="font-size: 12pt;">&#x231A;</span> 11:00&ndash;22:00 пн.&ndash;вс.
+                                        &#9742; +7 916 185-06-28, +7 925 142-25-01, +7 499 235-37-18<br/>
+                                        <span style="font-size: 12pt;">&#x1f550;</span> 11:00&ndash;22:00 пн.&ndash;вс.
                                     </p>
                                 </div>
                             </li>

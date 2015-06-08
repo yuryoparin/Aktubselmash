@@ -44,23 +44,23 @@ insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image
 -- insert into product (product_id, short_nm, seq_num, name, parts_f, menu_f, image_path_m, image_path_s, description, new_f, unavailable_f, unit) values(16,'pch-rus',               10, 'Преобразователь частоты (Россия)',    'true',  'true', '/images/clippers/PCH-400-2/1m.png', '/images/clippers/PCH-400-2/1s.png', '',              true, false, 'шт.');
 
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 1, 29500, 300, '2015-01-17', 12400, 500);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 2, 29900, 0, '2015-01-17', 12225, 250);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 3, 30500, 100, '2015-01-17', 13000, 700);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 4, 30500, 100, '2015-01-17', 13000, 700);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 5, 30500, 100, '2015-01-17', 12700, 400);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 1, 29500, 300, '2015-02-14', 12400, 500);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 2, 29900, 0, '2015-02-14', 12225, 250);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 3, 30500, 100, '2015-02-14', 13000, 700);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 4, 30500, 100, '2015-02-14', 13000, 700);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (1, 5, 30500, 100, '2015-02-14', 12700, 400);
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 1, 9700, 1500, '2015-01-17', 5400, 500);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 2, 9700, 1100, '2015-01-17', 5100, 200);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 3, 9700, 1100, '2015-01-17', 5100, 200);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 4, 9700, 1100, '2015-01-17', 5100, 200);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 5, 9700, 1100, '2015-01-17', 5300, 200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 1, 10200, 800, '2015-02-14', 5400, 500);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 2, 10200, 500, '2015-02-14', 5100, 200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 3, 10200, 400, '2015-02-14', 5100, 200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 4, 10200, 400, '2015-02-14', 5100, 200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (2, 5, 10200, 400, '2015-02-14', 5300, 200);
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 1, 28500, null, null, 10600, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 2, 28900, null, null, 10900, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 3, 29500, null, null, 10900, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 4, 29500, null, null, 10900, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 5, 29500, null, null, 10900, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 1, 29500, null, null, 10600, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 2, 29900, null, null, 10900, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 3, 30500, null, null, 10900, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 4, 30500, null, null, 10900, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (3, 5, 30500, null, null, 10900, null);
 
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (4, 1, 28500, null, null, 15500, null);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (4, 2, 28850, null, null, 15500, null);
@@ -80,11 +80,11 @@ insert into product_price (product_id, shipping_id, price, discount_p, discount_
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (6, 4, 1900, null, null, 500, null);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (6, 5, 1900, null, null, 500, null);
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 1, 3800, null, null, 1200, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 2, 3800, null, null, 1200, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 3, 3900, null, null, 1250, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 4, 3900, null, null, 1250, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 5, 3800, null, null, 1250, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 1, 4800, null, null, 1200, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 2, 4800, null, null, 1200, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 3, 5000, null, null, 1250, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 4, 5000, null, null, 1250, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (7, 5, 5000, null, null, 1250, null);
 
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (8, 1, 2400, null, null, 550, null);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (8, 2, 2400, null, null, 550, null);
@@ -116,11 +116,11 @@ insert into product_price (product_id, shipping_id, price, discount_p, discount_
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 4, 58000, 0, null, 21000, 0);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (16, 5, 58000, 0, null, 21000, 0);
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 1, 10700, 1400, '2015-01-17', 6800, 1200);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 2, 10700, 1050, '2015-01-17', 6700, 900);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 3, 10700, 1000, '2015-01-17', 6700, 900);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 4, 10700, 1000, '2015-01-17', 6700, 900);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 5, 10700, 1000, '2015-01-17', 5900, 0);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 1, 11200, 900, '2015-02-14', 6800, 1200);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 2, 11200, 700, '2015-02-14', 6700, 900);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 3, 11200, 700, '2015-02-14', 6700, 900);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 4, 11200, 700, '2015-02-14', 6700, 900);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (12, 5, 11200, 700, '2015-02-14', 5900, 0);
 
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (13, 1, 15500, null, null, 5000, null);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (13, 2, 16000, null, null, 5000, null);
@@ -128,11 +128,11 @@ insert into product_price (product_id, shipping_id, price, discount_p, discount_
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (13, 4, 16000, null, null, 5000, null);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (13, 5, 16000, null, null, 5000, null);
 
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 1, 30500, null, null, 12900, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 2, 31500, null, null, 13200, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 3, 31500, null, null, 13200, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 4, 31500, null, null, 13200, null);
-insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 5, 31000, null, null, 13300, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 1, 32000, null, null, 12900, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 2, 33000, null, null, 13200, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 3, 33000, null, null, 13200, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 4, 33000, null, null, 13200, null);
+insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (14, 5, 32500, null, null, 13300, null);
 
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (15, 1, 19500, null, null, 10000, null);
 insert into product_price (product_id, shipping_id, price, discount_p, discount_due_d, fprice, fdiscount_p) values (15, 2, 20000, null, null, 10200, null);
@@ -194,12 +194,13 @@ insert into product_relation (owner_id, dependant_id, seq_num) values (16, 8, 4)
 -- insert into product_relation (owner_id, dependant_id, seq_num) values (16, 3, 2);
 -- insert into product_relation (owner_id, dependant_id, seq_num) values (16, 4, 3);
 
-insert into product_relation (owner_id, dependant_id, seq_num) values (5, 1, 1);
-insert into product_relation (owner_id, dependant_id, seq_num) values (5, 3, 2);
-insert into product_relation (owner_id, dependant_id, seq_num) values (5, 4, 3);
-insert into product_relation (owner_id, dependant_id, seq_num) values (5, 10, 4);
-insert into product_relation (owner_id, dependant_id, seq_num) values (5, 11, 5);
-insert into product_relation (owner_id, dependant_id, seq_num) values (5, 16, 6);
+insert into product_relation (owner_id, dependant_id, seq_num) values (5, 12, 1);
+insert into product_relation (owner_id, dependant_id, seq_num) values (5, 1, 2);
+insert into product_relation (owner_id, dependant_id, seq_num) values (5, 3, 3);
+insert into product_relation (owner_id, dependant_id, seq_num) values (5, 4, 4);
+insert into product_relation (owner_id, dependant_id, seq_num) values (5, 10, 5);
+insert into product_relation (owner_id, dependant_id, seq_num) values (5, 11, 6);
+insert into product_relation (owner_id, dependant_id, seq_num) values (5, 16, 7);
 insert into product_relation (owner_id, dependant_id, seq_num) values (6, 2, 1);
 insert into product_relation (owner_id, dependant_id, seq_num) values (6, 12, 2);
 insert into product_relation (owner_id, dependant_id, seq_num) values (6, 11, 3);

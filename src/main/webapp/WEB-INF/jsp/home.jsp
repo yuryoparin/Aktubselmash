@@ -13,7 +13,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Машинка для стрижки овец от <c:out value="${productMinPrice}"/> руб. Режущие пары от <c:out value="${partMinPrice}"/> руб.</title>
-	<meta content="Машинки для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200. Режущие пары — 950р. Продажа по России наложенным платежом или самовывозом." name="description">
+	<meta content="Машинки для стрижки овец Takumi F7, VS84-S, Liscop Super Profi 3000 и советские МСУ-200. Режущие пары — 1400р. Продажа по России наложенным платежом или самовывозом." name="description">
 	<meta content="машинка +для стрижки овец, машинки +для стрижки овец, куплю машинку +для стрижки овец, машинка +для стрижки овец купить, машинка +для стрижки овец цена, машинка +для стрижки овец продажа, продажа машинок для стрижки овец" name="keywords">
 	<meta content="Актюбсельмаш" name="author">
 
