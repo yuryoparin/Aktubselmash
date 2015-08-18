@@ -757,6 +757,14 @@ div.home-tile-text span {
     top: -1px;
 }
 
+.red-stripe {
+    position: absolute;
+    color: #f00;
+    top: 70%;
+    left: 50%;
+    margin-left: -116px;
+}
+
 .products-t {
     border: 1px solid #909090;
 }

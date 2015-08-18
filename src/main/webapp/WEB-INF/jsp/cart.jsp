@@ -320,17 +320,16 @@
 //                            $td.append(
 //                                    '<span style="">+ запасная режущая пара в подарок</span>');
 //                    }
-//                    else if (parseInt($(val).text()) == 12 &&
- //                            $.inArray(parseInt($('#shippings option:selected').val()), [1,2,3,4,5]) > -1)
-  //                  {
-   //                     $td = $(val).closest('tr').find('td:eq(2)');
-//                        if ($td.find('span').length == 0)
-//                            $td.append(
-//                                    '<span style="">+ запасная режущая пара в подарок</span>');
-//                    }
-//                    else {
+                    if (parseInt($(val).text()) == 12 &&
+                             $.inArray(parseInt($('#shippings option:selected').val()), [1,2,3,4,5]) > -1)
+                    {
+                        var $td = $(val).closest('tr').find('td:eq(2)');
+                        if ($td.find('span').length == 0)
+                            $td.append('<span style="">+ запасная режущая пара в подарок</span>');
+                    }
+                    else {
                         $(val).closest('tr').find('td:eq(2) span').remove();
-//                    }
+                    }
                 });
                 $('.total h1 span').html(formatNumber(calculateTotalPrice()));
             }).complete(function() {
@@ -351,17 +350,16 @@
 //                                '<span style="">+ запасная режущая пара в подарок</span>');
 //                }
 //                else
-//                if (parseInt($(val).text()) == 12 &&
-//                        $.inArray(shippingId, [1,2,3,4,5]) > -1)
-//                {
-//                    var $td = $(val).closest('tr').find('td:eq(2)');
-//                    if ($td.find('span').length == 0)
-//                        $td.append(
-//                                '<span style="">+ запасная режущая пара в подарок</span>');
-//                }
-//                else {
+                if (parseInt($(val).text()) == 12 &&
+                        $.inArray(shippingId, [1,2,3,4,5]) > -1)
+                {
+                    var $td = $(val).closest('tr').find('td:eq(2)');
+                    if ($td.find('span').length == 0)
+                        $td.append('<span style="">+ запасная режущая пара в подарок</span>');
+                }
+                else {
                     $(val).closest('tr').find('td:eq(2) span').remove();
-//                }
+                }
             });
         }
 

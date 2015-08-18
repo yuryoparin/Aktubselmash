@@ -109,6 +109,9 @@
                                         </div>
                                     </c:when>
                                 </c:choose>
+                                <c:if test="${pp.product.id == 12}">
+                                    <div class="red-stripe">+ режущая режущая пара в подарок</div>
+                                </c:if>
                             </li>
                 <c:if test="${status.count % 3 eq 0}"></ul></div></c:if>
             </c:forEach>
