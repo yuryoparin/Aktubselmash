@@ -49,19 +49,19 @@
             <div class="" style="overflow: hidden; margin-top: 5px; position: relative; width: 900px;">
                 <div style="float: left; width: 548px;">
                     <img border="0" alt="Машинка для стрижки овец ${homeProductPrice.product.name}" width="500" height="400"
-                         src="<%=request.getContextPath()%>/images/clippers/VS84-S/1b-home.jpg"/>
+                         src="<%=request.getContextPath()%>/images/clippers/F7/1b-home.jpg"/>
                 </div>
-                <div style="float: left; width: 250px; margin: 30px 0 0 0;">
+                <div style="float: left; width: 250px; margin: 20px 0 0 0;">
                     <h1 style="margin-left: 17px; font-size: 30pt;">${homeProductPrice.product.name}</h1>
-                    <ul class="char-ul" style="margin-top: 2em; margin-left: 0;">
-                        <li style="font-size: 12pt; color: #606060;">&mdash; мощность двигателя 320 Вт</li>
-                        <li style="font-size: 12pt; color: #606060;">&mdash; вес машинки 1,7 кг</li>
+                    <ul class="char-ul" style="margin-top: 1.5em; margin-left: 0;">
+                        <li style="font-size: 12pt; color: #606060;">&mdash; мощность двигателя 380 Вт</li>
+                        <li style="font-size: 12pt; color: #606060;">&mdash; вес машинки 1,4 кг</li>
                         <li style="font-size: 12pt; color: #606060;">&mdash; число оборотов в минуту 2800</li>
-                        <li style="font-size: 12pt; color: #606060;">&mdash; уровень шума 93 Дб(а)</li>
-                        <li style="font-size: 12pt; color: #606060;">&mdash; размеры машинки <br/><span style="padding-left: 1.3em;">(Ш х В х Дл.) 80х90х350 мм</span></li>
-                        <li style="font-size: 12pt; color: #606060;">&mdash; диаметр рукоятки 51-57 мм</li>
+                        <li style="font-size: 12pt; color: #606060;">&mdash; уровень шума 80 Дб(а)</li>
+                        <li style="font-size: 12pt; color: #606060;">&mdash; размеры машинки <br/><span style="padding-left: 1.3em;">(Ш х В х Дл.) 80х95х325 мм</span></li>
+                        <li style="font-size: 12pt; color: #606060;">&mdash; диаметр рукоятки 57 мм</li>
                     </ul>
-                    <div style="text-align: center; margin-top: 2em;">
+                    <div style="text-align: center; margin-top: 1.5em;">
                         <h1 style="margin-left: 0; color: black;">
                             <c:choose>
                                 <c:when test="${country}">
@@ -89,7 +89,8 @@
 
                             </c:choose>
                         </h1>
-                        <div style="margin: 10px auto; width: 228px;">
+                        <span style="color: red; font-weight: bold;">+ запасная режущая пара в подарок!</span>
+                        <div style="margin: 15px auto; width: 228px;">
                             <a class="buy-button blue-button" href="<%=request.getContextPath()%>/clippers">
                                 <span class="label" style="padding-left: 10px;">Смотреть все машинки <span style="font-weight: normal;">&rarr;</span></span>
                                 <span class="r" style="width: 10px;"></span>

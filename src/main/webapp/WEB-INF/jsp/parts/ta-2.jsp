@@ -17,7 +17,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>${productPrice.product.name}</title>
-    <meta content="Станок для заточни режущих пар машинки для стрижки овец - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
+    <meta content="Станок для заточки режущих пар машинки для стрижки овец - ${price} руб. Продажа по России наложенным платежом или самовывозом." name="description">
     <meta content="заточка режущих пар +для стрижки овец, доводка режущих пар +для стрижки овец" name="keywords">
     <meta content="Актюбсельмаш" name="author">
 

@@ -110,7 +110,7 @@
                             <li>
                                 <div class="num"><span>3</span></div>
                                 <div class="address">
-                                    <a href="#3" class="dashed">м. Павелецкая</a>
+                                    <a href="#3" class="dashed">м. Павелецкая, м. Серпуховская</a>
                                     <p>г. Москва, ул. Б. Пионерская д. 10&ndash;12 стр. 1, подъезд 1<br/>
                                         &#9742; +7 916 185-06-28, +7 925 142-25-01, +7 499 235-37-18<br/>
                                         <span style="font-size: 12pt;">&#x1f550;</span> 11:00&ndash;22:00 пн.&ndash;вс.
