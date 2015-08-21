@@ -86,7 +86,7 @@
             <div class="gallery-box" style="width: 400px;">
               <ul class="gallery-box-ul" style="width: 1600px;">
                 <li><img src="<%=request.getContextPath()%>/images/parts/TA-2M/1b.jpg" alt="Точильный аппарат для ножей и гребенок ТА-2М" border="0" width="400" height="414"/></li>
-                <li><img style="margin-top: 18px;" src="<%=request.getContextPath()%>/images/parts/TA-2M/2b.jpg" alt="Точильный аппарат для ножей и гребенок ТА-2М" border="0" width="400" height="300"/></li>
+                <li><img src="<%=request.getContextPath()%>/images/parts/TA-2M/2b.jpg" alt="Точильный аппарат для ножей и гребенок ТА-2М" border="0" width="400" height="414"/></li>
               </ul>
             </div>
             <div class="gallery-dots" style="width: 68px;">

@@ -223,7 +223,7 @@
                     <ul class="vertical-d-ul">
                         <c:forEach var="dp" items="${dependantPrices}" varStatus="status">
                             <c:choose>
-                                <c:when test="${dp.product.shortName ne 'ta-1' and dp.product.shortName ne 'ta-2'}">
+                                <c:when test="${dp.product.shortName ne 'ta-1' and dp.product.shortName ne 'ta-2'  and dp.product.shortName ne 'ta-2m'}">
                                     <li <c:if test="${status.first}">class="first"</c:if>>
                                         <c:set var="path">
                                             <c:choose>
