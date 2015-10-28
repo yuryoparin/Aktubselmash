@@ -186,7 +186,7 @@
               <li>Прижимной диск для наклеивания наждачного полотна &mdash; 1 шт.</li>
               <li>Нажимной болт с гайкой и шайбой для наклеивания наждачного полотна &mdash; 1 комплект.</li>
               <li>Диск наждачного полотна диаметром 365 мм с зернистостью Р40 и Р80 &mdash; по 1  шт.</li>
-              <li><a href="<%=request.getContextPath()%>/files/TA-2_manual_rus.pdf" target="_blank">Инструкция по эксплуатации</a> &mdash; 1 шт.</li>
+              <li><a href="<%=request.getContextPath()%>/files/TA-2M_manual_rus.pdf" target="_blank">Инструкция по эксплуатации</a> &mdash; 1 шт.</li>
             </ul>
           </li>
         </ul>
@@ -197,7 +197,7 @@
         <h3>Файлы</h3>
         <div class="content description">
           <ul class="ul-clean ul-li-mb-1em">
-            <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-2_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации точильного аппарата ТА-2">Инструкция на точильный аппарат ТА-2</a></li>
+            <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-2M_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации точильного аппарата ТА-2М">Инструкция на точильный аппарат ТА-2М</a></li>
           </ul>
         </div>
       </div>
