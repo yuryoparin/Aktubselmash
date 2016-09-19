@@ -325,6 +325,17 @@ a.pdf:hover {
 	margin-left: 8px;
 }
 
+.box-main > h2 {
+    margin-top: 20px;
+    font-size: 14pt;
+}
+
+.info {
+    text-align: center;
+    background: #D9F7F5;
+    line-height: 40px;
+}
+
 .ul-list {
 	padding: 1px 2px 3px 2px;
 	margin-left: -1px;
@@ -1278,4 +1289,103 @@ span.required {
 
 a.hover span.choose-link {
     text-decoration: none;
+}
+
+/* Auction */
+.auction-open .content {
+    padding-left: 0;
+    padding-right: 0;
+    /*padding-top: 0;*/
+    border-top: none;
+    border-color: #eb4c7f;
+    -moz-box-shadow: 0 1px 1px rgba(235, 76, 127, 0.47);
+    -webkit-box-shadow: 0 1px 1px rgba(235, 76, 127, 0.47);
+    box-shadow: 0 1px 1px rgba(235, 76, 127, 0.47);
+}
+
+.auction-open h3 {
+    background: #eb4c7f;
+}
+
+.auction-open li {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.auction-open .name {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.auction-open .price {
+    text-decoration: line-through !important;
+}
+
+.auction {
+    margin-top: 8px;
+}
+
+.auction-open .auction {
+    display: block !important;
+}
+
+.auction-open .stripe-begin {
+    /*display: block !important;*/
+    color: #eb4c7f;
+    font-size: 14pt;
+    text-align: center;
+    line-height: 30px;
+}
+
+.auction .stripe-free, .auction .stripe-free-price {
+    background: #eb4c7f;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.auction .stripe-free-price {
+    margin-bottom: 0;
+    font-size: 16pt;
+    padding-top: 6px;
+}
+.auction .stripe-free { padding-bottom: 8px; }
+
+.auction p { text-align: center; }
+
+.auction .stripe-end {
+    text-align: center;
+    font-size: 14pt;
+    color: #eb4c7f;
+    margin-bottom: 0;
+    margin-top: 3px;
+}
+
+.auction .stripe-end .number-left {
+    font-weight: bold;
+}
+
+.auction .chart {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.auction .time-left {
+    font-weight: bold;
+    font-size: 22pt;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -22px;
+    color: #333;
+}
+
+.auction canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
 }

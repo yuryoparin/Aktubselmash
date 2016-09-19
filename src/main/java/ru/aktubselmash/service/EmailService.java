@@ -11,6 +11,9 @@ import org.springframework.ui.velocity.VelocityEngineUtils;
 import ru.aktubselmash.model.Cart;
 
 import javax.mail.internet.MimeMessage;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -24,6 +27,7 @@ import java.util.Map;
  */
 public class EmailService {
     private static final Log logger = LogFactory.getLog(EmailService.class);
+    private static final DateFormat df = new SimpleDateFormat("w");
 
     private JavaMailSender mailSender;
     private VelocityEngine velocityEngine;
@@ -38,13 +42,14 @@ public class EmailService {
         MimeMessagePreparator preparator = new MimeMessagePreparator() {
             public void prepare(MimeMessage mimeMessage) throws Exception {
                 MimeMessageHelper message = new MimeMessageHelper(mimeMessage);
-                message.setSubject("Ваш заказ №" + cart.getId() + " на Aktubselmash.ru");
+                message.setSubject("Ваш заказ №" + cart.getId() + "/" + df.format(new Date()) + " на Aktubselmash.ru");
                 message.setTo(cart.getClient().getEmail());
                 message.setFrom(infoEmail);
                 Map<String, Object> model = new HashMap<String, Object>();
                 model.put("cart", cart);
                 model.put("number", new NumberTool());
                 model.put("locale", new Locale("ru", "RU"));
+                model.put("month", df.format(new Date()));
                 String text = VelocityEngineUtils.mergeTemplateIntoString(
                         velocityEngine, "confirmation.vm", "UTF-8", model);
                 message.setText(text, true);
@@ -57,13 +62,14 @@ public class EmailService {
         MimeMessagePreparator preparator = new MimeMessagePreparator() {
             public void prepare(MimeMessage mimeMessage) throws Exception {
                 MimeMessageHelper message = new MimeMessageHelper(mimeMessage);
-                message.setSubject("Новый заказ №" + cart.getId());
+                message.setSubject("Новый заказ №" + cart.getId() + "/" + df.format(new Date()));
                 message.setFrom(infoEmail);
                 message.setTo(homeEmail);
                 Map<String, Object> model = new HashMap<String, Object>();
                 model.put("cart", cart);
                 model.put("number", new NumberTool());
                 model.put("locale", new Locale("ru", "RU"));
+                model.put("month", df.format(new Date()));
                 String text = VelocityEngineUtils.mergeTemplateIntoString(
                         velocityEngine, "order.vm", "UTF-8", model);
                 message.setText(text, true);

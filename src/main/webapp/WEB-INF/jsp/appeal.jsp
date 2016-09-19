@@ -33,7 +33,7 @@
         }
         .home-icon {float: none;}
     </style>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>
 </head>
 <body class="${browserClass}">

@@ -56,6 +56,11 @@ public class HomeController extends BasicController {
         return "appeal";
     }
 
+    @RequestMapping("/information")
+    public String information() {
+        return "information";
+    }
+
     @RequestMapping("/payment")
     public String payment() {
         return "payment";

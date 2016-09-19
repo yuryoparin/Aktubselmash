@@ -1,13 +1,14 @@
 #* @vtlvariable name="cart" type="ru.aktubselmash.model.Cart" *#
 #* @vtlvariable name="number" type="org.apache.velocity.tools.generic.NumberTool" *#
 #* @vtlvariable name="locale" type="java.util.Locale" *#
+#* @vtlvariable name="month" type="java.lang.String" *#
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
 <p style="margin-top: 0;">
-    Спасибо за заказ №${cart.id} на Aktubselmash.ru!<br/><br/>
+    Спасибо за заказ №${cart.id}/${month} на Aktubselmash.ru!<br/><br/>
     В ближайшее время мы свяжемся с вами для уточнения способа <a href="http://aktubselmash.ru/payment">оплаты</a>
     и <a href="http://aktubselmash.ru/payment">доставки</a> заказа.<br/>
     Ниже следует описание заказа.

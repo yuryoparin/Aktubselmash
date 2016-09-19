@@ -45,6 +45,7 @@
 	<div id="content">
         <div class="box box-main">
             <h1>Запчасти и инструменты</h1>
+            <h2 class="info"><a href="<%=request.getContextPath()%>/information">Отвечаем на вопросы покупателей: Как изготавливаются и затачиваются ножи?</a></h2>
             <c:forEach var="pp" items="${partPrices}" varStatus="status">
                 <c:if test="${status.count % 3 eq 1}">
                     <div class="ul-list ul-list-transparent ul-list-three" style="margin-top:20px;">

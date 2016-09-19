@@ -26,7 +26,7 @@
 	<link media="all" type="text/css" href="<%=request.getContextPath()%>/css/smoothness/jquery-ui-1.8.13.custom.css" rel="stylesheet"/>
 	<link media="all" type="text/css" href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"/>
 
-	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.12.3.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.8.13.custom.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>
     <c:if test="${fn:contains(browserClass, 'ie6')}">
@@ -44,17 +44,19 @@
             }, 5000);
 
             var blur = false;
-            $(window).focus(function() {
+            $(window).blur(function() {
+                clearInterval(galInterval);
+                blur = true;
+            }).focus(function() {
                 if (blur) {
                     galInterval = setInterval(function() {
                         if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 3)).click();
                     }, 5000);
                     blur = false;
                 }
-            }).blur(function() {
-                clearInterval(galInterval);
-                blur = true;
-            }).focus();
+            });
+
+            setTimeout(function() { $(window).focus(); }, 0);
 
             $('.gallery-dots span').mousedown(function() {
                 if (!$(this).hasClass('active')) cnt = -1;
@@ -201,11 +203,11 @@
                         <h2>Комплектация</h2>
                         <ul class="sc-case-ul">
                             <li class="first">Машинка для стрижки овец МСУ-200</li>
-                            <li>Преобразователь частоты тока</li>
+                            <li>Преобразователь частоты тока (в настоящее время поставляется новая модель преобразователя на современной электронной базе)</li>
                             <li>Комплект ножей (установлены на машинку)</li>
-                            <li>Специальная отвертка и спецключ</li>
+                            <!--<li>Специальная отвертка и спецключ</li>-->
                             <li><a href="<%=request.getContextPath()%>/files/ASI_MSU_manual_rus.pdf" target="_blank">Инструкция по эксплуатации</a></li>
-                            <li>Портфель для транспортировки и хранения</li>
+                            <!--<li>Портфель для транспортировки и хранения</li>-->
                         </ul>
                     </li>
                 </ul>
@@ -249,7 +251,7 @@
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
                         <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/ASI_MSU_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации агрегата АСИ-101">Инструкция по эксплуатации</a></li>
-                        <li><a class="pdf" href="<%=request.getContextPath()%>/files/ASI_MPO_manual_rus.pdf" target="_blank">Паспорт преобразователя частоты</a></li>
+                        <!--<li><a class="pdf" href="<%=request.getContextPath()%>/files/ASI_MPO_manual_rus.pdf" target="_blank">Паспорт преобразователя частоты</a></li>-->
                     </ul>
                 </div>
             </div>

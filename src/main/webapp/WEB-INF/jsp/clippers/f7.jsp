@@ -25,8 +25,10 @@
 	<link type="image/x-icon" href="<%=request.getContextPath()%>/favicon.ico" rel="icon"/>
 	<link media="all" type="text/css" href="<%=request.getContextPath()%>/css/smoothness/jquery-ui-1.8.13.custom.css" rel="stylesheet"/>
 	<link media="all" type="text/css" href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"/>
+    <link media="all" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
 
-	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/js.cookie.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.8.13.custom.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>
     <c:if test="${fn:contains(browserClass, 'ie6')}">
@@ -40,26 +42,32 @@
 
             var cnt = 1;
             var galInterval = setInterval(function() {
-                if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 3)).click();
+                if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 4)).click();
             }, 5000);
 
             var blur = false;
-            $(window).focus(function() {
+            $(window).blur(function() {
+//                console.log('clear galInterval');
+                clearInterval(galInterval);
+                blur = true;
+            }).focus(function() {
+//                console.log('set galInterval blur=%s', blur);
                 if (blur) {
                     galInterval = setInterval(function() {
                         if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 3)).click();
                     }, 5000);
                     blur = false;
                 }
-            }).blur(function() {
-                clearInterval(galInterval);
-                blur = true;
-            }).focus();
+            });
+
+            setTimeout(function() { $(window).focus(); }, 0);
 
             $('.gallery-dots span').mousedown(function() {
                 if (!$(this).hasClass('active')) cnt = -1;
             });
             $('.buy-button').click(function() {
+                if (window.yaCounter1192561 != null)
+                    window.yaCounter1192561.reachGoal('click-on-buy-takumi-f7');
                 return buy(${productPrice.product.id}, "<%=request.getContextPath()%>/cart/addProduct");
             });
         });
@@ -88,14 +96,16 @@
                     <div class="box-heading" style="height: 433px;">
                         <div class="gallery" style="float:left; margin-left: 5px; height: 433px; width: 400px;">
                             <div class="gallery-box" style="width: 400px;">
-                                <ul class="gallery-box-ul" style="width: 1240px;">
-                                    <li><img itemprop="image" src="<%=request.getContextPath()%>/images/clippers/F7/1b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
-                                    <li><img src="<%=request.getContextPath()%>/images/clippers/F7/2b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                <ul class="gallery-box-ul" style="width: 1654px;">
+                                    <li><img itemprop="image" src="<%=request.getContextPath()%>/images/clippers/F7/4b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/F7/5b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
+                                    <li><img src="<%=request.getContextPath()%>/images/clippers/F7/1b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
                                     <li><img src="<%=request.getContextPath()%>/images/clippers/F7/3b.jpg" alt="${productPrice.product.name}" border="0" width="400" height="414"/></li>
                                 </ul>
                             </div>
-                            <div class="gallery-dots" style="width: 52px;">
+                            <div class="gallery-dots" style="width: 70px;">
                                 <span class="active"></span>
+                                <span></span>
                                 <span></span>
                                 <span></span>
                             </div>
@@ -106,7 +116,7 @@
                                 <li>— мощность двигателя 380 Вт</li>
                                 <li>— вес машинки 1,4 кг</li>
                                 <li>— напряжение 220-240 В</li>
-                                <li>— гарантия на машинку 6 месяцев</li>
+                                <li>— гарантия на машинку 12 месяцев</li>
                                 <li>— частота тока 50 Гц</li>
                                 <li>— число оборотов в минуту 2800</li>
                                 <li>— уровень шума 80 Дб(а)</li>
@@ -184,12 +194,17 @@
             <div class="box box-container" style="margin-top: 1em;">
                 <ul class="vertical-ul">
                     <li>
+                        <h2 class="info">
+                            <a href="<%=request.getContextPath()%>/information">Отвечаем на вопросы покупателей: Как изготавливаются и затачиваются ножи?</a>
+                        </h2>
+                    </li>
+                    <li>
                         <h2>Описание</h2>
 
                         <div itemprop="description">
                             <p style="margin-top: 12px;">Машинка для стрижки овец Takumi F7 Professional отличается японским качеством и надежностью.</p>
-                            <p>Мощный двигатель - 380 Вт - позволяет справляться со стрижкой стада овец в 300 голов за сезон. Кабель у этой модели очень гибкий, 6 метров в длину. Вес машинки без кабеля уменьшен до 1,4 кг. Винты с широкой полукруглой головкой, фиксирующие гребенку, имеют шестигранное углубление под ключ и обеспечивают надежную фиксацию и удобную замену гребенок с помощью входящего в комплект ключа-шестигранника.</p>
-                            <p>Остальные характеристики этой машинки и комплект поставки такие же как у <a href="<%=request.getContextPath()%>/clippers/vs84-s">VS84-S</a>.</p>
+                            <p>Мощный двигатель - 380 Вт - позволяет справляться со стрижкой стада овец в 300 голов за сезон. Кабель у этой модели очень гибкий, 6 метров в длину. Вес машинки без кабеля уменьшен до 1,4 кг. Винты с широкой полукруглой головкой, фиксирующие гребенку, имеют обычный паз под отвертку с широким шлицем и обеспечивают надежную фиксацию и удобную замену гребенок с помощью входящей в комплект специальной Г-образной отвертки.</p>
+                            <!--<p>Остальные характеристики этой машинки и комплект поставки такие же как у <a href="<%=request.getContextPath()%>/clippers/vs84-s">VS84-S</a>.</p>-->
                             <p>Все зубчатые колеса редуктора изготовлены из стали, а не из текстолита. Кроме того, электродвигатель машинки Takumi F7 Professional существенно тише, чем у предыдущих моделей, и имеет более высокий коэффициент полезной мощности, что способствует меньшему нагреву машинки во время работы.</p>
                             <p>Мастерская обеспечена запасными частями.</p>
                         </div>
@@ -207,7 +222,7 @@
                         <h2>Комплектация</h2>
                         <ul class="sc-case-ul">
                             <li class="first">Машинка для стрижки овец</li>
-                            <li>Комплект ножей (установлены на машинку)</li>
+                            <li>Два комплекта ножей (один установлен на машинку)</li>
                             <li>Специальная отвертка</li>
                             <li>Запасные графитовые щетки - 2 шт.</li>
                             <li>Флакон для смазочного масла (60 мл)</li>
@@ -230,7 +245,7 @@
             </div>
             <jsp:useBean id="taList" class="java.util.ArrayList" />
             <div class="portlet">
-                <h3><span>Запасные пары</span></h3>
+                <h3><i class="fa fa-gift" style="font-size: 16pt; vertical-align: -2px; margin-right: 4px;"></i> <span>Запасная пара</span></h3>
                 <div class="content description">
                     <ul class="vertical-d-ul">
                         <c:forEach var="dp" items="${dependantPrices}" varStatus="status">
@@ -244,6 +259,7 @@
                                             </c:choose>
                                         </c:set>
                                         <a href="<%=request.getContextPath()%>/${path}/${dp.product.shortName}">
+                                            <p class="stripe-begin" style="display: none;">Лови момент</p>
                                             <p style="text-align: center; margin-bottom: 0;">
                                                 <img src="<%=request.getContextPath()%>${dp.product.smallImagePath}"
                                                      alt="${dp.product.name}" border="0" class="png" width="100"/>
@@ -275,6 +291,19 @@
                                                     </c:otherwise>
                                                 </c:choose>
                                             </h4>
+                                            <div class="auction" style="display: none;">
+                                                <p class="stripe-free-price">
+                                                    <span class="old-price-s" style="font-size: 12pt;"><fmt:formatNumber value="${dp.price - dp.discount}"/></span>
+                                                    0 руб.
+                                                </p>
+                                                <p class="stripe-free">При покупке Takumi F7</p>
+                                                <p style="color: #333;">до конца акции</p>
+                                                <div class="chart">
+                                                    <p class="time-left">8:00</p>
+                                                    <canvas id="auction-canvas" width="120" height="120"></canvas>
+                                                </div>
+                                                <p class="stripe-end">Осталось <span class="number-left">15</span> штук</p>
+                                            </div>
                                         </a>
                                         <%--<c:choose>--%>
                                             <%--<c:when test="${dp.product.newFlag}">--%>
@@ -363,5 +392,110 @@
 	<jsp:include page="../footer.jsp" />
 </div>
 <jsp:include page="../error-msg.jsp" />
+<script type="text/javascript">
+    var elem = document.createElement('canvas');
+    if (!!(elem.getContext && elem.getContext('2d'))) {
+        var canvas = document.getElementById('auction-canvas'),
+            c_w = parseInt(canvas.getAttribute('width')),
+            c_h = parseInt(canvas.getAttribute('height')),
+            circleWidth = 8,
+            ctx = canvas.getContext("2d"),
+
+            timeElement = document.querySelector('.auction .time-left'),
+            numberElement = document.querySelector('.auction .number-left'),
+
+            startTime = parseInt(timeElement.textContent.split(':')[0]) * 60, // sec
+            time = startTime,
+            startNumber = parseInt(numberElement.textContent),
+            number = startNumber,
+            date = parseInt(Cookies.get('auction_f7_date')) || 0,
+            now = (new Date()).getTime();
+
+        // more that an hour passed since last auction
+        if (now - date > 5 * 60 * 1000) {
+            document.querySelectorAll('.portlet')[1].className += ' auction-open';
+            Cookies.remove('auction_f7_date', {path: ''});
+
+            if (parseInt(Cookies.get('auction_f7_time'))) {
+                time = parseInt(Cookies.get('auction_f7_time'));
+            }
+
+            if (parseInt(Cookies.get('auction_f7_items'))) {
+                number = startNumber = parseInt(Cookies.get('auction_f7_items'));
+            }
+
+            if (startNumber == 1) {
+                Cookies.remove('auction_f7_items', {path: ''});
+                number = startNumber = parseInt(numberElement.textContent);
+            }
+
+            var min = Math.floor(time / 60) | 0,
+                sec = time % 60;
+            timeElement.textContent = (min < 10 ? '0' + min : min) + ':' + (sec < 10 ? '0' + sec : sec);
+            numberElement.textContent = number;
+
+            var numberOfChanges = 2,
+                timeChanges = {};
+
+            for (var i = 0; i < numberOfChanges; i++)
+                timeChanges[parseInt(startTime * Math.random() + 1)] = true;
+
+            draw(2 * Math.PI * time / startTime - Math.PI / 2);
+
+            var auctionIntId = setInterval(function() {
+//                console.log('time = %d', time);
+                if (!--time) {
+//                    console.log('clear auction interval');
+                    clearInterval(auctionIntId);
+                    var auctionOpen = document.querySelector('.auction-open');
+                    auctionOpen.className = auctionOpen.className.replace(/\s*auction-open/, '');
+                    Cookies.remove('auction_f7_time', {path: ''});
+                    Cookies.set('auction_f7_date', (new Date()).getTime(), {expires: 7, path: ''});
+                }
+
+                var min = Math.floor(time / 60) | 0,
+                    sec = time % 60;
+
+                timeElement.textContent = (min < 10 ? '0' + min : min) + ':' + (sec < 10 ? '0' + sec : sec);
+                draw(2 * Math.PI * time / startTime - Math.PI / 2);
+
+                if (timeChanges[time] && number > 1) {
+                    numberElement.textContent = --number;
+                    Cookies.set('auction_f7_items', number, {expires: 7, path: ''});
+                }
+
+                time ? Cookies.set('auction_f7_time', time, {expires: 7, path: ''})
+                        : Cookies.remove('auction_f7_time', {path: ''});
+            }, 1000);
+
+            document.querySelector('.auction-open li.first a').addEventListener('click', function(e) {
+                if (time) {
+                    document.querySelector('.buy-button').click();
+                    e.preventDefault();
+                }
+            });
+        }
+
+        function draw(angle) {
+            ctx.clearRect(0, 0, c_w, c_h);
+
+            // main circle
+            ctx.beginPath();
+            ctx.arc(c_w / 2, c_h / 2, c_w / 2 - circleWidth, 0, 2 * Math.PI, false);
+            ctx.strokeStyle = '#F7D7E1';
+            ctx.lineWidth = circleWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // shrinking circle
+            ctx.beginPath();
+            ctx.arc(c_w / 2, c_h / 2, c_w / 2 - circleWidth, -Math.PI/2, angle, false);
+            ctx.strokeStyle = '#eb4c7f';
+            ctx.lineWidth = circleWidth;
+            ctx.stroke();
+            ctx.closePath();
+        }
+    }
+</script>
 </body>
 </html>

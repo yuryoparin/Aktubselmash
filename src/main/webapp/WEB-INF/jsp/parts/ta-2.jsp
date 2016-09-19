@@ -26,7 +26,7 @@
     <link media="all" type="text/css" href="<%=request.getContextPath()%>/css/smoothness/jquery-ui-1.8.13.custom.css" rel="stylesheet"/>
     <link media="all" type="text/css" href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"/>
 
-    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.8.13.custom.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>
     <c:if test="${fn:contains(browserClass, 'ie6')}">
@@ -44,17 +44,19 @@
             }, 5000);
 
             var blur = false;
-            $(window).focus(function() {
+            $(window).blur(function() {
+                clearInterval(galInterval);
+                blur = true;
+            }).focus(function() {
                 if (blur) {
                     galInterval = setInterval(function() {
                         if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 4)).click();
                     }, 5000);
                     blur = false;
                 }
-            }).blur(function() {
-                        clearInterval(galInterval);
-                        blur = true;
-                    }).focus();
+            });
+
+            setTimeout(function() { $(window).focus(); }, 0);
 
             $('.gallery-dots span').mousedown(function() {
                 if (!$(this).hasClass('active')) cnt = -1;
@@ -201,11 +203,10 @@
                             <li class="first">Точильный аппарат с двумя точильными дисками &mdash; 1 шт.</li>
                             <li>Маятник с державкой и регулируемой тягой &mdash; 1 шт.</li>
                             <li>Опорные резиновые ножки &mdash; 4 шт.</li>
-                            <li>Двусторонний зажимной диск для наклеивания наждачного полотна &mdash; 1 шт.</li>
-                            <li>Нажимной болт с гайкой и шайбой &mdash; 1 комплект.</li>
                             <li>Диск наждачного полотна диаметром 365 мм с зернистостью Р40 и Р80 &mdash; по 1  шт.</li>
                             <li>Гаечный ключ 32 х 36 &mdash; 1 шт.</li>
-                            <li><a href="<%=request.getContextPath()%>/files/TA-2_manual_rus.pdf" target="_blank">Инструкция по эксплуатации</a> &mdash; 1 шт.</li>
+                            <%--<li><a href="<%=request.getContextPath()%>/files/TA-2_manual_rus.pdf" target="_blank">Инструкция по эксплуатации</a> &mdash; 1 шт.</li>--%>
+                            <li>Инструкция по эксплуатации &mdash; 1 шт.</li>
                             <li>Тара &mdash; деревянный ящик из фанеры &mdash; 1 шт.</li>
                         </ul>
                     </li>
@@ -213,14 +214,14 @@
             </div>
         </div>
         <div class="sidebar">
-            <div class="portlet">
+            <%--<div class="portlet">
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
                         <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-2_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации точильного аппарата ТА-2">Инструкция на точильный аппарат ТА-2</a></li>
                     </ul>
                 </div>
-            </div>
+            </div>--%>
             <div class="portlet">
                 <h3><span>Режущие пары</span></h3>
                 <div class="content description">

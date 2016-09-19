@@ -15,7 +15,7 @@
 	<link type="image/x-icon" href="<%=request.getContextPath()%>/favicon.ico" rel="icon"/>
 	<link media="all" type="text/css" href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"/>
 
-	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.12.3.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>
 </head>
 <body class="${browserClass}">

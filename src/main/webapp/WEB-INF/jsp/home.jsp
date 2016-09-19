@@ -22,7 +22,7 @@
     <link media="all" type="text/css" href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"/>
     <link rel="canonical" href="http://aktubselmash.ru"/>
 
-    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>
     <c:if test="${fn:contains(browserClass, 'ie6')}">
         <script type="text/javascript" src="<%=request.getContextPath()%>/js/DD_belatedPNG.js"></script>

@@ -26,7 +26,7 @@
 	<link media="all" type="text/css" href="<%=request.getContextPath()%>/css/smoothness/jquery-ui-1.8.13.custom.css" rel="stylesheet"/>
 	<link media="all" type="text/css" href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"/>
 
-	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.12.3.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.8.13.custom.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>
     <c:if test="${fn:contains(browserClass, 'ie6')}">
@@ -44,17 +44,19 @@
             }, 5000);
 
             var blur = false;
-            $(window).focus(function() {
+            $(window).blur(function() {
+                clearInterval(galInterval);
+                blur = true;
+            }).focus(function() {
                 if (blur) {
                     galInterval = setInterval(function() {
                         if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 3)).click();
                     }, 5000);
                     blur = false;
                 }
-            }).blur(function() {
-                clearInterval(galInterval);
-                blur = true;
-            }).focus();
+            });
+
+            setTimeout(function() { $(window).focus(); }, 0);
 
             $('.gallery-dots span').mousedown(function() {
                 if (!$(this).hasClass('active')) cnt = -1;
@@ -178,20 +180,20 @@
                         <h2>Описание</h2>
                         <p style="margin-top: 12px;">Точильный аппарат ТА-1 предназначен для заточки
                             (доводки) режущих пар машинок для стрижки овец.</p>
-                        <p>Также в наличии имеются точильные диски стоимостью 7000 руб за шт.</p>
+                        <p>Также в наличии имеются точильные диски стоимостью 8000 руб за шт.</p>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="sidebar">
-            <div class="portlet">
+            <%--<div class="portlet">
                 <h3>Файлы</h3>
                 <div class="content description">
                     <ul class="ul-clean ul-li-mb-1em">
                         <li class="first"><a class="pdf" href="<%=request.getContextPath()%>/files/TA-1_manual_rus.pdf" target="_blank" title="Инструкция по эксплуатации точильного аппарата ТА-1">Инструкция по эксплуатации</a></li>
                     </ul>
                 </div>
-            </div>
+            </div>--%>
             <div class="portlet">
                 <h3><span>Режущие пары</span></h3>
                 <div class="content description">

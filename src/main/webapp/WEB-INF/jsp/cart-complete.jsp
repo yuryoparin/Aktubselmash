@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--@elvariable id="browserClass" type="java.lang.String"--%>
 <%--@elvariable id="cart" type="ru.aktubselmash.model.Cart"--%>
 <%--@elvariable id="basket" type="ru.aktubselmash.model.Cart"--%>
@@ -20,12 +21,13 @@
 	<link type="image/x-icon" href="<%=request.getContextPath()%>/favicon.ico" rel="icon"/>
 	<link media="all" type="text/css" href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"/>
 
-	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.12.3.min.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>
 </head>
 <body class="${browserClass}">
 <div id="wrapper">
     <c:set var="selected" value="" scope="request"/>
+    <jsp:useBean id="now" class="java.util.Date" />
     <jsp:include page="header.jsp" />
 	<div id="content">
         <div class="main-content">
@@ -43,7 +45,7 @@
                             <p>Просим извинения за неудобства.</p>
                         </c:when>
                         <c:otherwise>
-                            <h2 style="margin: 5px 0;">Ваш заказ №<c:out value="${basket.id}"/> принят.</h2>
+                            <h2 style="margin: 5px 0;">Ваш заказ №<c:out value="${basket.id}"/>/<fmt:formatDate value="${now}" pattern="w" /> принят.</h2>
                             <p>В ближайшее время мы свяжемся с вами для уточнения способа оплаты и доставки заказа.
                                <c:if test="${not empty basket.client.email}">
                                 Также на указанную эл. почту <c:out value="${basket.client.email}"/> выслано письмо

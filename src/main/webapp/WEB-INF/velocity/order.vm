@@ -1,12 +1,13 @@
 #* @vtlvariable name="cart" type="ru.aktubselmash.model.Cart" *#
 #* @vtlvariable name="number" type="org.apache.velocity.tools.generic.NumberTool" *#
 #* @vtlvariable name="locale" type="java.util.Locale" *#
+#* @vtlvariable name="month" type="java.lang.String" *#
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<p style="margin-top: 0;">Поступил новый заказ №${cart.id}.</p>
+<p style="margin-top: 0;">Поступил новый заказ №${cart.id}/${month}.</p>
 <div style="margin: 15px 0 10px 0;">
     <p>1. Перечень товаров</p>
     <span>Доставка: ${cart.shipping.name}</span><br/>

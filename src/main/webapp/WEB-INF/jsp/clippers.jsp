@@ -51,6 +51,7 @@
 	<div id="content">
         <div class="box box-main">
             <h1>Машинки для стрижки овец</h1>
+            <h2 class="info"><a href="<%=request.getContextPath()%>/information">Отвечаем на вопросы покупателей: Как изготавливаются и затачиваются ножи?</a></h2>
             <c:forEach var="pp" items="${productPrices}" varStatus="status">
                 <c:if test="${status.count % 3 eq 1}">
                     <div class="ul-list ul-list-transparent ul-list-three" style="margin-top:20px;">
@@ -110,7 +111,7 @@
                                     </c:when>
                                 </c:choose>
                                 <c:if test="${pp.product.id == 12}">
-                                    <div class="red-stripe">+ режущая режущая пара в подарок</div>
+                                    <div class="red-stripe">+ запасная режущая пара в подарок</div>
                                 </c:if>
                             </li>
                 <c:if test="${status.count % 3 eq 0}"></ul></div></c:if>

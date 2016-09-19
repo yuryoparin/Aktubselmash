@@ -26,7 +26,7 @@
     <link media="all" type="text/css" href="<%=request.getContextPath()%>/css/smoothness/jquery-ui-1.8.13.custom.css" rel="stylesheet"/>
     <link media="all" type="text/css" href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"/>
 
-    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-ui-1.8.13.custom.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/main.js"></script>
     <c:if test="${fn:contains(browserClass, 'ie6')}">
@@ -44,17 +44,19 @@
             }, 5000);
 
             var blur = false;
-            $(window).focus(function() {
+            $(window).blur(function() {
+                clearInterval(galInterval);
+                blur = true;
+            }).focus(function() {
                 if (blur) {
                     galInterval = setInterval(function() {
                         if (cnt != -1) $($('.gallery-dots span').get(cnt++ % 3)).click();
                     }, 5000);
                     blur = false;
                 }
-            }).blur(function() {
-                        clearInterval(galInterval);
-                        blur = true;
-                    }).focus();
+            });
+
+            setTimeout(function() { $(window).focus(); }, 0);
 
             $('.gallery-dots span').mousedown(function() {
                 if (!$(this).hasClass('active')) cnt = -1;
